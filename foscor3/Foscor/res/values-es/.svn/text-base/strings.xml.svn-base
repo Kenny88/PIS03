@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="Continue">Continuar</string>
+    <string name="Exit">Salir</string>
+    <string name="Load">Cargar</string>
+    <string name="New">Nuevo</string>
+    <string name="Options">Opciones</string>
+    <string name="Start">Click para empezar</string>
+    <string name="action_settings">Configuración</string>
+
+</resources>

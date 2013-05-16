@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Tiled2" tilewidth="32" tileheight="32">
+  <image source="gfx/tiled2.png" width="256" height="15360"/>
+ </tileset>
+ <layer name="Ground" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3RsQ0AMAzDMM85of8f2g+61kA4cBegSTKwwCloeLW19jW3tX8FAAAAAP656ul1bAAZAAA=
+  </data>
+ </layer>
+ <layer name="arboles" width="40" height="40" opacity="0.98">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC81YO08DMQzOUkAnQVngUCUoG0+p5SHxlODPABMwAb8JFgRTYQCBBJ1gQ7Ax9m/gExc1suw4zt1Rhk9OlTv38xfH8SU1xkwB5gDzETYV3m84mABMKmw9xzigBWhHWOl9l980YEZhUyf+RiSKvu9D04k/1kfo+++euZ4zvkuMuU/6sVel31ekvyfg9pz8vX6xsfv0u4Q4rpIw/WqAIcJKHF49c5J+N8DtluHXcXzMAkYBY4StQr8HhQ9b57gaVoRfSP71BB+2znE1LHvmAHAIOMp/PyIfeN6n30dEnG5NoHAMOAGcBs7bvd80/fzR8MExuDWBwhngHHDBrA83n2lHnZNlgFqzRACVf9Q5WQaoNZX4dVFcaQW8fGsaop8bV70gB19tpRDCz40rVD/NnvbtZW3+ZfoNA0ZKXFdqL3P1LUPXM5caf33GusXURpxTro7UnIumoc+3JTjcl2u/4wWwi/m4BbZd0/Pz1T/fXFb7qHN8Bzjs5jy2wG7n4z2w+wQ/d59I56EGLUY/LT+8BzQcuL7M7gsq/4rww5B6Ia4vs7yo/qAIvzelflxfZnlR+q0Bh/WcxwrY1Xy8AXYT8bPrwK0T7qOv0X9xfRmnnxbWD7dOsX20Tz8qTsmPdBcQG3eofty3kvUj3QXE6hfan3LfSmXfH3xG6ietQ+jzLxXpJ/nRvifVcZ9+HcX/YP3wvsK+fP3Uf9CP44f7xtD8o/LF9aXNP0473DcW0c/1FZt/38L8oPavNm+K+vfFJ90rDFo/6V6hDP1sf8JZ60d6TmtD9bPP/bW1vH4ALolpLwAZAAA=
+  </data>
+ </layer>
+</map>

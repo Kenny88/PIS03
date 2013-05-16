@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tileset2" tilewidth="32" tileheight="32">
+  <image source="Tilesets/Inq XP Medieval Town/Inq XP MT- Medieval Town.png" width="256" height="16704"/>
+ </tileset>
+ <tileset firstgid="4177" name="tileset1" tilewidth="32" tileheight="32">
+  <image source="Tilesets/RPGmakerXPMegaTilesetByLmnopguy7.png" width="256" height="15300"/>
+ </tileset>
+ <tileset firstgid="8001" name="door" tilewidth="32" tileheight="32">
+  <image source="Tilesets/Inq XP Medieval Town/Inq XP Doors.png" width="128" height="256"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3NIRaCQAAG4X17Ap834ghcUygqBkGDgkH2BEoXk3oEpu0GAgS38IevTJlkbUwiIiKjttaYHfYocMAGGXL7//+RR4kKJ5zxQo93hP+FxxU1GtzwwRe/CP87jzbgrG8uwv/B4xnorG9dhL/IFOnK0395fxGROQaXfQaBABAAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3Ry24BUQCH8RPEHnWpS/VVEAu1Kk/RYoF2Mb0svABWSJR21Vq1tWmtWius8Eg+ySxmRMLizEzanH/yy0RyMt+cEEJN7X+siRbaDvU76KIn+b1XLiGuUUIZFdf+c0M840Vyv0qvhjpucIsZ5lgYvuUVbxhJ7ms07nCPBzxiiRXWhv47PvApuX/svvCNiU09zW3+/YNfTG3qN3b6M8yxsKA19pif26WS5jN23z+707fq/j74EcAJggghjIjhXB9PGEjunyKKGOJI4Azb658bzln5/6sdXsorRFqX8drfz9G80OUd6F/SLOiKDvTV1NTU/tI2Wqpk/AAQAAA=
+  </data>
+ </layer>
+ <layer name="Capa de patrones 3" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OQQ0AMAzEsPKnsJVrj8U6yZbyTxUAwL9OuqlfjwDAcgNRBhiHABAAAA==
+  </data>
+ </layer>
+</map>

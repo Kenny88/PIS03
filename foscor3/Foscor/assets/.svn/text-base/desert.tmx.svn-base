@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="3" margin="2">
+  <image source="gfx/desert_tiled.png" width="281" height="211"/>
+  <tile id="30">
+   <properties>
+    <property name="cactus" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="49" name="RPGmakerXPMegaTilesetByLmnopguy7" tilewidth="32" tileheight="32">
+  <image source="Tilesets/RPGmakerXPMegaTilesetByLmnopguy7.png" trans="ff00ff" width="256" height="15300"/>
+ </tileset>
+ <layer name="Ground" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2Y2Q6CMBBFqzy4kLgm4hIVxQU39P+/zjHSQCaNlNqOg+HhRCClPdypMnElhFg5pAf0gYHjdUxIFH5rBl5Vye+V1QQIgKmDuW3M0wCagOdgbuw7A+YlWAAdoAv4DmskjzfAtgSRQ79YcU367YAzsP+hn4pNbl2dPCn8Dgz9HsgL+13Fe//fiP3wnsPnRXnhfWnDT/U9iFF+8rjID+dqK78jOpc+ZfNzXV/siTml9dPlYsGvldIW2bvoE57mOMnyS7++yPoL+ayf8DXHqe4z8QtE1l8MgVEBY81xqvtc7j1qQqHuczh5hoQ+Jr0ZhVeSfur8dubfP5Gl9XXR8Xs5PdKxlH53hn54X3PzM6lvvr+g8ruX8MNZcstPVWvOfpT5mfRmlH7/QsjAoSrgrLj9N1jXuKbmO56qLB+lABkAAA==
+  </data>
+ </layer>
+ <layer name="arbikes" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3UNw6AQAwFUS5KaAgNoSE0hKPzD7CSFwmwBPOkKZFdrEmSeKnKVK6KC9+9pVSVqlXjvEtIqzrVq8F5l5BRTWpWi/MuIava1K4O31U+w/umrfneN23N975pa37sTT/1Dqz5sTf91Du465/i/Q4s/NsBAAAAAMBfncytmx4AGQAA
+  </data>
+ </layer>
+</map>

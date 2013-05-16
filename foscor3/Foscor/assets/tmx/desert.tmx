@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="3" margin="2">
+  <image source="gfx/desert_tiled.png" width="281" height="211"/>
+  <tile id="30">
+   <properties>
+    <property name="cactus" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="49" name="Nothing" tilewidth="32" tileheight="32">
+  <image source="Tilesets/Nothing.png" trans="ff00ff" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="50" name="sky" tilewidth="32" tileheight="32">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <image source="gfx/bosque.png" width="512" height="325"/>
+  <tile id="4">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="pass" value="tmx/desert1.tmx"/>
+    <property name="x" value="28"/>
+    <property name="y" value="36"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="pass" value="tmx/desert1.tmx"/>
+    <property name="x" value="30"/>
+    <property name="y" value="37"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Ground" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3DAQkAAAwEoev1/Xutx1Bw1VRVVVVVVR89wPKicwAZAAA=
+  </data>
+ </layer>
+ <layer name="arboles" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC92YS0oEMRCGcypdqptRV+pGR1yoMLSKIG4EXfVOfMDMEQZv4BH6Ct7IEqYgFKmkXj0DLn6qSaeS1JfqPHqaUjoHnYLOFHZq9LtYSdr+LegO1IFuFPYAdGjwu1+pVQ/HheN8VSr32wHtgvYM7bTax3Fy9T6ZcuT393wEOgadOMZDY2zxe1LwuwRdga4d46MxcvzmlfF9Mfw4LQTzgKIxRubfGJLmHycJP4+k/OZMecnv8R/w2wJtV973An4SDtb8k8bl5Wf1K8W1qLSf1/9Q9PMMemHe/Qjjqq05Xn5voPcgfrU4xl7HtHmBue/lJxXdVzfJbyiU0X1VymNd/Oi+Snn0jJ+XX2udteZfFD/r/rGu/LP6rYsf+uE8Sy32S8vH4jcB7Sss9kvLNfxK+yEXn/Z+ydmx+HVJd7/kbHT+cfNCZb17evlx80JlvXu2+A0Nfzov30w9693Tw2+WScudivsWPfk3S/IxStaCKH7L7Nm6/0blnzS+scZX4ldbC+g8cdyHSp/5N/Rg4KdZCzbBr7UW5Pctyq/1/0eivtB+jcOy0lYEv1pMlF/UOSnKUn6TFHNOirLe8xH+P4g6X3Htd8l2HsL/B1Z/afu/kdocKwAZAAA=
+  </data>
+ </layer>
+</map>

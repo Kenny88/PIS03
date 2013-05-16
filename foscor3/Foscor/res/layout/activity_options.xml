@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pantalla_prinicpal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/papiro"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity2" >
+
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="58dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/NewText" />
+
+        <TextView
+            android:id="@+id/NewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ratingBar1"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_marginBottom="14dp"
+            android:text="@string/Difficulty"
+            android:textColor="@color/Blanco"
+            android:textSize="@dimen/Options"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ratingBar1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/ratingBar1"
+            android:layout_marginBottom="44dp"
+            android:progress="20" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/seekBar2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="61dp"
+            android:text="@string/Sound"
+            android:textColor="@color/Blanco"
+            android:textSize="@dimen/Options"
+            android:textStyle="bold" />
+
+</RelativeLayout>

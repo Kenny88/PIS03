@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="3" margin="2">
+  <image source="gfx/desert_tiled.png" width="281" height="211"/>
+  <tile id="30">
+   <properties>
+    <property name="cactus" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Ground" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YaW/CMAxAs3U3u9m9QctgjF2F///r5mqx5FnJcENiMtQPTzRVGr86bhIxNMYME3IKnAHnieM07AH7wIGwf+3wKxN60VhSzxT52wK2LQWJwXHFLNn1DXAL3EX0OwSugGugR2JwJDHxXQvPO4T6PQED64dj3gMPLXi0Yx2RcWJwAVxa+sDM3h8Bzy0YR/LD+qc1j04lAf0mwDvwouTX1P8OsGt+rwOcEYlbC/IZ0+8YOHH4TT1+tJ3aj36fzTe5YF7c79P81P+Xkh8yc7TpWrAsX7wuY/hxJ7w3JW28XubH8xorf6+sjT7cfV3ri8+T82bnT8pHBD+67tF910ch7IcMVvSjez2+61/0hP1cz4X40XWF7ms++sJ+rudS1p42lXGfc3LyrBR9Qs5mGl61/ZWsnXT/GSvPlcSvcVrYvpp+8wz9eF3n5hcyv/R8oeU3b+HHc5lb/lxznbOfZv5CzmaafptClYHDf4HnKsV/g90cd3Ssj29C9RLBABkAAA==
+  </data>
+ </layer>
+</map>

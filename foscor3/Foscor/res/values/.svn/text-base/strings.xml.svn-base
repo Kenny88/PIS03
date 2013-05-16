@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PIS v1</string>
+    <string name="action_settings">Settings</string>
+    <string name="Start">&quot;Click to start&quot;</string>
+    <color name="Blanco">#FFFFFFFF</color>
+    <string name="Continue">&quot;Continue&quot;</string>
+    <string name="Load">&quot;Load&quot;</string>
+    <string name="Options">&quot;Options&quot;</string>
+    <string name="Exit">&quot;Exit&quot;</string>
+    <string name="New">&quot;New&quot;</string>
+    <string name="textViewtest">Mensaje de debug</string>
+    <string name="Save1">&quot;Save1&quot;</string>
+    <string name="Save2">&quot;Save2&quot;</string>
+    <string name="Save3">&quot;Save3&quot;</string>
+    <string name="Return">&quot;Return&quot;</string>
+    <string name="Sound">Sound</string>
+    <string name="Difficulty">Difficulty</string>
+    <string-array name="Language">
+        <item>English</item>
+        <item>Catalan</item>
+        <item>Spanish</item>
+    </string-array>
+    <string name="Language">Language</string>
+
+</resources>

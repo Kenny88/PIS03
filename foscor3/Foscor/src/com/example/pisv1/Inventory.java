@@ -294,15 +294,15 @@ public class Inventory extends InGameMenu {
 		}
 		if(select!=-1&&selectBox!=-1){
 			Item item=null,item2=items.get(select-BACKGROUND+pos);
-			if(item2.getType()=="Weapon"&&selectBox-EQUIPMENT==0){
+			if(item2.getType().equals("Weapon")&&selectBox-EQUIPMENT==0){
 				item=weapon;
 				weapon=item2;
 			}
-			else if(item2.getType()=="Accessory"&&selectBox-EQUIPMENT==1){
+			else if(item2.getType().equals("Accessory")&&selectBox-EQUIPMENT==1){
 				item=accessory;
 				accessory=item2;
 			}
-			else if(item2.getType()=="Defense"&&selectBox-EQUIPMENT==2){
+			else if(item2.getType().equals("Defense")&&selectBox-EQUIPMENT==2){
 				item=defense;
 				defense=item2;
 			}else{

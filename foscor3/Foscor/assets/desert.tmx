@@ -213,7 +213,46 @@
  </layer>
  <layer name="arboles" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC92YS0oEMRCGcypdqptRV+pGR1yoMLSKIG4EXfVOfMDMEQZv4BH6Ct7IEqYgFKmkXj0DLn6qSaeS1JfqPHqaUjoHnYLOFHZq9LtYSdr+LegO1IFuFPYAdGjwu1+pVQ/HheN8VSr32wHtgvYM7bTax3Fy9T6ZcuT393wEOgadOMZDY2zxe1LwuwRdga4d46MxcvzmlfF9Mfw4LQTzgKIxRubfGJLmHycJP4+k/OZMecnv8R/w2wJtV973An4SDtb8k8bl5Wf1K8W1qLSf1/9Q9PMMemHe/Qjjqq05Xn5voPcgfrU4xl7HtHmBue/lJxXdVzfJbyiU0X1VymNd/Oi+Snn0jJ+XX2udteZfFD/r/rGu/LP6rYsf+uE8Sy32S8vH4jcB7Sss9kvLNfxK+yEXn/Z+ydmx+HVJd7/kbHT+cfNCZb17evlx80JlvXu2+A0Nfzov30w9693Tw2+WScudivsWPfk3S/IxStaCKH7L7Nm6/0blnzS+scZX4ldbC+g8cdyHSp/5N/Rg4KdZCzbBr7UW5Pctyq/1/0eivtB+jcOy0lYEv1pMlF/UOSnKUn6TFHNOirLe8xH+P4g6X3Htd8l2HsL/B1Z/afu/kdocKwAZAAA=
+   H4sIAAAAAAAAC8WYS0pDMRSGsyodqpOqI3WiFQcqyFURpBNBR3dWfEC7hOIOXMLdgjvyXOiBcDzPJNXAT9rbnOTPl8dNOk0pnYNOQWeBfFoYd7GWt/470D2oA90G8gPQYUHcw1pWOfSFPudB5XE7oF3QnhHDJat+9CmV+xCeI7/x8xHoGHRS4Y/20eL3FOB3CboCXTu4S/5oHyV+C8Xfp8BP0pIZB8kf7WPL+ZezKeVXOv8kcfysNjmPUhkvv4XwnIubBfi05MfVpc0/re0t0LbSVu/gN2Paokyk+Wex86wrLz8pzYU4WobzyPVryZTj+L0H/D2DXoR+fSv+8n5Je7+Hn5bG319Bb0r9eVmLHydr/Vr+vJw1fpxw7nv4WT4tL6Poe7U1v4jHgamHvle974Oa9Zsnba6Nyt+rKf3m0QtxnveH5infZz2+MW2aH/6G+yz1QOPo902vX9q/aPorfhiH4+zNsV36vNX8w+cYNwHtB3Jslz6P8FsK3nJ/GBe9X0p5Cb98zkvzvEux+6WUl8w/bcylcaHy3j1L+UkepXGh8t49o/wGI56Oy5dQLnL3bMXvJlMkjhN3Nq2Zf9Sf5VFqfxP8Vtln655Tq9r7b2lcDT9tL6DjJHEflDbzNfRYwC+yF/wHP2svyO9blJ92F/OqZ+rXOKyUulrw0/pE+bU6J7XKKb9JanNOapXXno/w/4NW5yup/i6VnYfw/4PSeG/9P/rzI+4AGQAA
   </data>
  </layer>
+ <objectgroup name="monstruos" width="40" height="40">
+  <properties>
+   <property name="pj" value="true"/>
+  </properties>
+  <object name="Anciano" x="654" y="110">
+   <properties>
+    <property name="imagen" value="anciano.png"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="muro" width="40" height="40">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="450" y="34" width="59" height="402"/>
+  <object x="905" y="311" width="49" height="467"/>
+  <object x="454" y="709" width="627" height="69"/>
+  <object x="453" y="600" width="51" height="281"/>
+  <object x="734" y="928" width="144" height="109"/>
+ </objectgroup>
+ <objectgroup name="Capa de Objetos 3" width="40" height="40">
+  <properties>
+   <property name="object" value="true"/>
+  </properties>
+  <object name="arma" type="Weapon" x="856" y="243" width="25" height="23">
+   <properties>
+    <property name="attack" value="3"/>
+    <property name="defense" value="5"/>
+    <property name="image" value="Attack.png"/>
+   </properties>
+  </object>
+  <object name="arma2" type="Weapon" x="746" y="303" width="25" height="23">
+   <properties>
+    <property name="attack" value="7"/>
+    <property name="defense" value="2"/>
+    <property name="image" value="greataxe8hv.png"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

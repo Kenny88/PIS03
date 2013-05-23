@@ -155,7 +155,7 @@
    <properties>
     <property name="pass" value="tmx/desert.tmx"/>
     <property name="x" value="28"/>
-    <property name="y" value="3"/>
+    <property name="y" value="2"/>
    </properties>
   </tile>
   <tile id="64">

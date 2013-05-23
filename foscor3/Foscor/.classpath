@@ -2,8 +2,9 @@
 <classpath>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="lib" path="src/andengine.jar"/>
-	<classpathentry kind="lib" path="src/andenginetmxtiledmapextension.jar" sourcepath="C:/Users/Laura/unibruno/PIS_03/PISV1/src/andenginetmxtiledmapextension.jar"/>
+	<classpathentry kind="lib" path="libs/andengine.jar"/>
+	<classpathentry kind="lib" path="libs/andenginephysicsbox2dextension.jar"/>
+	<classpathentry kind="lib" path="libs/andenginetmxtiledmapextension.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>

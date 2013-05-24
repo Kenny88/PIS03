@@ -4,6 +4,7 @@ import java.util.Vector;
 
 import org.andengine.engine.camera.BoundCamera;
 import org.andengine.engine.camera.Camera;
+import org.andengine.engine.camera.hud.HUD;
 import org.andengine.engine.camera.hud.controls.BaseOnScreenControl;
 import org.andengine.engine.camera.hud.controls.DigitalOnScreenControl;
 import org.andengine.engine.camera.hud.controls.BaseOnScreenControl.IOnScreenControlListener;
@@ -20,6 +21,7 @@ import org.andengine.entity.modifier.PathModifier.Path;
 import org.andengine.entity.primitive.Rectangle;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.sprite.AnimatedSprite;
+import org.andengine.entity.sprite.ButtonSprite;
 import org.andengine.entity.util.FPSLogger;
 import org.andengine.extension.physics.box2d.PhysicsWorld;
 import org.andengine.extension.tmx.TMXLayer;
@@ -30,6 +32,7 @@ import org.andengine.extension.tmx.TMXTile;
 import org.andengine.extension.tmx.TMXTileProperty;
 import org.andengine.extension.tmx.TMXTiledMap;
 import org.andengine.extension.tmx.util.exception.TMXLoadException;
+import org.andengine.input.touch.TouchEvent;
 import org.andengine.input.touch.controller.MultiTouch;
 import org.andengine.opengl.texture.TextureOptions;
 import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlas;
@@ -64,7 +67,8 @@ public class Game extends SimpleBaseGameActivity {
 
 	protected BoundCamera mBoundChaseCamera;
 	protected Scene mMainScene;
-
+	
+	private HUD mHud;
 	
 	private BitmapTextureAtlas mOnScreenControlTexture;
 	private ITextureRegion mOnScreenControlBaseTextureRegion;
@@ -73,6 +77,10 @@ public class Game extends SimpleBaseGameActivity {
 	String mapaName ="tmx/desert.tmx";
 	private DigitalOnScreenControl mDigitalOnScreenControl;
 	private boolean write =true;
+	
+	private BitmapTextureAtlas mInventoryMenuButtonTexture;
+	private ITextureRegion mInventoryMenuButtonTextureRegion;
+	private ButtonSprite mInventoryMenuButton;
 	
 	protected Inventory menu;
 	protected boolean bMenu=false;
@@ -94,13 +102,16 @@ public class Game extends SimpleBaseGameActivity {
 		Point point= new Point();
 		Display display= this.getWindowManager().getDefaultDisplay();
 		display.getSize(point);
-		CAMERA_WIDTH=(point.x*3)/5;
-		CAMERA_HEIGHT=(point.y*3)/5;
+		CAMERA_WIDTH = (point.x*3) / 5;
+		CAMERA_HEIGHT = (point.y*3) / 5;
 		this.mBoundChaseCamera = new BoundCamera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
 
 		EngineOptions engineOptions= new EngineOptions(true, ScreenOrientation.LANDSCAPE_FIXED, new RatioResolutionPolicy(CAMERA_WIDTH, CAMERA_HEIGHT), this.mBoundChaseCamera);
 
 		engineOptions.getTouchOptions().setNeedsMultiTouch(true);
+		
+		mHud = new HUD();
+		mBoundChaseCamera.setHUD(mHud);
 
 		return engineOptions;
 }
@@ -113,6 +124,11 @@ public class Game extends SimpleBaseGameActivity {
 		this.mOnScreenControlBaseTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mOnScreenControlTexture, this, "onscreen_control_base.png", 0, 0);
 		this.mOnScreenControlKnobTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mOnScreenControlTexture, this, "onscreen_control_knob.png", 128, 0);
 		this.mOnScreenControlTexture.load();
+		
+		mInventoryMenuButtonTexture = new BitmapTextureAtlas(this.getTextureManager(), 64, 64, TextureOptions.NEAREST);
+		mInventoryMenuButtonTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(mInventoryMenuButtonTexture, this, "button-backpack-up.png", 0, 0);
+		mInventoryMenuButtonTexture.load();
+		
 		itemTest();
 	}
 
@@ -122,7 +138,6 @@ public class Game extends SimpleBaseGameActivity {
 		this.mEngine.registerUpdateHandler(new FPSLogger());
 
 		mMainScene = new Scene();
-
 
 		/* Calculate the coordinates for the face, so its centered on the camera. */
 		final float centerX = (CAMERA_WIDTH) / 2;
@@ -134,6 +149,7 @@ public class Game extends SimpleBaseGameActivity {
 		Player player =new Player(centerX,centerY,"prota.png",this);
 		this.mBoundChaseCamera.setChaseEntity(player.getAnimatedSprite());
 		this.mMap=new Map(mapaName,this,player);
+		
 		mMainScene.attachChild(mMap.getMapScene());
 		this.mDigitalOnScreenControl = new DigitalOnScreenControl(0, CAMERA_HEIGHT - this.mOnScreenControlBaseTextureRegion.getHeight(), 
 				this.mBoundChaseCamera, this.mOnScreenControlBaseTextureRegion, this.mOnScreenControlKnobTextureRegion, 0.1f, 
@@ -146,8 +162,38 @@ public class Game extends SimpleBaseGameActivity {
 		this.mDigitalOnScreenControl.refreshControlKnobPosition();
 		//this.mDigitalOnScreenControl.setAllowDiagonal(true);
 		mMainScene.setChildScene(this.mDigitalOnScreenControl);
+		
 		mMap.getMapScene().attachChild(anciano);
+		
 		menu.startMenu();
+		
+		/* Inventory Menu Button */
+		mInventoryMenuButton = new ButtonSprite(16, 16, mInventoryMenuButtonTextureRegion, mEngine.getVertexBufferObjectManager()) {
+			@Override
+			public boolean onAreaTouched(TouchEvent event, float x, float y)
+			{
+				if ( event.isActionDown() )
+				{
+					if ( bMenu )
+					{
+						menu.getScene().back();
+						bMenu=false;
+						mMainScene.setChildScene(Game.this.mDigitalOnScreenControl);
+					}
+					else
+					{
+						bMenu=true;
+						
+						Game.this.mMainScene.setChildScene(Game.this.menu.getScene(), false, true, true);
+					}
+				}
+				
+				return super.onAreaTouched(event, x, y);
+			}
+		};
+		mHud.registerTouchArea(mInventoryMenuButton);
+		mHud.attachChild(mInventoryMenuButton);
+		
 		return mMainScene;
 	}
 

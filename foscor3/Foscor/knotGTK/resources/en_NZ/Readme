@@ -1,0 +1,13 @@
+
+     The files in this directory are encoded in ISO 646-IRV encoding as a lowest
+common denominator for initial development purposes.
+
+     NOTE The default encoding for these files should be Unicode.  As a
+          temporary measure this has not yet been done.
+
+     Where a new environment requires some other encoding then the auxiliary
+program ccm should be used to effect the code translation.  Should the
+environment involve a non-English culture then a language expert should be
+invited to make correct translations of all of the message text, paying
+particular attention to the notes which accompany the cultedit auxiliary
+program.

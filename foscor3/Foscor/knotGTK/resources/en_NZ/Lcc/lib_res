@@ -1,0 +1,13 @@
+--        This is the resource index for the program salccomp version 1.1
+BUILDER	salccomp
+CONFIG_KEYS	config-keys
+CODE_NAME code-name
+
+BUILDER			salccomp
+BUILD_FILES		keys/file-keys
+DIRECTIVES		directives
+SATHER_LIB		sather-lib
+SYMBOL_KINDS		sym_kinds
+
+keys/lib_res
+errors/lib_res

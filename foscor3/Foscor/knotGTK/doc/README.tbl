@@ -1,0 +1,30 @@
+KNOT ---- knot table release note
+
+Kouji KODAMA  kodama@kobe-kosen.ac.jp
+
+WHAT IS KNOT?
+
+KNOT is the program for drawing knot/link diagrams 
+and calculate some invariants on X Windows System.
+It is distributed under the GNU General Public License.
+
+
+DISTRIBUTION
+
+You can get KNOT by anonymous ftp from 
+"ftp://ftp.math.s.kobe-u.ac.jp/pub/knot" .
+
+
+COPYING
+
+KNOT is Copyright 1983 1996 Kouji KODAMA 
+and is licensed under the terms of the GNU General Public License.
+
+Note that the GPL is copyrighted by the Free Software Foundation, 
+but the instance of code that it refers to "KNOT" is copyrighted by me.
+See the accompanying COPYING file for more details.
+
+KNOT TABLE
+Knot and links up to 10 crossings from "Knots and Links"(D.Rolfsen)
+with Nakanishi's correction.
+// end

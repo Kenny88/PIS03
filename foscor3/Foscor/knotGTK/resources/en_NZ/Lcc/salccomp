@@ -1,0 +1,44 @@
+--        This is the resource file for the locale compiler - class BUILDER
+
+26
+
+--   Command line argument names
+
+Code_Arg    :code
+Config_Arg  :config
+
+--   Source directories, etc
+-- in Sather Home!! 
+Resource_Root  :resources/lcc-Data/definitions
+Rep_Map_Source directory          :repmaps
+Culture_Source directory          :cultures
+Sather_Source directory           :sather
+
+Escape_Char :escape_char
+
+--   Leaf names
+
+Rep_Map     :rep_map
+Culture     :culture
+Order       :order
+Weekdays    :weekdays
+Months      :months
+Suffices    :suffices
+
+--   The remainder are error message formatting strings
+
+Usage         :Usage: salccomp -code \<code kind\> -config \<config file name\>\n
+No_Access     :Could not open <1:> for reading!\n
+Line_Err      :Error in file <1:> on line <2:>\n
+File_Create   :Could not create new file <1:>!\n
+Dir_Create    :A directory <1:> could not be created because <2:>\n
+
+Dir_Access    :The directory <1:> could not be accessed because <2:>\n
+Dir_Missing   :The directory <1:> does not exist!\n
+Unknown_Err   :A directory <1:> could not be created for an unknown reason\n
+Code_Err      :Repmap name <1:> has '<2:>' instead of code point on line <3:>!\n
+
+Bad_Code      :Bad code syntax for <1:> on line <2:>!\n
+Bad_Name      :Bad name syntax for <1:> on line <2:>!\n
+Bad_Path      :<1:> - is not a valid path name\n
+Errors_Exist  :Errors found :- <1:>!

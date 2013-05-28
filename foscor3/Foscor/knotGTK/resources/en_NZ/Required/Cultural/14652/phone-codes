@@ -1,0 +1,8 @@
+--        This file contains the codes used in accordance with ISO/IEC 14652
+--   for specifying the format of telephone numbers.
+
+4
+Area_Code          :a
+Prefixed_Area_Code :A
+Country_Code       :c
+Local_Number       :l

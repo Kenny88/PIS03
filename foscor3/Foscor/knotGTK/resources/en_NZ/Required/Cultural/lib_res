@@ -1,0 +1,15 @@
+--        This file gives the message files for the cultural group of classes.
+--   The 14652 directory includes all of the files specified in that standard.
+--
+
+14652/lib_res
+
+--        The classes whose resources are identified below are/may be used in
+--   manipulating cultural values additionally to those defined by that
+--   standard.
+
+ACCESS_CODES       access
+CAL_DISPLAY_ORDERS calendar
+DATE_FORMS         date-forms
+MON_SPACING        spacing
+SIGN_POSITIONS     signpos

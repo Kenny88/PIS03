@@ -1,0 +1,19 @@
+--        This file contains the text form of the version keys on a cultural
+--   specification file according to ISO/IEC 14652.
+
+15
+Title :title
+Source :source
+Postal_Address :address
+Contact :contact
+E_mail :email
+Phone_Number :tel
+Fax_Number :fax
+Language :language
+Territory :territory
+Audience :audience
+Application :application
+Abbreviation :abbreviation
+Revision :revision
+Date :date
+Category :category

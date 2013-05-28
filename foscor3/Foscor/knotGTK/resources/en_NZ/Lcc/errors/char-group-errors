@@ -1,0 +1,30 @@
+-- CHAR_GROUP
+23
+
+--   Note that the first item is needed to specify the alphabet being used and
+--   (the two 'Fs) the last hexadecimal digit.
+
+Letters :azAZfF09
+
+Missing:Run off end of locale file at line <1:>
+Extras:<1:> found after copy directive at line <2:>
+Copy_Errors :Errors detected while copying from file <1:> on line <2:>!\n
+Illegal_Copy:Copy found after other components at line <1:>
+Unexpected:<1:> not expected on line <2:>
+Unknown:Unknown keyword '<1:>' on line <2:>
+Trans_Not_Def:Synonym on line <1:> is not defined
+Invalid_Token:Invalid '<1:>' in synonym definition on line <2:>
+Range_Error:Invalid case maplet on line <1:>!\n
+Empty_Range:Range [<1:> .. <2:>] is empty on line <3:>!\n
+Missing_First:First map component missing on line <1:>!\n
+Missing_Second:Second map component after <1:> not found on line <2:>!\n
+Missing_Scolon:<1:> must be preceded by a semi-colon on line <2:>!\n
+Mandatory :Both the cntrl and punct groups must be specified\n
+Not_Class :<1:> is not a known character class on line <2:>!\n
+Unknown_Class :String on line <1:> is not a known character class!\n
+Not_Map :<1:> is not a known mapping on line <2:>!\n
+Unknown_Map :String on line <1:> is not a known mapping\n
+Unexpected_Escape :An unexpected escape character found on line <1:>!\n
+Unterminated_Name :The string <1:> does not contain a valid code name on line <2:>!\n
+Unterminated_String :An unterminated string is on line <1:>\n
+No_Start:Range end [<1:>] found but no start on line <2:>!\n

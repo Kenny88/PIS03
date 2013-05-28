@@ -1,0 +1,5 @@
+4
+Copy_Invalid :Copy is invalid on line <1:> when other keywords are present\n
+Copy_Errors :Errors were detected while reading file <1:> on line <2:>!\n
+Unknown_Keyword :The keyword <1"> on line <2:> is not recognised!\n
+Out_of_Range :Measurement code <1:> on line <2:> is invalid!\n

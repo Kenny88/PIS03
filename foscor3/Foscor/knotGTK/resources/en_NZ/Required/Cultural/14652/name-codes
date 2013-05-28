@@ -1,0 +1,16 @@
+--        This file contains the codes used in accordance with ISO/IEC 14652
+--   for specifying the format of a person's name.
+
+12
+Family_Name           :f
+UC_Family_Name        :F
+First_Given_Name      :g
+First_Given_Initial   :G
+First_Given_Romanized :l
+Other_Short_Name      :o
+Middle_Name           :m
+Middle_Initial        :M
+Profession            :p
+Salutation_String     :s
+Salutation_Code       :S
+Conditional_Space     :t

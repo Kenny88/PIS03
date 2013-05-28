@@ -1,0 +1,7 @@
+6
+Copy_Invalid :Copy is invalid on line <1:> when other keywords are present\n
+Copy_Errors :Errors were detected when copying from file <1:> at line <2:>!\n
+Bad_Date :The date string [<1:>] on line <2:> is invalid or wrong format!\n
+Bad_Cat :<1:> on line <2:> is not a valid standard!\n
+Bad_Std :Unknown section name [<1:>] found on line <2:>!\n
+Unknown_Keyword :The keyword <1:> is not known on line <2:>!\n

@@ -36,7 +36,7 @@ public class Inventory extends InGameMenu {
 	private String equipChar[]={"W","A","D"};
 	//private 
 	
-	private SimpleBaseGameActivity app;
+	private Game app;
 	
 	private BitmapTextureAtlas mMenuTexture;
 	private BitmapTextureAtlas arrowTexture;
@@ -56,7 +56,7 @@ public class Inventory extends InGameMenu {
 	
 	private MenuScene invMenuScene;
 	
-	public Inventory(SimpleBaseGameActivity application) {
+	public Inventory(Game application) {
 		super(application);
 		app=application;
 		
@@ -65,29 +65,33 @@ public class Inventory extends InGameMenu {
 	public void addItem(String path, String name, int attack, int deffence, String type){
 		items.add(new Item(path,name, attack, deffence, items.size(), type));
 	}
+	public void addItem(Item item){
+		item.setId(items.size());
+		items.add(item);
+	}
 	@Override
 	public void startMenu() {
 		super.startMenu();
 		
-		invMenuScene= new MenuScene((((Camera)((Game) app).mBoundChaseCamera)));
+		invMenuScene= new MenuScene((((Camera)app.mBoundChaseCamera)));
 		
 		BitmapTextureAtlasTextureRegionFactory.setAssetBasePath("gfx/");
 		
-		this.mMenuTexture = new BitmapTextureAtlas(((Game) app).getTextureManager(), 256, 128, TextureOptions.BILINEAR);
-		arrowTexture = new BitmapTextureAtlas(((Game) app).getTextureManager(), 50, 50, TextureOptions.BILINEAR);
-		attackTexture = new BitmapTextureAtlas(((Game) app).getTextureManager(), 40, 40, TextureOptions.BILINEAR);
-		deffenceTexture = new BitmapTextureAtlas(((Game) app).getTextureManager(), 40, 40, TextureOptions.BILINEAR);
-		highlightTexture = new BitmapTextureAtlas(((Game) app).getTextureManager(), 256, 128, TextureOptions.BILINEAR);
-		boxTexture = new BitmapTextureAtlas(((Game) app).getTextureManager(), 40, 40, TextureOptions.BILINEAR);
-		highboxTexture = new BitmapTextureAtlas(((Game) app).getTextureManager(), 40, 40, TextureOptions.BILINEAR);
+		this.mMenuTexture = new BitmapTextureAtlas(app.getTextureManager(), 256, 128, TextureOptions.BILINEAR);
+		arrowTexture = new BitmapTextureAtlas(app.getTextureManager(), 50, 50, TextureOptions.BILINEAR);
+		attackTexture = new BitmapTextureAtlas(app.getTextureManager(), 40, 40, TextureOptions.BILINEAR);
+		deffenceTexture = new BitmapTextureAtlas(app.getTextureManager(), 40, 40, TextureOptions.BILINEAR);
+		highlightTexture = new BitmapTextureAtlas(app.getTextureManager(), 256, 128, TextureOptions.BILINEAR);
+		boxTexture = new BitmapTextureAtlas(app.getTextureManager(), 40, 40, TextureOptions.BILINEAR);
+		highboxTexture = new BitmapTextureAtlas(app.getTextureManager(), 40, 40, TextureOptions.BILINEAR);
 		
-		this.mMenuResetTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mMenuTexture, ((Game) app), "menu_background.png", 0, 0);
-		arrowTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.arrowTexture, ((Game) app), "Up_Arrow_Icon.png", 0, 0);
-		attackTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.attackTexture, ((Game) app), "Attack.png", 0, 0);
-		deffenceTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.deffenceTexture, ((Game) app), "deffense.png", 0, 0);
-		highlightTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.highlightTexture, ((Game) app), "highlight.png", 0, 0);
-		boxTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.boxTexture, ((Game) app), "box.png", 0, 0);
-		highboxTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.highboxTexture, ((Game) app), "highbox.png", 0, 0);
+		this.mMenuResetTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mMenuTexture, app, "menu_background.png", 0, 0);
+		arrowTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.arrowTexture, app, "Up_Arrow_Icon.png", 0, 0);
+		attackTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.attackTexture, app, "Attack.png", 0, 0);
+		deffenceTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.deffenceTexture, app, "deffense.png", 0, 0);
+		highlightTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.highlightTexture, app, "highlight.png", 0, 0);
+		boxTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.boxTexture, app, "box.png", 0, 0);
+		highboxTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.highboxTexture, app, "highbox.png", 0, 0);
 		
 		this.mMenuTexture.load();
 		this.arrowTexture.load();
@@ -105,24 +109,24 @@ public class Inventory extends InGameMenu {
 	public void drawEquipment(Item item, int cont, ITextureRegion box){
 		
 		if(item==null){
-			SpriteMenuItem def=new SpriteMenuItem(EQUIPMENT+cont, box, ((Game) app).getVertexBufferObjectManager());
-			def.setPosition(((Game) app).getCameraWidth()/3+20+40*cont, ((Game) app).getCameraHeight()/3-100);
+			SpriteMenuItem def=new SpriteMenuItem(EQUIPMENT+cont, box, app.getVertexBufferObjectManager());
+			def.setPosition(app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
 			invMenuScene.addMenuItem(def);
 			
-			final Text statsA= new Text(((Game) app).getCameraWidth()/3+24+40*cont,((Game) app).getCameraHeight()/3-100, this.mFont, equipChar[cont], new TextOptions(HorizontalAlign.LEFT), ((Game) app).getVertexBufferObjectManager());
+			final Text statsA= new Text(app.getCameraWidth()/3+24+40*cont,app.getCameraHeight()/3-100, this.mFont, equipChar[cont], new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 			invMenuScene.attachChild(statsA);
 		}
 		else{
-			SpriteMenuItem def=new SpriteMenuItem(EQUIPMENT+cont, box, ((Game) app).getVertexBufferObjectManager());
-			def.setPosition(((Game) app).getCameraWidth()/3+20+40*cont, ((Game) app).getCameraHeight()/3-100);
+			SpriteMenuItem def=new SpriteMenuItem(EQUIPMENT+cont, box, app.getVertexBufferObjectManager());
+			def.setPosition(app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
 			invMenuScene.addMenuItem(def);
 			
-			BitmapTextureAtlas sprite1 = new BitmapTextureAtlas(((Game) app).getTextureManager(), 40, 40, TextureOptions.BILINEAR);
-			ITextureRegion region1 = BitmapTextureAtlasTextureRegionFactory.createFromAsset(sprite1, ((Game) app), item.getPath(), 0, 0);
+			BitmapTextureAtlas sprite1 = new BitmapTextureAtlas(app.getTextureManager(), 40, 40, TextureOptions.BILINEAR);
+			ITextureRegion region1 = BitmapTextureAtlasTextureRegionFactory.createFromAsset(sprite1, app, item.getPath(), 0, 0);
 			sprite1.load();
 			
-			SpriteMenuItem item1=new SpriteMenuItem(EQUIPMENT+cont, region1, ((Game) app).getVertexBufferObjectManager());
-			item1.setPosition(((Game) app).getCameraWidth()/3+20+40*cont, ((Game) app).getCameraHeight()/3-100);
+			SpriteMenuItem item1=new SpriteMenuItem(EQUIPMENT+cont, region1, app.getVertexBufferObjectManager());
+			item1.setPosition(app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
 			invMenuScene.attachChild(item1);
 						
 		}
@@ -142,42 +146,42 @@ public class Inventory extends InGameMenu {
 			sprite=new ArrayList<SpriteMenuItem>();
 		}
 		if(3<items.size()){
-			SpriteMenuItem arrowUp=new SpriteMenuItem(UP, arrowTextureRegion, ((Game) app).getVertexBufferObjectManager());
-			arrowUp.setPosition(((Game) app).getCameraWidth()/3+200, ((Game) app).getCameraHeight()/3-50+50*i);
+			SpriteMenuItem arrowUp=new SpriteMenuItem(UP, arrowTextureRegion, app.getVertexBufferObjectManager());
+			arrowUp.setPosition(app.getCameraWidth()/3+200, app.getCameraHeight()/3-50+50*i);
 			invMenuScene.addMenuItem(arrowUp);
 			
-			SpriteMenuItem arrowDown=new SpriteMenuItem(DOWN, arrowTextureRegion, ((Game) app).getVertexBufferObjectManager());
+			SpriteMenuItem arrowDown=new SpriteMenuItem(DOWN, arrowTextureRegion, app.getVertexBufferObjectManager());
 			arrowDown.setFlippedVertical(true);
-			arrowDown.setPosition(((Game) app).getCameraWidth()/3+200, ((Game) app).getCameraHeight()/3-90+50*3);
+			arrowDown.setPosition(app.getCameraWidth()/3+200, app.getCameraHeight()/3-90+50*3);
 			invMenuScene.addMenuItem(arrowDown);
 		}
 		for(i=0;i<items.size()&&i<3;i++){
-			texture.add(new BitmapTextureAtlas(((Game) app).getTextureManager(), 40, 40, TextureOptions.BILINEAR));
-			cell.add(BitmapTextureAtlasTextureRegionFactory.createFromAsset(texture.get(i), ((Game) app), items.get(i+pos).getPath(), 0, 0));
+			texture.add(new BitmapTextureAtlas(app.getTextureManager(), 40, 40, TextureOptions.BILINEAR));
+			cell.add(BitmapTextureAtlasTextureRegionFactory.createFromAsset(texture.get(i), app, items.get(i+pos).getPath(), 0, 0));
 			texture.get(i).load();
 			
 			Log.d("path", items.get(i).getPath()+" "+i);
 			
-			SpriteMenuItem item1=new SpriteMenuItem(BACKGROUND+i, mMenuResetTextureRegion, ((Game) app).getVertexBufferObjectManager());
-			item1.setPosition(((Game) app).getCameraWidth()/3, ((Game) app).getCameraHeight()/3-50+50*i);
+			SpriteMenuItem item1=new SpriteMenuItem(BACKGROUND+i, mMenuResetTextureRegion, app.getVertexBufferObjectManager());
+			item1.setPosition(app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
 			invMenuScene.addMenuItem(item1);
 
-			sprite.add(new SpriteMenuItem(BACKGROUND+i, cell.get(i), ((Game) app).getVertexBufferObjectManager()));
-			sprite.get(i).setPosition(((Game) app).getCameraWidth()/3+10, ((Game) app).getCameraHeight()/3-40+50*i);
+			sprite.add(new SpriteMenuItem(BACKGROUND+i, cell.get(i), app.getVertexBufferObjectManager()));
+			sprite.get(i).setPosition(app.getCameraWidth()/3+10, app.getCameraHeight()/3-40+50*i);
 			invMenuScene.attachChild(sprite.get(i));
 			
-			SpriteMenuItem att=new SpriteMenuItem(BACKGROUND+i, attackTextureRegion, ((Game) app).getVertexBufferObjectManager());
-			att.setPosition(((Game) app).getCameraWidth()/3+60, ((Game) app).getCameraHeight()/3-37+50*i);
+			SpriteMenuItem att=new SpriteMenuItem(BACKGROUND+i, attackTextureRegion, app.getVertexBufferObjectManager());
+			att.setPosition(app.getCameraWidth()/3+60, app.getCameraHeight()/3-37+50*i);
 			invMenuScene.attachChild(att);
 			
-			final Text statsA= new Text(((Game) app).getCameraWidth()/3+90,((Game) app).getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getAtk()), new TextOptions(HorizontalAlign.LEFT), ((Game) app).getVertexBufferObjectManager());
+			final Text statsA= new Text(app.getCameraWidth()/3+90,app.getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getAtk()), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 			invMenuScene.attachChild(statsA);
 			
-			SpriteMenuItem def=new SpriteMenuItem(BACKGROUND+i, deffenceTextureRegion, ((Game) app).getVertexBufferObjectManager());
-			def.setPosition(((Game) app).getCameraWidth()/3+117, ((Game) app).getCameraHeight()/3-38+50*i);
+			SpriteMenuItem def=new SpriteMenuItem(BACKGROUND+i, deffenceTextureRegion, app.getVertexBufferObjectManager());
+			def.setPosition(app.getCameraWidth()/3+117, app.getCameraHeight()/3-38+50*i);
 			invMenuScene.attachChild(def);
 			
-			final Text statsD= new Text(((Game) app).getCameraWidth()/3+150,((Game) app).getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getDef()), new TextOptions(HorizontalAlign.LEFT), ((Game) app).getVertexBufferObjectManager());
+			final Text statsD= new Text(app.getCameraWidth()/3+150,app.getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getDef()), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 			invMenuScene.attachChild(statsD);
 			
 		}
@@ -187,37 +191,37 @@ public class Inventory extends InGameMenu {
 		//invMenuScene.getChildByMatcher(pEntityMatcher)
 		int i=id-BACKGROUND;
 		
-		BitmapTextureAtlas sprite1 = new BitmapTextureAtlas(((Game) app).getTextureManager(), 40, 40, TextureOptions.BILINEAR);
-		ITextureRegion region1 = BitmapTextureAtlasTextureRegionFactory.createFromAsset(sprite1, ((Game) app), items.get(i+pos).getPath(), 0, 0);
+		BitmapTextureAtlas sprite1 = new BitmapTextureAtlas(app.getTextureManager(), 40, 40, TextureOptions.BILINEAR);
+		ITextureRegion region1 = BitmapTextureAtlasTextureRegionFactory.createFromAsset(sprite1, app, items.get(i+pos).getPath(), 0, 0);
 		sprite1.load();
 		
 		if(select!=id){
-			SpriteMenuItem sprite = new SpriteMenuItem(id, highlightTextureRegion, ((Game) app).getVertexBufferObjectManager());
-			sprite.setPosition(((Game) app).getCameraWidth()/3, ((Game) app).getCameraHeight()/3-50+50*i);
+			SpriteMenuItem sprite = new SpriteMenuItem(id, highlightTextureRegion, app.getVertexBufferObjectManager());
+			sprite.setPosition(app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
 			invMenuScene.addMenuItem(sprite);
 			select=id;
 		}else{
-			SpriteMenuItem sprite = new SpriteMenuItem(id, mMenuResetTextureRegion, ((Game) app).getVertexBufferObjectManager());
-			sprite.setPosition(((Game) app).getCameraWidth()/3, ((Game) app).getCameraHeight()/3-50+50*i);
+			SpriteMenuItem sprite = new SpriteMenuItem(id, mMenuResetTextureRegion, app.getVertexBufferObjectManager());
+			sprite.setPosition(app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
 			invMenuScene.addMenuItem(sprite);
 			select=-1;
 		}
-		SpriteMenuItem item1=new SpriteMenuItem(id, region1, ((Game) app).getVertexBufferObjectManager());
-		item1.setPosition(((Game) app).getCameraWidth()/3+10, ((Game) app).getCameraHeight()/3-40+50*i);
+		SpriteMenuItem item1=new SpriteMenuItem(id, region1, app.getVertexBufferObjectManager());
+		item1.setPosition(app.getCameraWidth()/3+10, app.getCameraHeight()/3-40+50*i);
 		invMenuScene.attachChild(item1);
 		
-		SpriteMenuItem att=new SpriteMenuItem(id, attackTextureRegion, ((Game) app).getVertexBufferObjectManager());
-		att.setPosition(((Game) app).getCameraWidth()/3+60, ((Game) app).getCameraHeight()/3-37+50*i);
+		SpriteMenuItem att=new SpriteMenuItem(id, attackTextureRegion, app.getVertexBufferObjectManager());
+		att.setPosition(app.getCameraWidth()/3+60, app.getCameraHeight()/3-37+50*i);
 		invMenuScene.attachChild(att);
 		
-		final Text statsA= new Text(((Game) app).getCameraWidth()/3+90,((Game) app).getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getAtk()), new TextOptions(HorizontalAlign.LEFT), ((Game) app).getVertexBufferObjectManager());
+		final Text statsA= new Text(app.getCameraWidth()/3+90,app.getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getAtk()), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 		invMenuScene.attachChild(statsA);
 		
-		SpriteMenuItem def=new SpriteMenuItem(id, deffenceTextureRegion, ((Game) app).getVertexBufferObjectManager());
-		def.setPosition(((Game) app).getCameraWidth()/3+117, ((Game) app).getCameraHeight()/3-38+50*i);
+		SpriteMenuItem def=new SpriteMenuItem(id, deffenceTextureRegion, app.getVertexBufferObjectManager());
+		def.setPosition(app.getCameraWidth()/3+117, app.getCameraHeight()/3-38+50*i);
 		invMenuScene.attachChild(def);
 		
-		final Text statsD= new Text(((Game) app).getCameraWidth()/3+150,((Game) app).getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getDef()), new TextOptions(HorizontalAlign.LEFT), ((Game) app).getVertexBufferObjectManager());
+		final Text statsD= new Text(app.getCameraWidth()/3+150,app.getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getDef()), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 		invMenuScene.attachChild(statsD);
 		
 		
@@ -261,14 +265,14 @@ public class Inventory extends InGameMenu {
 		else{
 			switch(pMenuItem.getID()) {
 			case QUIT:
-				((Game) app).bMenu=false;
-				((Game) app).finish();
+				app.bMenu=false;
+				app.finish();
 	
 				return true;
 			case INVENTORY:
 				pMenuScene.back();
 				invReset();
-				((Game) app).mMainScene.setChildScene(invMenuScene, false, true, true);
+				app.mMainScene.setChildScene(invMenuScene, false, true, true);
 				return true;
 			case UP:
 				Log.d("case", "Enter case up");
@@ -310,8 +314,12 @@ public class Inventory extends InGameMenu {
 				return true;
 			}
 			if(item!=null){
-				
+				app.mPlayer.cAttack+=-item.getAtk()+item2.getAtk();
+				app.mPlayer.cDefense+=-item.getDef()+item2.getDef();
 				items.add(item);
+			}else{
+				app.mPlayer.cAttack+=item2.getAtk();
+				app.mPlayer.cAttack+=item2.getDef();
 			}
 			items.remove(item2);
 			invReset();

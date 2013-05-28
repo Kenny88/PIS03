@@ -1,0 +1,19 @@
+18
+Abb_Weekday :abday
+Abb_Month :abmon
+Alt_Digits :alt_digits
+Am_Pm :am_pm
+Day_Name :day
+Date_Format :d_fmt
+Date_Time_Format :d_t_fmt
+Era :era
+Era_Date_Format :era_d_fmt
+Era_Year :era_year
+Month_Name :mon
+Time_Format :t_fmt
+Time_Format_AM_PM :t_fmt_ampm
+Time_Zone :timezone
+First_Weekday :first_weekday
+First_Workday :first_workday
+Calendar_Direction :cal_direction
+Week :week

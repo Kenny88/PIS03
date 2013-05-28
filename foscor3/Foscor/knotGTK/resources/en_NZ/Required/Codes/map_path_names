@@ -1,0 +1,107 @@
+--        This file contains the path name of all code mapping files in
+--   the same order as the corresponding code kind in the class enumeration
+--   CODE_KINDS.  All names are given relative to the SATHER_HOME
+--   Maps directory in which all the mapping files are to be found.
+
+83
+Adobe_Dingbats :Adobe/ZDingbat.map
+Adobe_Standard :Adobe/StdEnc.map
+Adobe_Symbol :Adobe/Symbol.map
+
+Apple_Arabic :Apple/Arabic.map
+Apple_CntEuro :Apple/CntEuro.map
+Apple_Croatian :Apple/Croatian.map
+Apple_Cyrillic :Apple/Cyrillic.map
+Apple_Dingbat :Apple/Dingbat.map
+Apple_Greek :Apple/Greek.map
+Apple_Hebrew :Apple/Hebrew.map
+Apple_Iceland :Apple/Iceland.map
+Apple_Japan :Apple/Japan.map
+Apple_Roman :Apple/Roman.map
+Apple_Romania :Apple/Romania.map
+Apple_Symbol :Apple/Symbol.map
+Apple_Thai :Apple/Thai.map
+Apple_Turkish :Apple/Turkish.map
+Apple_Ukraine :Apple/Ukraine.map
+
+Big5 :EastAsia/Big5.map
+
+CP037 :MS/EBCDIC/CP037.map
+CP_1026 :MS/EBCDIC/CP1026.map
+CP_1250 :MS/WIN/CP1250.map
+CP_1251 :MS/WIN/CP1251.map
+CP_1252 :MS/WIN/CP1252.map
+CP_1253 :MS/WIN/CP1253.map
+CP_1254 :MS/WIN/CP1254.map
+CP_1255 :MS/WIN/CP1255.map
+CP_1256 :MS/WIN/CP1256.map
+CP_1257 :MS/WIN/CP1257.map
+CP_1258 :MS/WIN/CP1258.map
+CP_437 :MS/DOS/CP437.map
+CP_500 :MS/EBCDIC/CP500.map
+CP_737 :MS/DOS/CP737.map
+CP_775 :MS/DOS/CP775.map
+CP_850 :MS/DOS/CP850.map
+CP_852 :MS/DOS/CP852.map
+CP_855 :MS/DOS/CP855.map
+CP_857 :MS/DOS/CP857.map
+CP_860 :MS/DOS/CP860.map
+CP_861 :MS/DOS/CP861.map
+CP_862 :MS/DOS/CP862.map
+CP_863 :MS/DOS/CP863.map
+CP_864 :MS/DOS/CP864.map
+CP_865 :MS/DOS/CP865.map
+CP_866 :MS/DOS/CP866.map
+CP_869 :MS/DOS/CP869.map
+CP_874 :MS/DOS/CP874.map
+CP_875 :MS/EBCDIC/CP875.map
+CP_932 :MS/WIN/CP932.map
+CP_936 :MS/WIN/CP936.map
+CP_949 :MS/WIN/CP949.map
+CP_950 :MS/WIN/CP950.map
+
+GB12345_80 :EastAsia/GB12345-80.map
+GB2312_80 :EastAsia/GB2312-80.map
+
+IBM038 :IBM/IBM038.map
+
+ISO8859_1 :ISO/8859-1.map
+ISO8859_10 :ISO/8859-10.map
+ISO8859_2 :ISO/8859-2.map
+ISO8859_3 :ISO/8859-3.map
+ISO8859_4 :ISO/8859-4.map
+ISO8859_5 :ISO/8859-5.map
+ISO8859_6 :ISO/8859-6.map
+ISO8859_7 :ISO/8859-7.map
+ISO8859_8 :ISO/8859-8.map
+ISO8859_9 :ISO/8859-9.map
+
+JIS_X_0201 :EastAsia/JIS-X-0210.map
+JIS_X_0208 :EastAsia/JIS-X-0208.map
+JIS_X_0212 :EastAsia/JIS-X-0212.map
+
+MS_Cyrillic :MS/MAC/Cyrillic.map
+MS_Greek :MS/MAC/Greek.map
+MS_Iceland :MS/MAC/Iceland.map
+MS_Latin_2 :MS/MAC/Latin2.map
+MS_Roman :MS/MAC/Roman.map
+MS_Turkish :MS/MAC/Turkish.map
+
+NEXT :NeXt/NextStep.map
+
+Shift_JIS :EastAsia/ShiftJIS.map
+
+US_ASCII :ISO/ISO646-US.map
+
+--        The next six code kinds have NO corresponding map file as they are
+--   algorithmically defined variants of ISO/IEC 10646-1:2
+
+ UCS2    :
+ UCS4    :
+ Unicode :
+ UTF7    :
+ UTF8    :
+ UTF16   :
+
+ --        FURTHER CODE KINDS MUST BE APPENDED HERE IN THE ORDER IN WHICH THEY
+ --   ARE ADDED TO THE CODE_KINDS CLASS!

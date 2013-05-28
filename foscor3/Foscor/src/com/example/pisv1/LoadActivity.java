@@ -5,7 +5,6 @@ package com.example.pisv1;
 import java.io.File;
 
 import android.os.Bundle;
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;

@@ -1,0 +1,7 @@
+--        This is the resource file for the locale compiler class SATHER_LIB
+
+3
+Comment :--
+Sather_Lib :LIBCHARS
+
+Line_Err :Error in specials file <1:> on line <2:>\n

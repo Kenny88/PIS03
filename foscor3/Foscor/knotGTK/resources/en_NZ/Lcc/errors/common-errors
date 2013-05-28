@@ -1,0 +1,15 @@
+14
+Not_Collating :The name <1:> is not a valid collating symbol\n
+Internal :COMMON_DATA class has had an internal error when handling <>\n
+Missing_Symbol :A collating name is expected on line <1:>!\n
+Dup_Name :The collating symbol <1:> on line <2:> has already been defined!\n
+Unknown_Name :The name <1:> on line <2:> has not been defined before use!\n
+From_Missing :The from keyword is omitted on line <1:>!\n
+Invalid_Weight_Max :The max weights specified (<1:>) on line <2:> must be positive!\n
+Invalid_Keyword :<1:> on line <2:> is not a collating order keyword\n
+Expected_Equals :Expected equals symbol on line <1:> - found '<2:>'!\n
+Syntax_Error :The name <1:> contains a syntax error on line <2:>!\n
+Dup_Weight :The name <1:> on line <2:> has already been defined as a weight!\n
+Unterminated_String :The string on line <1:> has a missing end quotation mark\n
+Undefined_Weight :The name <1:> on line <2:> is not a defined weight name\n
+Undefined_Name :The name <1:> on line <2:> must be defined before use\n

@@ -1,0 +1,6 @@
+--   Local Sather resource messages for the non-numeric group of classes
+
+ANSWERS            yesno
+BOOL               boolean
+TRI_STATE          tri_state
+UNIT_KINDS         unit-kinds

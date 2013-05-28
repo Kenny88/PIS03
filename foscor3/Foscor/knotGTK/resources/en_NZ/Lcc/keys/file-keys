@@ -1,0 +1,5 @@
+4
+Map :charmap_src
+Locale :culture_src
+Sather :libchars_src
+OutDir :out_dir

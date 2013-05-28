@@ -1,0 +1,19 @@
+18
+Left_Bracket :[
+Right_Bracket :]
+Left_Brace :{
+Right_Brace :}
+Left_Parenthesis :(
+Right_Parenthesis :)
+Left_Anchor :^
+Right_Anchor :$
+Minus_Sign :-
+Plus_Sign :+
+Fullstop :.
+Vertical_Line :|
+Asterisk :*
+Question_Mark :?
+Escape :\\
+Colon ::
+Equals_Mark :=
+Comma :,

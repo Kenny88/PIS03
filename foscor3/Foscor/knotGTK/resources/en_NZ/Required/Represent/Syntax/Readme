@@ -1,0 +1,6 @@
+     The sub-directories contained in this directory hold any literal text
+needed for classes in this sub-section of the Required Library.
+
+     NOTE The resource files in this default directory will be used in the
+          event that no cultural locale is specified in the program environment.
+

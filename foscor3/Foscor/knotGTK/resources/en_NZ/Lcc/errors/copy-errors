@@ -1,0 +1,9 @@
+6
+Missing :In file <1:> an escape/comment character is missing on line <2:>\n
+Invalid :Copy directive not permitted in file <1:> at line <2:>\n
+File_Err :Unable to open file <1:> for reading
+Bad_Path :Unable to make a valid path for <1:>!\n
+Unknown :Unknown directive in file <1:> on line <2:>\n
+Run_Off :Desired section <1:> was not found in file <2:>\n
+
+ 

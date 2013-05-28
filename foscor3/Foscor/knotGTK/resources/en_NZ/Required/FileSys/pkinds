@@ -1,0 +1,9 @@
+--        This file contains the names of the path element kinds in a file path.
+
+6
+Kind     :File system kind
+FS_Name  :FS name
+Root     :ROOT
+Self     :Self
+Parent   :Parent
+Ordinary :Name

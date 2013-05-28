@@ -1,0 +1,4 @@
+--   Local Sather message resources for unix specific implementation classes
+
+OS_SIGKINDS        os_sigs
+OS_TIMERS          os_timers

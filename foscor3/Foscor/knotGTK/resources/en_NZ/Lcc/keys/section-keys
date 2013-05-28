@@ -1,0 +1,19 @@
+--        This file contains the culture specification section keywords as
+--   defined in ISO/IEC 14652
+
+13
+
+Character groups/maps                :LC_CTYPE
+Collating order                      :LC_COLLATE
+Number formatting                    :LC_NUMERIC
+Currecny value formatting            :LC_MONETARY
+Date and Time values and formatting  :LC_TIME
+Logical question answers             :LC_MESSAGES
+Paper sizes                          :LC_PAPER
+Personal style and title             :LC_NAME
+Postal Address                       :LC_ADDRESS
+Telephone number format              :LC_TELEPHONE
+Measurement units                    :LC_MEASUREMENT
+Versions of each component above     :LC_VERSIONS
+End of a section                     :END
+

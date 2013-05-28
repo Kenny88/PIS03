@@ -1,0 +1,17 @@
+--        This file contains the names specified in ISO/IEC 14652 for the
+--   address section components of the cultural specification.
+
+12
+
+Postal Format              :postal_fmt
+Country Name               :country_name
+CEPT postal abbreviation   :country_post
+Two letter abbreviation    :country_ab2
+Three letter abbreviation  :country_ab3
+ISO3166 number             :country_num
+Geneva car code            :country_car
+Country ISBN               :country_isbn
+Language name              :lang_name
+ISO639 abbreviation        :lang_ab
+ISO639 term                :lang_term
+ISO639 library name        :lang_lib

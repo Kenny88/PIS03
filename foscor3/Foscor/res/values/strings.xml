@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Foscor</string>
+    <string name="app_name">Darkness</string>
     <string name="action_settings">Settings</string>
     <string name="Start">&quot;Touch to start&quot;</string>
     <color name="Blanco">#FFFFFFFF</color>
@@ -23,12 +23,16 @@
         <item>Spanish</item>
     </string-array>
     <string name="Language">Language</string>
-    <string name="TextoInicial">Tu nombre es Swil, vives en un pueblo de montaña a las afueras de Balmont prospera capital de Uggarden.
-\n\nEl país lleva años en paz pero tras tu decimoquinto cumpleaños escuchas rumores del este. 
-\n\nSe esta formando un terrible ejército de monstruos que lo destruyen todo a su paso. Una avanzada del ejército que buscaba algo en el pueblo te obliga a escapar. 
-\n\nTu hermano Thyre se sacrifica y se queda cubriendote las espaldas mientras sigues adentrándote en el bosque obligado a dejar atrás a amigos y família sin poder saber lo que les ha pasado.
-</string>
-<string name="TextoInicial2">¡Preparate! Tu historia comienza...</string>
+    <string name="TextoInicial">Your name is Swil, you live in a mountain village on the outskirts of Balmont capital thrives Uggarden.
+\n\nThe country alone takes years but after your fifteenth birthday hear rumors of this.
+\n\nIt is forming a terrible army of monsters to destroy everything in its path. An advanced army in the village looking for something forces you to escape.
+\n\nYour Thyre brother is sacrificed and is covering for the shoulders while still heading down into the woods forced to leave behind friends and family without being able to know what has happened.</string>
+<string name="TextoInicial2">Be ready! Your history begins...</string>
+<string name="cantCross">Ups! seems like you can\'t cross.</string>
+
 <color name="grey">#212121</color>
+<string name="Yes">Yes</string>
+<string name="No">No</string>
+<string name="ExitQuestion">Are you sure you want exit of the game?\n (may have content that is not saved)</string>
 
 </resources>

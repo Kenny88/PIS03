@@ -1,0 +1,10 @@
+5
+
+--        These are the names of the different kinds of data which may be found
+--   in the header of a map file. See the class for details.
+
+Header_Name :Name of the character set
+Charset_Alias :Character set alias name
+Mapfile_Revision :File revision number
+Mapfile_Author :File written by
+Mapfile_Info :Miscellaneous data

@@ -1,0 +1,11 @@
+10
+World_Execute :W_Exec
+World_Write :W_Write
+World_Read :W_Read
+Group_Execute :G_Exec
+Group_Write :G_Write
+Group_Read :G_Read
+Owner_Execute :Exec
+Owner_Write :Write
+Owner_Read :Read
+Sticky :Sticky

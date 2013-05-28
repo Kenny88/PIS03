@@ -1,0 +1,6 @@
+-- Test class messages, etc
+
+RES_TEST_OK                ok
+RES_TEST_BAD_NUM           bad_num
+RES_TEST_SHORT             short
+RES_TEST_COLON_OMITTED     nocolon

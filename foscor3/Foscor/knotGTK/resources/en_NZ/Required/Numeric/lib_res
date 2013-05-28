@@ -1,0 +1,6 @@
+--   Local Sather resource messages for the numeric group of classes
+
+FLT                 specials
+FLTD                specials
+MONETARY_UNITS      currencies
+NUM_SIGNS           num_signs

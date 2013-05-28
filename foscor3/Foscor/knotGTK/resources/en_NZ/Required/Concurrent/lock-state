@@ -1,0 +1,10 @@
+9
+Mutex :Mutex
+Threads :Threaded
+No_Threads :Unthreaded
+Empty :Empty
+Not_Empty :Not empty
+No_Value :No value
+Has_Value :Value held
+Open :Open
+Closed :Shut

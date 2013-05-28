@@ -1,0 +1,408 @@
+--        This is a list of 'standard' named colours (given in the sRGB colour
+--   model and in the conventional 'numeric bit-pattern' equivalent) has been
+--   produced as a minor variation on such lists as the so-called 'web-safe'
+--   colours, the SVG list of named colours, the X windows system named
+--   colours - and others.
+
+--        The lists used as sources all seemed to use light/medium/pale/dark to
+--   mean both a variation of colour saturation as well as of colour value.  In
+--   this name list colour value is indicated by dim/dark/<>/light/bright.  The
+--   actual 'numeric' value in the HSV model depends on the particular colour.
+                                        
+--        All colours have been given different names - no name contains more
+--   than one word indicating a second colour - all variants have been given
+--   non-colour names as found in some sources, others have been given single
+--   colour names from some sources which 'correspond' to 'double colour' names
+--   in others.  The equivalences are as follows -
+
+--        Mushroom             darker shades of Antique White
+--        Bright Peach         Blanched Almond
+--        Leaf Green           Green Yellow
+--        Vermillion           Orange Red
+--        Crimson              Violet Red
+
+--        Mulberry             'deep' Pink
+--        Summer Blue          'deep' Sky Blue
+
+--        Amber                'dark' Goldenrod
+--        Rose Pink            'dark' Salmon
+
+--        Lilac                'medium' Orchid
+--        Purple Haze          'medium' Purple
+
+--        Blue Haze            'light' Blue
+--        Coral Pink           'light' Coral
+--        Blush Pink           'light' Pink
+--        Apricot              'light' Salmon
+--        Cream                'light' Yellow
+
+--        Blue Jade            'pale' Turquoise
+--        Mauve                'pale' Violet Red
+
+--   NOTE The ordering of colours in this list is that given by the HSV colour
+--        model - ie sorted on Hue first, Saturation second and finally Value.
+
+360
+
+--                        sRGB colour fractions    RGB components
+--                        ---------------------    --------------
+
+:Black                   0.0000  0.0000  0.0000      0    0    0
+:Slate                   0.4118  0.4118  0.4118    105  105  105
+:Granite                 0.5451  0.5451  0.5451    139  139  139
+:Dark Grey               0.6275  0.6275  0.6275    160  160  160
+:Silver                  0.7057  0.7057  0.7057    180  180  180
+:Light Grey              0.8039  0.8039  0.8039    205  205  205
+:Gainsboro               0.8470  0.8470  0.8470    216  216  216
+:Bright Grey             0.9333  0.9333  0.9333    238  238  238
+:White Smoke             0.9608  0.9608  0.9608    245  245  245
+:Snow                    1.0000  0.9800  0.9800    255  250  250
+:Dark Rosy Brown         0.5451  0.4088  0.4088    139  104  104
+:Rosy Brown              0.7057  0.5293  0.5293    180  135  135
+:Medium Rosy Brown       0.8039  0.6029  0.6029    205  154  154
+:Light Rosy Brown        0.9333  0.7000  0.7000    238  178  178
+:Bright Rosy Brown       1.0000  0.7500  0.7500    255  191  191
+:Coral Pink              0.8039  0.4261  0.4261    205  109  109
+:Light Coral Pink        0.9333  0.4946  0.4946    238  126  126
+:Bright Coral Pink       1.0000  0.5300  0.5300    255  135  135
+:Dark Indian Red         0.5451  0.2453  0.2453    139   63   63
+:Indian Red              0.8039  0.3618  0.3618    205   92   92
+:Light Indian Red        0.9333  0.4200  0.4200    238  107  107
+:Bright Indian Red       1.0000  0.4500  0.4500    255  115  115
+:Dark Brown              0.5451  0.1363  0.1363    139   35   35
+:Brown                   0.7057  0.1764  0.1764    180   45   45
+:Light Brown             0.8039  0.2010  0.2010    205   51   51
+:Dark Firebrick          0.5451  0.1036  0.1036    139   26   26
+:Firebrick               0.7057  0.1341  0.1341    180   34   34
+:Medium Firebrick        0.8039  0.1527  0.1527    205   39   39
+:Light Firebrick         0.9333  0.1773  0.1773    238   45   45
+:Bright Firebrick        1.0000  0.1900  0.1900    255   48   48
+:Dim Red                 0.3900  0.0234  0.0234     99    6    6
+:Dark Red                0.5451  0.0000  0.0000    139    0    0
+:Medium Red              0.8039  0.0000  0.0000    205    0    0
+:Red                     0.9333  0.0000  0.0000    238    0    0
+:Bright Red              1.0000  0.0000  0.0000    255    0    0
+:Dark Misty Rose         0.5451  0.4862  0.4797    139  124  122
+:Misty Rose              0.8039  0.7171  0.7074    205  183  180
+:Light Misty Rose        0.9333  0.8325  0.8213    238  212  209
+:Bright Misty Rose       1.0000  0.8920  0.8800    255  227  224
+:Dark Salmon             0.8039  0.4277  0.3859    205  109   98
+:Salmon                  0.9333  0.4965  0.4480    238  127  114
+:Light Salmon            0.9608  0.5111  0.4612    245  130  118
+:Bright Salmon           1.0000  0.5320  0.4800    255  136  122
+:Dark Skin               0.5451  0.2671  0.2180    139   68   56
+:Light Skin              0.9333  0.4573  0.3733    238  117   95
+:Dark Tomato             0.8039  0.3187  0.2331    205   81   59
+:Tomato                  0.9333  0.3701  0.2707    238   94   69
+:Light Tomato            0.9608  0.3810  0.2786    245   97   71
+:Bright Tomato           1.0000  0.3965  0.2900    255  101   74
+:Rose Pink               0.9333  0.5911  0.4667    238  151  119
+:Coral                   0.8039  0.3971  0.2492    205  101   64
+:Light Coral             0.9333  0.4611  0.2893    238  118   74
+:Bright Coral            1.0000  0.4940  0.3100    255  126   79
+:Dark Vermillion         0.5451  0.1454  0.0000    139   37    0
+:Vermillion              0.8039  0.2144  0.0000    205   55    0
+:Light Vermillion        0.9333  0.2489  0.0000    238   63    0
+:Bright Vermillion       1.0000  0.2667  0.0000    255   68    0
+:Dark Apricot            0.8039  0.5043  0.3859    205  129   98
+:Apricot                 0.9333  0.5855  0.4480    238  149  114
+:Light Apricot           0.9608  0.6027  0.4612    245  154  118
+:Bright Apricot          1.0000  0.6273  0.4800    255  160  122
+:Dark Sienna             0.5451  0.2769  0.1526    139   71   39
+:Sienna                  0.6275  0.3188  0.1757    160   81   45
+:Medium Sienna           0.8039  0.4084  0.2251    205  104   57
+:Light Sienna            0.9333  0.4741  0.2613    238  121   67
+:Bright Sienna           1.0000  0.5080  0.2800    255  130   71
+:Dark Seashell           0.5451  0.5260  0.5124    139  134  131
+:Seashell                0.8039  0.7758  0.7557    205  198  193
+:Light Seashell          0.9333  0.9006  0.8773    238  230  222
+:Bright Seashell         1.0000  0.9650  0.9400    255  246  240
+:Dark Saddle Brown       0.1290  0.0756  0.0374     33   19   10
+:Saddle Brown            0.3300  0.1933  0.0957     84   49   24
+:Light Saddle Brown      0.5451  0.3193  0.1581    139   81   40
+:Bright Saddle Brown     0.6275  0.3676  0.1820    160   94   46
+:Dark Chocolate          0.3300  0.1645  0.0462     84   42   12
+:Chocolate               0.4118  0.2052  0.0577    105   52   15
+:Light Chocolate         0.5451  0.2716  0.0763    139   69   19
+:Milk Chocolate          0.8039  0.4006  0.1125    205  102   29
+:Dark Peach Puff         0.5451  0.4666  0.3979    139  119  101
+:Peach Puff              0.8039  0.6881  0.5868    205  175  150
+:Light Peach Puff        0.9333  0.7989  0.6813    238  204  174
+:Bright Peach Puff       1.0000  0.8560  0.7300    255  218  186
+:Sandy Brown             0.9470  0.6389  0.3693    241  163   94
+:Linen                   0.9804  0.9412  0.9020    250  240  230
+:Peach                   0.9608  0.8647  0.7686    245  221  196
+:Bright Peach            1.0000  0.9000  0.8000    255  230  204
+:Peru                    0.8039  0.5185  0.2331    205  132   59
+:Dark Bisque             0.5451  0.4876  0.4197    139  124  107
+:Bisque                  0.8039  0.7192  0.6190    205  183  158
+:Light Bisque            0.9333  0.8349  0.7186    238  213  183
+:Bright Bisque           1.0000  0.8946  0.7700    255  228  196
+:Dark Mushroom           0.5451  0.5120  0.4688    139  131  120
+:Mushroom                0.8039  0.7551  0.6913    205  193  176
+:Light Mushroom          0.9333  0.8767  0.8026    238  224  205
+:Antique White           0.9804  0.9209  0.8431    250  235  215
+:Bright Antique White    1.0000  0.9393  0.8600    255  240  219
+:Dark Tan                0.5451  0.4672  0.3652    139  119   93
+:Tan                     0.8039  0.6889  0.5386    205  176  137
+:Medium Tan              0.8470  0.7259  0.5675    216  185  145
+:Light Tan               0.9333  0.7998  0.6253    238  204  159
+:Bright Tan              1.0000  0.8570  0.6700    255  219  171
+:Dark Burlywood          0.8039  0.6680  0.4904    205  170  125
+:Burlywood               0.8470  0.7039  0.5167    216  179  132
+:Medium Burlywood        0.9333  0.7756  0.5693    238  198  145
+:Light Burlywood         0.9608  0.7984  0.5861    245  204  149
+:Bright Burlywood        1.0000  0.8310  0.6100    255  212  156
+:Dark Navajo White       0.5451  0.4753  0.3707    139  121   95
+:Navajo White            0.8039  0.7010  0.5467    205  179  139
+:Light Navajo White      0.9333  0.8138  0.6346    238  208  162
+:Bright Navajo White     1.0000  0.8720  0.6800    255  222  173
+:Papaya Whip             1.0000  0.9387  0.8400    255  239  214
+:Moccasin                1.0000  0.8888  0.7100    255  227  181
+:Dark Wheat              0.8039  0.7279  0.5868    205  186  150
+:Wheat                   0.9333  0.8451  0.6813    238  216  174
+:Light Wheat             0.9608  0.8700  0.7014    245  222  179
+:Bright Wheat            1.0000  0.9055  0.7300    255  231  186
+:Dark Orange             0.8039  0.5225  0.0000    205  133    0
+:Orange                  0.9333  0.6066  0.0000    238  155    0
+:Light Orange            0.9608  0.6245  0.0000    245  159    0
+:Bright Orange           1.0000  0.6500  0.0000    255  166    0
+:Old Lace                0.9804  0.9510  0.8922    253  243  228
+:Floral White            1.0000  0.9800  0.9400    255  250  240
+:Dark Goldenrod          0.5451  0.4154  0.0872    139  106   22
+:Goldenrod               0.8400  0.6454  0.1355    214  165   35
+:Light Goldenrod         0.9333  0.7112  0.1493    238  181   38
+:Bright Goldenrod        1.0000  0.7620  0.1600    255  194   41
+:Dark Amber              0.5451  0.3999  0.0327    139  102    8
+:Amber                   0.8039  0.5898  0.0482    205  150   12
+:Light Amber             0.9333  0.6847  0.0560    238  175   14
+:Bright Amber            1.0000  0.7337  0.0600    255  187   15
+:Dark Cornsilk           0.5451  0.5298  0.4688    139  135  120
+:Cornsilk                0.8039  0.7814  0.6914    205  199  176
+:Light Cornsilk          0.9333  0.9072  0.8026    238  231  205
+:Bright Cornsilk         1.0000  0.9720  0.8600    255  248  219
+:Dark Gold               0.5451  0.4650  0.0109    139  119    3
+:Gold                    0.8039  0.6857  0.0161    205  175    4
+:Light Gold              0.9333  0.7961  0.0187    238  203    5
+:Bright Gold             1.0000  0.8530  0.0200    255  218    5
+:Dark Khaki              0.5451  0.5222  0.3162    139  133   81
+:Khaki                   0.8039  0.7701  0.4663    205  196  119
+:Light Khaki             0.9333  0.8941  0.5413    238  228  138
+:Bright Khaki            1.0000  0.9580  0.5800    255  244  148
+:Dark Lemon Chiffon      0.8039  0.7878  0.6431    205  201  164
+:Lemon Chiffon           0.9333  0.9146  0.7466    238  233  190
+:Light Lemon Chiffon     0.9608  0.9416  0.7686    245  240  196
+:Bright Lemon Chiffon    1.0000  0.9800  0.8000    255  250  204
+:Dark Ivory              0.8039  0.8039  0.7557    205  205  193
+:Ivory                   0.9333  0.9333  0.8773    238  238  224
+:Light Ivory             0.9608  0.9608  0.9032    245  245  230
+:Bright Ivory            1.0000  1.0000  0.9400    255  255  240
+:Dark Beige              0.8039  0.8039  0.7235    205  205  184
+:Beige                   0.9470  0.9470  0.8523    241  241  217
+:Light Beige             0.9608  0.9608  0.8647    245  245  221
+:Bright Beige            1.0000  1.0000  0.9000    255  255  230
+:Dark Cream              0.9333  0.9333  0.7476    238  238  190
+:Cream                   0.9470  0.9470  0.7576    241  241  193
+:Light Cream             0.9608  0.9608  0.7686    245  245  196
+:Bright Cream            1.0000  1.0000  0.8000    255  255  204
+:Dark Yellow             0.5451  0.5451  0.0000    139  139    0
+:Yellow                  0.8039  0.8039  0.0000    205  205    0
+:Light Yellow            0.9333  0.9333  0.0000    238  238    0
+:Bright Yellow           1.0000  1.0000  0.0000    255  255    0
+:Dim Olive Green         0.3349  0.4118  0.1812     85  105   46
+:Dark Olive Green        0.4433  0.5451  0.2398    113  139   61
+:Olive Green             0.6538  0.8039  0.3537    167  205   90
+:Light Olive Green       0.7591  0.9333  0.4107    194  238  105
+:Bright Olive Green      0.8133  1.0000  0.4400    207  255  112
+:Dim Olive Drab          0.2475  0.3300  0.0825     63   84   21
+:Dark Olive Drab         0.3089  0.4118  0.1030     79  105   26
+:Olive Drab              0.4088  0.5451  0.1363    104  139   35
+:Light Olive Drab        0.6029  0.8039  0.2010    154  205   51
+:Bright Olive Drab       0.7000  0.9333  0.2333    178  238   59
+:Dark Leaf Green         0.3589  0.5451  0.0981     92  139   25
+:Leaf Green              0.5292  0.8039  0.1447    135  205   37
+:Light Leaf Green        0.6144  0.9333  0.1680    157  238   43
+:Bright Leaf Green       0.6583  1.0000  0.1800    168  255   46
+:Lime                    0.5627  0.8039  0.3216    143  205   82
+:Dark Chartreuse         0.4622  0.8039  0.1206    118  205   31
+:Chartreuse              0.5366  0.9333  0.1400    137  238   36
+:Light Chartreuse        0.5525  0.9608  0.1441    141  245   37
+:Bright Chartreuse       0.5750  1.0000  0.1500    147  255   38
+:Lawn Green              0.4902  0.9804  0.0000    125  250    0
+:Dark Honeydew           0.7557  0.8039  0.7557    193  205  193
+:Honeydew                0.8773  0.9333  0.8773    224  238  224
+:Light Honeydew          0.9032  0.9608  0.9032    230  245  230
+:Bright Honeydew         0.9400  1.0000  0.9400    240  255  240
+:Dim Grass Green         0.0452  0.1290  0.0452     12   33   12
+:Dark Grass Green        0.1908  0.5451  0.1908     49  139   49
+:Grass Green             0.2814  0.8039  0.2814     72  205   72
+:Light Grass Green       0.3267  0.9333  0.3267     83  238   83
+:Bright Grass Green      0.3500  1.0000  0.3500     89  255   89
+:Dark Forest Green       0.1308  0.5451  0.1308     33  139   33
+:Forest Green            0.1929  0.8039  0.1929     49  205   49
+:Light Forest Green      0.2240  0.9333  0.2240     57  238   57
+:Bright Forest Green     0.2400  1.0000  0.2400     61  255   61
+:Lime Green              0.1608  0.8039  0.1608     41  205   41
+:Dark Green              0.0000  0.5451  0.0000      0  139    0
+:Green                   0.0000  0.8039  0.0000      0  205    0
+:Light Green             0.0000  0.9333  0.0000      0  238    0
+:Bright Green            0.0000  1.0000  0.0000      0  255    0
+:Dark Sea Green          0.1799  0.5451  0.3321     46  139   85
+:Sea Green               0.2653  0.8039  0.4897     68  205  125
+:Medium Sea Green        0.2795  0.8470  0.5160     71  216  132
+:Light Sea Green         0.3080  0.9333  0.5685     79  238  145
+:Bright Sea Green        0.3300  1.0000  0.6092     84  255  155
+:Mint Cream              0.9600  1.0000  0.9800    245  255  250
+:Dark Spring Green       0.0000  0.8039  0.4957      0  205  126
+:Spring Green            0.0000  0.9333  0.5755      0  238  147
+:Light Spring Green      0.0000  0.9804  0.6046      0  250  154
+:Bright Spring Green     0.0000  1.0000  0.6167      0  255  157
+:Dark Aquamarine         0.2726  0.5451  0.4543     70  139  116
+:Aquamarine              0.4020  0.8039  0.6699    102  205  171
+:Medium Aquamarine       0.4235  0.8470  0.7058    108  216  180
+:Light Aquamarine        0.4667  0.9333  0.7778    119  238  198
+:Bright Aquamarine       0.5000  1.0000  0.8333    128  255  213
+:Dark Slate Blue         0.2398  0.5451  0.5044     61  139  129
+:Slate Blue              0.3537  0.8039  0.7439     90  205  190
+:Medium Slate Blue       0.4107  0.9333  0.8636    105  238  220
+:Light Slate Blue        0.4400  1.0000  0.9253    112  255  236
+:Flower Blue             0.2398  0.5451  0.5044     61  139  120
+:Azure                   0.9400  1.0000  1.0000    240  255  255
+:Dark Slate Grey         0.2574  0.3300  0.3300     66   84   84
+:Slate Grey              0.4392  0.5647  0.5647    112  144  144
+:Light Slate Grey        0.4895  0.6275  0.6275    125  160  160
+:Dark Blue Jade          0.3979  0.5451  0.5451    101  139  139
+:Blue Jade               0.5868  0.8039  0.8039    150  205  205
+:Light Blue Jade         0.6813  0.9333  0.9333    174  238  238
+:Bright Blue Jade        0.7300  1.0000  1.0000    186  255  255
+:Turquoise               0.2331  0.8039  0.8039     59  205  205
+:Medium Turquoise        0.2456  0.8470  0.8470     63  214  214
+:Light Turquoise         0.2707  0.9333  0.9333     69  238  238
+:Dim Cyan                0.0000  0.4118  0.4118      0  105  105
+:Dark Cyan               0.0000  0.5451  0.5451      0  139  139
+:Cyan                    0.0000  0.8039  0.8039      0  205  205
+:Light Cyan              0.0000  0.9333  0.9333      0  238  238
+:Bright Cyan             0.0000  1.0000  1.0000      0  255  255
+:Dark Cadet Blue         0.3271  0.5415  0.5451     83  138  139
+:Cadet Blue              0.3765  0.6233  0.6275     96  159  160
+:Light Cadet Blue        0.4234  0.7010  0.7057    108  179  180
+:Bright Cadet Blue       0.4823  0.7985  0.8039    123  204  205
+:Powder Blue             0.7000  0.9022  0.9333    178  230  238
+:Dark Summer Blue        0.0000  0.4088  0.5451      0  104  139
+:Summer Blue             0.0000  0.6029  0.8039      0  154  205
+:Light Summer Blue       0.0000  0.7000  0.9333      0  178  238
+:Bright Summer Blue      0.0000  0.7500  1.0000      0  191  255
+:Dark Blue Haze          0.6351  0.7504  0.8039    162  191  205
+:Blue Haze               0.7373  0.8712  0.9333    188  222  238
+:Medium Blue Haze        0.7481  0.8840  0.9470    191  225  241
+:Light Blue Haze         0.7590  0.8969  0.9608    194  229  245
+:Bright Blue Haze        0.7900  0.9335  1.0000    201  238  255
+:Dark Sky Blue           0.3107  0.4513  0.5451     79  115  139
+:Sky Blue                0.4582  0.6656  0.8039    117  170  205
+:Medium Sky Blue         0.4828  0.7013  0.8470    123  179  216
+:Light Sky Blue          0.5320  0.7728  0.9333    136  197  238
+:Bright Sky Blue         0.5700  0.8280  1.0000    145  211  255
+:Dark Steel Blue         0.2752  0.4905  0.7057     80  142  205
+:Steel Blue              0.3135  0.5587  0.8039     70  125  180
+:Light Steel Blue        0.3640  0.6486  0.9333     93  165  238
+:Bright Steel Blue       0.3900  0.6950  1.0000     99  177  255
+:Dark Dodger Blue        0.0654  0.3053  0.5451     17   78  139
+:Dodger Blue             0.0965  0.4502  0.8039     25  115  205
+:Light Dodger Blue       0.1120  0.5226  0.9333     29  133  238
+:Bright Dodger Blue      0.1200  0.5600  1.0000     31  143  255
+:Alice Blue              0.9400  0.9680  1.0000    240  247  255
+:Cornflower Blue         0.3920  0.5860  0.9333    100  149  238
+:Dark Royal Blue         0.1581  0.2548  0.5451     40   65  139
+:Royal Blue              0.2331  0.3758  0.8039     59   96  205
+:Medium Royal Blue       0.2456  0.3960  0.8824     63  101  216
+:Light Royal Blue        0.2707  0.4363  0.9333     69  111  238
+:Bright Royal Blue       0.2900  0.4675  1.0000     74  119  255
+:Ultramarine             0.1583  0.2230  0.5460     40   57  139
+:Dark Lavender           0.8493  0.8493  0.9333    217  217  238
+:Lavender                0.8618  0.8618  0.9470    220  220  241
+:Light Lavender          0.8743  0.8743  0.9608    223  223  245
+:Bright Lavender         0.9100  0.9100  1.0000    232  232  255
+:Dark Powder Blue        0.4088  0.4088  0.5451    104  104  139
+:Powder Blue             0.6029  0.6029  0.8039    154  154  205
+:Light Powder Blue       0.7000  0.7000  0.9333    178  178  238
+:Bright Powder Blue      0.7500  0.7500  1.0000    191  191  255
+:Midnight Blue           0.0906  0.0906  0.4118     23   23  105
+:Dim Blue                0.0000  0.0000  0.1290      0    0   33
+:Dark Blue               0.0000  0.0000  0.5451      0    0  139
+:Navy Blue               0.0000  0.0000  0.6275      0    0  153
+:Blue                    0.0000  0.0000  0.8039      0    0  205
+:Light Blue              0.0000  0.0000  0.9333      0    0  238
+:Bright Blue             0.0000  0.0000  1.0000      0    0  255
+:Dark Slate Blue         0.2862  0.2344  0.5451     73   60  139
+:Slate Blue              0.4220  0.3457  0.8039    108   88  205
+:Light Slate Blue        0.4900  0.4013  0.9333    125  102  238
+:Bright Slate Blue       0.5250  0.4300  1.0000    134  110  255
+:Dim Purple Haze         0.0687  0.0515  0.1030     18   13   26
+:Dark Purple Haze        0.2200  0.1650  0.3300     56   42   84
+:Purple Haze             0.3634  0.2726  0.5451     93   70  139
+:Light Purple Haze       0.5359  0.4020  0.8039    137  102  205
+:Ghost White             0.9875  0.9700  1.0000    252  247  255
+:Dim Neutral             0.2009  0.1861  0.2115     51   47   54
+:Dark Neutral            0.5178  0.4797  0.5451    132  122  139
+:Neutral                 0.7637  0.7074  0.8039    195  180  205
+:Medium Neutral          0.8047  0.7454  0.8470    205  190  216
+:Dark Purple             0.3520  0.0818  0.5451     90   21  139
+:Purple                  0.5192  0.1206  0.8039    132   31  205
+:Light Purple            0.6028  0.1400  0.9333    154   36  238
+:Dark Lilac              0.4797  0.2180  0.5451    122   56  139
+:Lilac                   0.7074  0.3216  0.8039    180   82  205
+:Light Lilac             0.8213  0.3733  0.9333    210   95  238
+:Bright Lilac            0.8800  0.4000  1.0000    225  102  255
+:Dark Thistle            0.8039  0.7074  0.8039    205  180  205
+:Thistle                 0.8470  0.7454  0.8470    216  190  216
+:Medium Thistle          0.9333  0.8213  0.9333    238  209  238
+:Light Thistle           0.9608  0.8455  0.9608    245  216  245
+:Bright Thistle          1.0000  0.8800  1.0000    255  224  255
+:Dark Plum               0.5451  0.3925  0.5451    139  100  139
+:Plum                    0.8039  0.5788  0.8039    205  148  205
+:Medium Plum             0.8470  0.6098  0.8470    216  156  216
+:Light Plum              0.9333  0.6720  0.9333    238  171  238
+:Bright Plum             1.0000  0.7200  1.0000    255  184  255
+:Dark Violet             0.5451  0.1363  0.5451    139   35  139
+:Violet                  0.8039  0.2010  0.8039    205   51  205
+:Light Violet            0.9333  0.2333  0.9333    238   59  238
+:Dim Magenta            0.3300  0.0000  0.3300     84    0   84
+:Dark Magenta            0.5451  0.0000  0.5451     84    0   84
+:Magenta                 0.8039  0.0000  0.8039    205    0  205
+:Light Magenta           0.9333  0.0000  0.9333    238    0  238
+:Bright Magenta          1.0000  0.0000  1.0000    255    0  255
+:Dark Orchid             0.5451  0.2726  0.5224    139   70  133
+:Orchid                  0.8039  0.4020  0.7704    205  102  196
+:Light Orchid            0.9333  0.4667  0.8944    238  119  228
+:Bright Orchid           1.0000  0.5000  0.9583    255  128  244
+:Dark Hot Pink           0.5451  0.2235  0.3843    139   57   98
+:Hot Pink                0.8039  0.3296  0.5667    205   84  145
+:Light Hot Pink          0.9333  0.3827  0.6580    238   98  168
+:Bright Hot Pink         1.0000  0.4100  0.7050    255  105  180
+:Dark Mulberry           0.8039  0.0643  0.4341    205   16  111
+:Mulberry                0.9333  0.0747  0.5040    238   19  129
+:Light Mulberry          0.9608  0.0769  0.5188    245   20  132
+:Bright Mulberry         1.0000  0.0800  0.5400    255   20  138
+:Dark Maroon             0.5451  0.1526  0.3031    139   39   77
+:Maroon                  0.6275  0.1757  0.3489    160   45   89
+:Light Maroon            0.8039  0.2251  0.4470    205   57  114
+:Bright Maroon           0.9333  0.2613  0.5189    238   67  132
+:Dark Lavender Blush     0.5451  0.5124  0.5233    139  131  133
+:Lavender Blush          0.8039  0.7557  0.7717    205  193  197
+:Light Lavender Blush    0.9333  0.8773  0.8960    238  224  228
+:Bright Lavender Blush   1.0000  0.9400  0.9600    255  240  245
+:Dark Mauve              0.5451  0.2726  0.3634    139   70   93
+:Mauve                   0.8039  0.4020  0.5359    205  102  137
+:Light Mauve             0.9333  0.4667  0.6222    238  119  159
+:Bright Mauve            1.0000  0.5000  0.6667    255  128  170
+:Dark Crimson            0.5451  0.0491  0.2144    139   13   55
+:Crimson                 0.8039  0.0724  0.3162    205   18   81
+:Medium Crimson          0.8470  0.0762  0.3332    214   19   85
+:Light Crimson           0.9333  0.0840  0.3671    238   21   94
+:Bright Crimson          1.0000  0.0900  0.3933    255   23  100
+:Dark Pink               0.8039  0.6029  0.6364    205  154  162
+:Pink                    0.9333  0.7000  0.7389    238  178  188 
+:Light Pink              0.9608  0.7206  0.7606    245  184  194
+:Bright Pink             1.0000  0.7500  0.7917    255  191  202
+:Light Blush Pink        0.9608  0.6822  0.7286    245  174  186
+:Bright Blush Pink       1.0000  0.7100  0.7583    255  181  193

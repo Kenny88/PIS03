@@ -1,0 +1,9 @@
+8
+Cut_Set :\n =
+Unknown_Script_Name :Unknown script name <1:> on line <2:>!\n
+Run_Off_EOF :Unexpected end of file at line <1:>!\n
+Missing_RS_End :Unexpected order_start keyword at line <1:>!\n
+Copy_Errors :When copying from file <1:> on line <2:> errors were detected\n
+Copy_Invalid :The copy directive on line <1:> is invalid!\n
+Out_of_Order :The keyword <1:> on line <2:> is not valid in this position!\n
+Unknown :<1:> is an unknown name on line <2:>!\n

@@ -1,0 +1,22 @@
+--        This resource file defines the default standard colours for
+--   a four-bit colour value index into some palette. The colours are taken
+--   from the standard colours file list.
+
+16
+
+:White                   1.0000  1.0000  1.0000    255  255  255
+:Bright Grey             0.9333  0.9333  0.9333    238  238  238
+:Gainsboro               0.8470  0.8470  0.8470    216  216  216
+:Light Grey              0.8039  0.8039  0.8039    205  205  205
+:Silver                  0.7057  0.7057  0.7057    180  180  180
+:Granite                 0.5451  0.5451  0.5451    139  139  139
+:Slate                   0.4118  0.4118  0.4118    105  105  105
+:Black                   0.0000  0.0000  0.0000      0    0    0
+:Dim Olive Green         0.3349  0.4118  0.1812     85  105   46
+:Light Yellow            0.9333  0.9333  0.0000    238  238    0
+:Green                   0.0000  0.8039  0.0000      0  205    0
+:Medium Red              0.8039  0.0000  0.0000    205    0    0
+:Dark Cream              0.9333  0.9333  0.7476    238  238  190
+:Lime Green              0.1608  0.8039  0.1608     41  205   41
+:Bright Orange           1.0000  0.6500  0.0000    255  166    0
+:Bright Summer Blue      0.0000  0.7500  1.0000      0  191  255

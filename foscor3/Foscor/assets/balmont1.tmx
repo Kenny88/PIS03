@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="3" margin="2">
+  <image source="gfx/desert_tiled.png" width="281" height="211"/>
+  <tile id="30">
+   <properties>
+    <property name="cactus" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="49" name="Nothing" tilewidth="32" tileheight="32">
+  <image source="Tilesets/Nothing.png" trans="ff00ff" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="50" name="sky" tilewidth="32" tileheight="32">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <image source="gfx/bosque.png" width="512" height="325"/>
+  <tile id="4">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="pass" value="tmx/desert.tmx"/>
+    <property name="x" value="28"/>
+    <property name="y" value="2"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="pass" value="tmx/desert1.tmx"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="121">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="210" name="tilec" tilewidth="32" tileheight="32">
+  <image source="gfx/tilec.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="466" name="tilea3" tilewidth="32" tileheight="32">
+  <image source="gfx/tilea3.png" width="512" height="256"/>
+ </tileset>
+ <layer name="Ground" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3DAQkAAAwEoev1/Xutx1Bw1VRVVVVVVR89wPKicwAZAAA=
+  </data>
+ </layer>
+ <layer name="arboles" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC9WYTVICMRCF+1SKNXvUC/izF9x6A3azYcERuIKcQI6gNzJT2GXT9kteZlBiql4lBSH58ibdEzITkauki6TLhurZF9dN0m3SPOm6oVq5HpIek+6S7huqlUs5l0nPDdXevwVQD6RlaD8Zof6964vG0zG9fwxfB/iQNqa9Jvh2ZszIv9Lae9OP4avxzyvyr8RlPR3Lt83w7Uyb9U+fafTsPd+L8cjWv+0fYhM5jo0a6dhvbq4V8A/FgeWzHpyKL5IE/iGfoli2fKU48DxD+9313chPPjb/KZd//p7P9v0guIf2GvSJ/GN8W5g5hOhf4ss939z+i/pH8VHaD2hv5Bg1B3j/cgXFbw2fzTlMfvH+1fLVqpZPueZyOG8xZQob4ltJ3j89b43l6+Q4X5bipda/pRzOWz4/+xytn1lPhORjcrR/J6p/3R+p9v2i/rXIJ437J//Qv97Ukex3aNyxe83HzFA0r9g1lmK+NK7PcWPPWEPRvMKyoXmnrCfHF+0R22dPzqXfvxKMbH5m+FhPpvoenU3t+6CWr5bRz1/6HeJjuLbBPOya2HUxfIw3p+Lz4yC+Tr4Ls08Q355kQx7k/MvxTfWPzTFacnwCfmv/b/k50H+xmv2nZ1XE59eAONk9Go2npeShcp37nrl0/zyXNu6bUX3ue+ZSvZQ27ptR/QnioNWAABkAAA==
+  </data>
+ </layer>
+ <layer name="Capa de patrones 3" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3VwQmAMAxG4fi7km6g++9SF7AHoV40okiivA9Cjnn0UjMAeNcgs1H+jjLV27P8HYX3e4b3w1ctXZtM9l0ZG4/6MnR6bZGNV9ui+sp2u9B3i+o/0qvtswEAAAD+ZAXDI2HgABkAAA==
+  </data>
+ </layer>
+ <layer name="Capa de patrones 4" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2VS27CMBRF/fgtgN+YbyZM6LbbrgCxgpYZMGMEpAto2o57I/xU17yYIFkEpHekK6wrJxzZkW2MotwHa2SDbC90ZZ5zeSZjXq7IK52/Y48ckCOSIh8FneR2ac5C+L8QS2H+J5IhX8g38lPQSW6Z9eM5/jrG8KuhqyMNpIm0SO4kN9cvT+o5xvBro+sgXaSH9EnucnjfMyP7sSPvdQy/EboxMkGmSEJ/HZPYMe97yM/9HmL4GXRE3ljqzGnfy/jx9xDDb4BuSP/Hc+TJdu64rF8/ot/MdrvAc7MK1+8aJD8+g6T1e8PveyA+q8h+fAYVrd+t8f3cM0havyr9Op5Dz57lVfvV6dyNYceq/NoBt5ypd9/cGv9ekeA7SFEURVEURVEU5VH4BXaZ9HAAGQAA
+  </data>
+ </layer>
+ <layer name="Capa de patrones 5" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2VwQ0CIRBFmatagW4H24nZOrYEerImO1ArUA8OiSSzE1hxgw7R/5IfOBB4mQng3H9wtBaY4cQ5cy7WIhmunBvnbi2SYUXOrTkbsjZJs2WvHacz9Ds0WptSRpqOLRBcYrwYWyC6SC8vahhTi33BXoNY42naUz2vXct3/XRPtVftPge//rlnT+kMmXoFZK/1mm+Tug/x//XK1wLZT80n7sYScvXRfbZi7vzR2PHV22H9Vpec28o/AgAAAAAAAAC/wgOU8YMrABkAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 6" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3FQQ3AIBAAQVRRB+CgdQD+HXAS7kFyfcwkm20N7ujRk3iVEc3Eq7zRl3iVFe3EAQAAAAD+4AAWRbqgABkAAA==
+  </data>
+ </layer>
+ <objectgroup color="#df2c00" name="muro" width="40" height="40">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="1221" y="42" width="53" height="767"/>
+  <object x="9" y="1173" width="1270" height="79"/>
+  <object x="5" y="109" width="53" height="507"/>
+  <object x="21" y="39" width="1218" height="67"/>
+  <object x="9" y="631" width="13" height="526"/>
+  <object x="364" y="1097" width="18" height="15"/>
+  <object x="585" y="1097" width="18" height="12"/>
+  <object x="836" y="161" width="18" height="21"/>
+  <object x="994" y="388" width="24" height="18"/>
+  <object x="64" y="108" width="319" height="271"/>
+  <object x="1260" y="816" width="12" height="352"/>
+  <object x="801" y="133" width="15" height="311"/>
+  <object x="804" y="416" width="249" height="29"/>
+  <object x="1185" y="416" width="30" height="27"/>
+  <object x="1200" y="128" width="18" height="289"/>
+  <object x="805" y="130" width="399" height="22"/>
+  <object x="868" y="121" width="314" height="77"/>
+  <object x="414" y="299" width="352" height="434"/>
+  <object x="560" y="105" width="61" height="74"/>
+  <object x="163" y="380" width="220" height="32"/>
+  <object x="65" y="378" width="58" height="33"/>
+  <object x="437" y="281" width="306" height="17"/>
+  <object x="456" y="259" width="267" height="17"/>
+  <object x="484" y="234" width="213" height="22"/>
+  <object x="504" y="213" width="173" height="16"/>
+  <object x="526" y="193" width="130" height="19"/>
+  <object x="544" y="174" width="97" height="17"/>
+ </objectgroup>
+ <objectgroup color="#ffff00" name="puertas" width="40" height="40">
+  <properties>
+   <property name="pass" value="true"/>
+  </properties>
+  <object name="puertaIzquierda" type="tmx/bosque4.tmx" x="28" y="633" width="11" height="521">
+   <properties>
+    <property name="abierta" value="true"/>
+    <property name="image" value="null"/>
+    <property name="x" value="35"/>
+    <property name="y" value="0"/>
+   </properties>
+  </object>
+  <object name="PuertaCasa" type="tmx/casabalmont1.tmx" x="127" y="385" width="32" height="27">
+   <properties>
+    <property name="abierta" value="true"/>
+    <property name="image" value="null"/>
+    <property name="x" value="0"/>
+    <property name="y" value="-1"/>
+   </properties>
+  </object>
+  <object name="puertaDerecha" type="tmx/balmont2.tmx" x="1244" y="815" width="9" height="344">
+   <properties>
+    <property name="abierta" value="true"/>
+    <property name="image" value="null"/>
+    <property name="x" value="-35"/>
+    <property name="y" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="objetos" width="40" height="40">
+  <properties>
+   <property name="object" value="true"/>
+  </properties>
+  <object name="Arma" type="Weapon" x="879" y="277" width="55" height="52">
+   <properties>
+    <property name="attack" value="100"/>
+    <property name="defense" value="100"/>
+    <property name="image" value="Attack.png"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

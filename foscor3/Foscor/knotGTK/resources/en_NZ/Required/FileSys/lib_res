@@ -1,0 +1,5 @@
+-- resource files for the file system group of classes
+
+FILE_KINDS         kinds
+PERMISSIONS        perms
+PATH_KINDS         pkinds

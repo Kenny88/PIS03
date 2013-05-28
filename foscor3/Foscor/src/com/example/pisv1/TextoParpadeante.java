@@ -21,7 +21,7 @@ public class TextoParpadeante {
      */
 	public TextoParpadeante(Context context, TextView text){
 		this.context = context;
-		this.texto = (TextView)text;
+		this.texto = text;
 	    runAnimations();
 	}
 
@@ -54,13 +54,15 @@ public class TextoParpadeante {
     
     // Runnables to start the actual animation
     private Runnable mLaunchFadeOutAnimation = new Runnable() {
-	    public void run() {
+	    @Override
+		public void run() {
 	    	launchOutAnimation();
 	    }
     };    
     
     private Runnable mLaunchFadeInAnimation = new Runnable() {
-	    public void run() {
+	    @Override
+		public void run() {
 	    	launchInAnimation();
 	    }
     };    
@@ -72,12 +74,15 @@ public class TextoParpadeante {
      *
      */
     private class LocalFadeInAnimationListener implements AnimationListener {
-	    public void onAnimationEnd(Animation animation) {
+	    @Override
+		public void onAnimationEnd(Animation animation) {
 		    texto.post(mLaunchFadeOutAnimation);
 		}
-	    public void onAnimationRepeat(Animation animation){
+	    @Override
+		public void onAnimationRepeat(Animation animation){
 	    }
-	    public void onAnimationStart(Animation animation) {
+	    @Override
+		public void onAnimationStart(Animation animation) {
 	    }
     };
     
@@ -85,12 +90,15 @@ public class TextoParpadeante {
      * Listener de animación para el Fadein
      */
     private class LocalFadeOutAnimationListener implements AnimationListener {
-	    public void onAnimationEnd(Animation animation) {
+	    @Override
+		public void onAnimationEnd(Animation animation) {
 		    texto.post(mLaunchFadeInAnimation);
 		}	
-	    public void onAnimationRepeat(Animation animation) {
+	    @Override
+		public void onAnimationRepeat(Animation animation) {
 	    }
-	    public void onAnimationStart(Animation animation) {
+	    @Override
+		public void onAnimationStart(Animation animation) {
 	    }
     };
 }

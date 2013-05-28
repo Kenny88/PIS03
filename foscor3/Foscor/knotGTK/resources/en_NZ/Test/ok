@@ -1,0 +1,7 @@
+--        This is a test file for resource testing.  The two values should
+--   reflect the values in the culture in which the testing is conducted for
+--   true and false.
+
+2
+:False
+Headed:True

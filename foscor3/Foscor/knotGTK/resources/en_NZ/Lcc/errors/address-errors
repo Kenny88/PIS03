@@ -1,0 +1,9 @@
+--        This file contains the message formatting strings for the error
+--   messages which may be needed when reading the address section source of
+--   a cultural specification in accordance with ISO/IEC 14652.
+
+3
+
+Copy_Invalid :Copy directive on line <1:> is invalid when other keywords are present\n
+Copy_Errors :Errors occurred when copying from file <1:> on line <2:>!\n
+Unknown_Keyword :The keyword <1:> is not known on line <2:>!\n

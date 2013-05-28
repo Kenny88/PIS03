@@ -1,0 +1,102 @@
+83
+Adobe_Dingbats :Dingbats(Adobe)
+Adobe_Standard :Standard(Adobe)
+Adobe_Symbol :Symbol(Adobe)
+
+Apple_Arabic :Arabic
+Apple_CntEuro :Central-Europe
+Apple_Croatian :Croatian
+Apple_Cyrillic :Cyrillic
+Apple_Dingbat :Dingbats
+Apple_Greek :Greek
+Apple_Hebrew :Hebrew
+Apple_Iceland :Iceland
+Apple_Japan :Japan
+Apple_Roman :Roman
+Apple_Romania :Romania
+Apple_Symbol :Symbol
+Apple_Thai :Thai
+Apple_Turkish :Turkish
+Apple_Ukraine :Ukraine
+     
+Big5 :Big5
+     
+CP037 :CP-037
+CP_1026 :CP-1026
+CP_1250 :CP-1250
+CP_1251 :CP-1251
+CP_1252 :CP-1252
+CP_1253 :CP-1253
+CP_1254 :CP-1254
+CP_1255 :CP-1255
+CP_1256 :CP-1256
+CP_1257 :CP-1257
+CP_1258 :CP-1258
+CP_437 :CP-437
+CP_500 :CP-500
+CP_737 :CP-737
+CP_775 :CP-775
+CP_850 :CP-850
+CP_852 :CP-852
+CP_855 :CP-855
+CP_857 :CP-857
+CP_860 :CP-860
+CP_861 :CP-861
+CP_862 :CP-862
+CP_863 :CP-863
+CP_864 :CP-864
+CP_865 :CP-865
+CP_866 :CP-866
+CP_869 :CP-869
+CP_874 :CP-874
+CP_875 :CP-875
+CP_932 :CP-932
+CP_936 :CP-936
+CP_949 :CP-949
+CP_950 :CP-950
+
+GB12345_80 :GB-12345
+GB2312_80 :GB-2312
+
+IBM038 :IBM-038
+
+ISO8859_1 :ISO8859-1
+ISO8859_10 :ISO8859-10
+ISO8859_2 :ISO8859-2
+ISO8859_3 :ISO8859-3
+ISO8859_4 :ISO8859-4
+ISO8859_5 :ISO8859-5
+ISO8859_6 :ISO8859-6
+ISO8859_7 :ISO8859-7
+ISO8859_8 :ISO8859-8
+ISO8859_9 :ISO8859-9
+
+JIS_X_0201 :JIS-0201
+JIS_X_0208 :JIS-0208
+JIS_X_0212 :JIS-0212
+
+MS_Cyrillic :MS-Cyrillic
+MS_Greek :MS-Greek
+MS_Iceland :MS-Iceland
+MS_Latin_2 :MS_Latin-2
+MS_Roman :MS-Latin-1
+MS_Turkish :MS-Turkish
+
+NEXT :NeXt
+
+Shift_JIS :Shift-JIS
+
+US_ASCII :ISO-646-US
+
+--        The next five code kinds have NO corresponding map file as they are
+--   algorithmically defined variants of ISO/IEC 10646-1:2
+
+UCS2    :UCS2
+UCS4    :UCS4
+Unicode :Unicode
+UTF7    :UTF7
+UTF8    :UTF8
+UTF16   :UTF16
+
+ --        FURTHER CODE KINDS MUST BE APPENDED HERE IN THE ORDER IN WHICH THEY
+ --   ARE ADDED TO THE CODE_KINDS CLASS!

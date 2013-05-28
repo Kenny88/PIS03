@@ -1,0 +1,7 @@
+--        This contains the names of the message files for this group
+
+UNITS              units
+ASPECTS            aspect
+DIRECTIONS         directions
+MEASURE_UNITS      measures
+UNITS              units

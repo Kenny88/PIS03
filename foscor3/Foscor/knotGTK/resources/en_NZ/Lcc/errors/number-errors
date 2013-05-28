@@ -1,0 +1,4 @@
+3
+Copy_Invalid :Copying is invalid on line <1:> when other keywords are present\n
+Copy_Errors :Errors detected while copying from file <1:> at line <2:>!\n
+Unknown_Keyword :The keyword <1:> is not known on line <2:>!\n

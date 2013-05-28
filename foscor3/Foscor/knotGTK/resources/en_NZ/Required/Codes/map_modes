@@ -1,0 +1,7 @@
+3
+
+--        The map file ( or file part) construction modes
+
+Alternate_Key_Val :Sequence of key/value pairs.
+All_Keys_All_Vals :Sequence of keys then sequence of values.
+Partial_Key_Val_Map :Key followed by a list of values, for contiguous keys.

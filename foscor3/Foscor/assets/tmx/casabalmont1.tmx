@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="3" margin="2">
+  <image source="gfx/desert_tiled.png" width="281" height="211"/>
+  <tile id="30">
+   <properties>
+    <property name="cactus" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="49" name="Nothing" tilewidth="32" tileheight="32">
+  <image source="Tilesets/Nothing.png" trans="ff00ff" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="50" name="sky" tilewidth="32" tileheight="32">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <image source="gfx/bosque.png" width="512" height="325"/>
+  <tile id="4">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="pass" value="tmx/desert1.tmx"/>
+    <property name="x" value="28"/>
+    <property name="y" value="36"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="pass" value="tmx/desert1.tmx"/>
+    <property name="x" value="30"/>
+    <property name="y" value="37"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="wall" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="210" name="tilea" tilewidth="32" tileheight="32">
+  <image source="gfx/tilea1.png" width="512" height="384"/>
+ </tileset>
+ <tileset firstgid="402" name="tileb" tilewidth="32" tileheight="32">
+  <image source="gfx/tileb.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="658" name="tilec" tilewidth="32" tileheight="32">
+  <image source="gfx/tilec.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="914" name="tiled" tilewidth="32" tileheight="32">
+  <image source="gfx/tiled.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="1170" name="indoor" tilewidth="32" tileheight="32">
+  <image source="gfx/indoor.png" width="128" height="784"/>
+ </tileset>
+ <tileset firstgid="1266" name="tilee" tilewidth="32" tileheight="32">
+  <image source="gfx/tilee.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="1522" name="tilea2" tilewidth="32" tileheight="32">
+  <image source="gfx/tilea2.png" width="512" height="384"/>
+ </tileset>
+ <tileset firstgid="1714" name="tilea3" tilewidth="32" tileheight="32">
+  <image source="gfx/tilea3.png" width="512" height="256"/>
+ </tileset>
+ <tileset firstgid="1842" name="tilea4" tilewidth="32" tileheight="32">
+  <image source="gfx/tilea4.png" width="512" height="480"/>
+ </tileset>
+ <tileset firstgid="2082" name="tilea5" tilewidth="32" tileheight="32">
+  <image source="gfx/tilea5.png" width="256" height="512"/>
+ </tileset>
+ <layer name="Ground" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3DMQkAAAwDsJ7TUf8i62MkkF5SVVVVVVXVRweqfIW3ABkAAA==
+  </data>
+ </layer>
+ <layer name="habitacion" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OsQkAAAgEMd1/H+dzBguLhwSuv6oM07f8+fPnz58/fz+fAAAAAAkWUvzBegAZAAA=
+  </data>
+ </layer>
+ <layer name="muebles" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3UwQmDUAzG8cB7G/Tqrdcu4AhdS7tFaR1AWldwBN1ANzFFQcGLgWLe4f+D8B655COHiOzlUaQKIi+t5/K+w9z3km1m3/XfaJ6PVr283zD3f9pwfr6bYTedQz6LIYF8l7hWigrNVWo9Es13jWvhvzzuS2+Y6XFfRsNMj/ti2Z8Hy/4AAAAAAABw3AQdoWLkABkAAA==
+  </data>
+ </layer>
+ <layer name="mejoras" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3TsQkAIBAEwQPFKq3T+gw/ElPBmXjTTcroOVrt3sBPphcAAAAAAJ61AUt6IaoAGQAA
+  </data>
+ </layer>
+ <objectgroup name="monstruos" width="40" height="40">
+  <properties>
+   <property name="pj" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="muro" width="40" height="40">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="451" y="6" width="23" height="438"/>
+  <object x="124" y="449" width="100" height="11"/>
+  <object x="225" y="416" width="227" height="25"/>
+  <object x="417" y="263" width="32" height="88"/>
+  <object x="55" y="416" width="72" height="24"/>
+  <object x="58" y="11" width="394" height="16"/>
+  <object x="28" y="14" width="32" height="424"/>
+  <object x="64" y="287" width="32" height="124"/>
+  <object x="65" y="42" width="30" height="50"/>
+  <object x="166" y="11" width="209" height="41"/>
+  <object x="198" y="133" width="86" height="84"/>
+  <object x="416" y="38" width="33" height="87"/>
+ </objectgroup>
+ <objectgroup name="Capa de Objetos 3" width="40" height="40">
+  <properties>
+   <property name="object" value="true"/>
+  </properties>
+ </objectgroup>
+ <objectgroup name="puertas" width="40" height="40">
+  <properties>
+   <property name="pass" value="true"/>
+  </properties>
+  <object name="puertaAbajo" type="tmx/balmont1.tmx" x="125" y="444" width="99" height="5">
+   <properties>
+    <property name="abierta" value="true"/>
+    <property name="image" value="null"/>
+    <property name="x" value="0"/>
+    <property name="y" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#00ff00" name="llaves" width="40" height="40">
+  <properties>
+   <property name="keys" value="true"/>
+  </properties>
+  <object name="tmx/balmont4.tmx" type="puertaArriba" x="115" y="120" width="51" height="84">
+   <properties>
+    <property name="abrir" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="personajes" width="40" height="40">
+  <properties>
+   <property name="pj" value="true"/>
+  </properties>
+  <object name="personaje" type="anciano" x="115" y="123" width="46" height="77">
+   <properties>
+    <property name="imagen" value="anciano.png"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

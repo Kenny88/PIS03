@@ -1,0 +1,11 @@
+9
+Heading :Regular Expression Error : 
+Trailing_Chars :The string '<1:>' was found after a right anchor!
+Unexpected_Char :Unexpected character '<1:>' found!
+Missing_Brace :The character '<1:>' found instead of a right brace!
+Missing_Dup_No :The character '<1:>' found instead of a duplication count!
+Missing_Right_Paren :Missing right parenthesis at position <1:>!
+Missing_Right_Bracket :Missing right bracket at position <1:>!
+Escape_Last :Escape character at position <1:> - at end!
+Empty_Brackets :Empty bracketed expression at position <1:>!
+

@@ -1,0 +1,19 @@
+--        This file contains the format strings used for reporting exceptions
+--   from the Sather Required Library.  With a few exceptions these are
+--   concerned with the program environment and resource files provided in
+--   this implementation.
+
+12
+
+Prefix            :In object of class <1:> :-\n\t 
+File_Error        :<1:> for file <2:>
+Access_Error      :Access error for <1:>
+Bad_Type          :Object of type <1:> not expected
+Bad_Value         :Invalid expression value - "<1:>"
+Bad_Format        :Format code error after "<1:>"
+Bad_Name          :<1:> is not a valid name
+Bad_Environment   :Environment variable <1:> not found
+Bad_Map           :Invalid code conversion map for <1:>
+Resource_Missing  :Class resource file <1:> missing
+Domain_Error      :<1:> is not in the class domain
+Range_Error       :<1:> is not in the class range

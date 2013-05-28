@@ -1,0 +1,13 @@
+12
+Cut_Set : ;
+Not_Code :<1:> on line <2:> is not a code name!\n
+Empty_Range :The range on line <1:> is empty!\n
+Run_Off_EOF :Unexpected end of file at line <1:>!\n
+Run_Off_Order :Missing order end detected at line <1:>!\n
+Unexpected_Key :The keyword <1:> on line <2:> is invalid there!\n
+No_Rule :There is no rule on line <1:>!\n
+Missing_RS_End :The reorder_script_end keyword is missing at line <1:>!\n
+Unknown_Wt :The weight name <1:> on line <2:> has not been defined!\n
+Unexpected_Name :<1:> on line <2:> is not a keyword\n
+Invalid_Count : Invalid count <1:>.\n
+Internal :Internal compiler script error concerning <1:>!\n

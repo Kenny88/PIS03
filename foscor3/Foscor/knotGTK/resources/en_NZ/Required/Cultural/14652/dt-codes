@@ -1,0 +1,40 @@
+--        This file contains the codes used in accordance with ISO/IEC 14652
+--   for specifying date and time formatting.
+
+34
+ADay_Name        :a
+Day_Name         :A
+AMonth_Name      :b
+Month_Name       :B
+Full_DT          :c
+Century          :C
+Month_Day        :d
+Numeric_Date     :D
+Filled_Month_Day :e
+Weekday_Num      :f
+ISO_Date         :F
+Alt_AMonth_Name  :h
+Hour             :H
+Rel_Hour         :I
+Year_Day         :j
+Year_Month       :m
+Minutes          :M
+New_Line         :n
+Am_Pm            :p
+Rel_Time         :r
+Seconds          :S
+Tab              :t
+Time             :T
+Year_Sun_Week    :U
+Week_Day         :w
+Year_Mon_Week    :W
+Local_Date       :x
+Local_Time       :X
+Century_Year     :y
+Year             :Y
+Time_Zone        :Z
+Percent          :%
+
+Era_Prefix       :E
+Alternate_Prefix :O
+

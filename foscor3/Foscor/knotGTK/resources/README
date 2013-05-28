@@ -1,0 +1,10 @@
+                              IMPORTANT NOTICES
+
+1.   This is empty for the base package.  To compile/run programs the Required
+     Library (doc, lib, resources and test directories) needs to be merged
+     into Sather Home directory.
+     
+2.   Reference should be made to the Resources sub-directory of the
+     doc/specifications directory for the details of how to create resource
+     files for a particular culture and machine-encoding.
+

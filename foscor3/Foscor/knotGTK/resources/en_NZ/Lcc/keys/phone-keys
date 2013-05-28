@@ -1,0 +1,7 @@
+6
+International_Format :tel_int_fmt
+Domestic_Format :tel_dom_fmt
+Internal_Access :int_select
+Foreign_Access :int_prefix
+Area_Access :area_prefix
+Local_Access :local_prefix

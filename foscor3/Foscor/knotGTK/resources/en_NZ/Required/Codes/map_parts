@@ -1,0 +1,7 @@
+3
+
+--        File section indicators
+
+End_Mark :End of file section.
+Infinite :Section is of arbitrary size.
+Byte_Size :Section contains up to 255 entries.

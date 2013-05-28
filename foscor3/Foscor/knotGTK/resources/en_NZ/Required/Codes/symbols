@@ -1,0 +1,43 @@
+--        These names are the names of the various non-script sections of
+--   the Unicode version 3.0 specification (unified with ISO/IEC 10646-1:2000).
+
+20
+
+--        The international  Braille dot codes for the blind
+
+Braille :Braille
+
+--        The forms of character which modify letter spacing.
+
+Modifiers :Letter Space Modifiers
+
+--        The spacing and punctuation group are used in ordinary text.
+
+Spacing :Spacing
+Punctuation :Punctuation - General and Script specific
+
+--        The following groups are visible marks in various categories.
+
+Currency :Currency Symbols
+Letter_Like :Like letters
+Super_Sub :Super and sub-scripts
+Number_Forms :Numeric Forms
+Maths_Operators :Maths Operators
+Arrows :Arrows
+Misc_Technical :Technical Miscellanea
+Control_Code_Pictures :Control code 'pictures'
+OCR_Symbols :OCR specials
+
+--        These groups enable forms of picture to be 'drawn' using the
+--   character shapes.
+
+Box_Drawing :Box Drawing
+Block_Elements :Block shapes
+Geometric_Shapes :Geometric shapes
+Miscellaneous :Miscellaneous shapes
+Dingbats :Dingbats
+Enclosed_Forms :Enclosed characters
+
+--        The codes in the following group are NOT characters.
+
+Special :Special

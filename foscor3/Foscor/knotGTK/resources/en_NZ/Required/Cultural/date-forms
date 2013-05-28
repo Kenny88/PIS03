@@ -1,0 +1,7 @@
+--        Time zone dates may be presented in any of the following forms for
+--   which a suitable text description is given.
+
+3
+Zero_Based :
+Julian : Julian date
+Month_Based : Gregorian date

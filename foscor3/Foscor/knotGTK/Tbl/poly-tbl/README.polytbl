@@ -1,0 +1,15 @@
+About "poly-table.tex"
+K.Kodama(kodama@kobe-kosen.ac.jp)
+
+"poly-table.tex" and other TeX files are
+table of polynomials for knots.
+"poly-table.tex" is a LaTeX2.09 file.
+And other file is "\input"ed in "poly-table.tex" file.
+Compile twice because of "\tableofcontents" .
+
+
+Documents are copyright(c) 1997 K.Kodama,
+and it's a free document.
+You can redistribute it under the terms of 
+the GNU General Public License.
+------------------------------------------------

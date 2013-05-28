@@ -1,0 +1,5 @@
+4
+Cut_Set :; ,
+Start :No range start given on line <1:>!\n
+Unknown_Name :<1:> has not been defined as a weight name on line <2:>!\n
+Unknown_Rule :<1:> is not a valid rule token on line <2:>\n

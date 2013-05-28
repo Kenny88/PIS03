@@ -1,0 +1,7 @@
+6
+File_Path :<1:> is not a valid file path\n
+File_Access :Unable to access file <1:> for reading\n
+Bad_Nesting :Incorrect conditional nesting detected at line <1:>\n
+Missing_Toggle :Toggle name required on line <1:>\n
+Dup_Name :Duplicate toggle <1:> defined on line <2:>\n
+Unknown :Unknown conditional keyword <1:> on line <2:>\n

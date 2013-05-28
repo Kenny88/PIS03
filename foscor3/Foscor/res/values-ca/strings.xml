@@ -1,11 +1,36 @@
 <resources>
+<string name="search_occurs">\'{string}\' occurs {times}</string>
+    <string name="app_name">Foscor</string>
+    <string name="action_settings">Adjustaments</string>
+    <string name="Start">&quot;Toca per començar&quot;</string>
+    <string name="Continue">&quot;Continuar&quot;</string>
+    <string name="Load">&quot;Carregar&quot;</string>
+    <string name="Options">&quot;Opcions&quot;</string>
+    <string name="Exit">&quot;Sortir&quot;</string>
+    <string name="New">&quot;Nou&quot;</string>
+    <string name="textViewtest">Missatge de debug</string>
+    <string name="Save1">&quot;Guardat1&quot;</string>
+    <string name="Save2">&quot;Guardat2&quot;</string>
+    <string name="Save3">&quot;Guardat3&quot;</string>
+    <string name="Return">&quot;Tornar&quot;</string>
+    <string name="Sound">Só</string>
+    <string name="Difficulty">Dificutat</string>
+    <string-array name="Language">
+        <item>Anglès</item>
+        <item>Català</item>
+        <item>Espanyol</item>
+    </string-array>
+    <string name="Language">Idioma</string>
+    <string name="TextoInicial">El teu nom és Swil, vius en un poble de montanya a les afores de Balmont pròspera capital d\'Uggarden.
+\n\nEl país porta anys en pau però després del teu quinzé aniversari escoltes rumors de l\'est. 
+\n\nSe esta forman un terrible exércit de monstres que ho destrueixen tot al seu pas. Una vanguardia d\'aquest exércit que buscaba alguna cosa al teu poble t\'obliga a escapar. 
+\n\nEl teu germà Thyre es sacrifica i es queda cuidante les esquenes mentres tu segueixes endinsante al bosc obligat a deixar enrere amics i familia sense saber ni tan sols si estan vius.
+</string>
+<string name="TextoInicial2">Peparat! La teva história esta a punt de començar!!...</string>
+<string name="cantCross">Ups! sembla que no pots creuar.</string>
 
-    <string name="Continue">Continuar</string>
-    <string name="Exit">Sortir</string>
-    <string name="Load">Carregar</string>
-    <string name="New">Nou</string>
-    <string name="Options">Opcions</string>
-    <string name="Start">Toca per començar</string>
-    <string name="action_settings">Configuració</string>
+<string name="Yes">Si</string>
+<string name="No">No</string>
+<string name="ExitQuestion">Estas segur de que vols sortir de la partida?\n(pot haverhi contingut que no s\'hagi guardat)</string>
 
 </resources>

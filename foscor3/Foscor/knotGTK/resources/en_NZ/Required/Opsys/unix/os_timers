@@ -1,0 +1,8 @@
+4
+
+--        A conforming POSIX implementation need only provide the first of these
+
+Default :Default timer
+Virtual :Virtual timer
+Profile :Profile timer
+Real_Profile :Real-time profile timer

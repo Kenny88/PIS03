@@ -36,7 +36,7 @@ public class NewGameActivity extends Activity {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         	setContentView(R.layout.activity_new);
         	
-final View Start = (View) findViewById(R.id.click_new);
+final View Start = findViewById(R.id.click_new);
         	
           
             

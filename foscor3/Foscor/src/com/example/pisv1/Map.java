@@ -9,9 +9,7 @@ import org.andengine.entity.modifier.PathModifier.IPathModifierListener;
 import org.andengine.entity.modifier.PathModifier.Path;
 import org.andengine.entity.primitive.Rectangle;
 import org.andengine.entity.scene.Scene;
-import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.sprite.Sprite;
-import org.andengine.extension.physics.box2d.PhysicsConnector;
 import org.andengine.extension.physics.box2d.PhysicsFactory;
 import org.andengine.extension.physics.box2d.PhysicsWorld;
 import org.andengine.extension.tmx.TMXLayer;
@@ -28,15 +26,18 @@ import org.andengine.opengl.texture.TextureOptions;
 import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlas;
 import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextureRegionFactory;
 import org.andengine.opengl.texture.region.ITextureRegion;
-import org.andengine.util.Constants;
 import org.andengine.util.debug.Debug;
 
+import android.graphics.Point;
 import android.util.Log;
 
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
+import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.ContactImpulse;
+import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.Manifold;
 
 /**
  * (c) 2010 Nicolas Gramlich
@@ -60,21 +61,20 @@ public class Map {
 	private Scene mMapScene;
 	private PhysicsWorld mPhysicsWorld;
 	
+	private int tileHeight;
+	private int tileWight;
+	private int tileNumX;
+	private int tileNumY;
 	
+	private boolean[][] tileMatrix;
 	
-	/* The categories. */
-	public static final short CATEGORYBIT_WALL = 1;
-	public static final short CATEGORYBIT_CHARACTER = 2;
-	public static final short CATEGORYBIT_CIRCLE = 4;
+	public PhysicsWorld getmPhysicsWorld() {
+		return mPhysicsWorld;
+	}
 
-	/* And what should collide with what. */
-	public static final short MASKBITS_WALL = CATEGORYBIT_WALL + CATEGORYBIT_CHARACTER + CATEGORYBIT_CIRCLE;
-	public static final short MASKBITS_CHARACTER = CATEGORYBIT_WALL + CATEGORYBIT_CHARACTER; // Missing: CATEGORYBIT_CIRCLE
-	public static final short MASKBITS_CIRCLE = CATEGORYBIT_WALL + CATEGORYBIT_CIRCLE; // Missing: CATEGORYBIT_BOX
-
-	public static final FixtureDef WALL_FIXTURE_DEF = PhysicsFactory.createFixtureDef(0, 0.5f, 0.5f, false, CATEGORYBIT_WALL, MASKBITS_WALL, (short)0);
-	public static final FixtureDef CHARACTER_FIXTURE_DEF = PhysicsFactory.createFixtureDef(1, 0.5f, 0.5f, false, CATEGORYBIT_CHARACTER, MASKBITS_CHARACTER, (short)0);
-	public static final FixtureDef CIRCLE_FIXTURE_DEF = PhysicsFactory.createFixtureDef(1, 0.5f, 0.5f, false, CATEGORYBIT_CIRCLE, MASKBITS_CIRCLE, (short)0);
+	private String mName;
+	private Doors doors=new Doors();
+	
 
 
 	
@@ -97,28 +97,22 @@ public class Map {
 	public Map(String name,Game app1,final Player player) {
 		this.mMapScene=new Scene();
 		this.app=app1;
+		this.mName=name;
 		mPhysicsWorld=new PhysicsWorld(new Vector2(0,0),false);
+		mPhysicsWorld.setContactListener(app.listener);
 		this.mMapScene.registerUpdateHandler(this.mPhysicsWorld);
-		player.registerUpdateHandler(mPhysicsWorld);
 		try {
 			final TMXLoader tmxLoader = new TMXLoader(app.getAssets(), app.getEngine().getTextureManager(), TextureOptions.BILINEAR_PREMULTIPLYALPHA, app.getVertexBufferObjectManager(), new ITMXTilePropertiesListener() {
 				@Override
 				public void onTMXTileWithPropertiesCreated(final TMXTiledMap pTMXTiledMap, final TMXLayer pTMXLayer, final TMXTile pTMXTile, final TMXProperties<TMXTileProperty> pTMXTileProperties) {
-					/* We are going to count the tiles that have the property "cactus=true" set. */
-					if(pTMXTileProperties.containsTMXProperty("wall", "true")) {
-		                final Rectangle rect = new Rectangle(0.0f+pTMXTile.getTileX(), 0.0f+pTMXTile.getTileY(),0.0f+pTMXTile.getTileWidth(), 0.0f+ pTMXTile.getTileHeight(), app.getVertexBufferObjectManager());
-//		           		rect.setColor(0,1, 1, 0.5f);
-	                    PhysicsFactory.createBoxBody(mPhysicsWorld, rect, BodyType.StaticBody, WALL_FIXTURE_DEF);
-//	                    rect.setVisible(false);
-//		           		mMapScene.attachChild(rect);
-						
-					}
-					if(pTMXTileProperties.containsTMXProperty("monster", "true")){
-						
-					}
+
 				}
 			});
 			this.mTMXTiledMap = tmxLoader.loadFromAsset(name);
+			tileNumX=mTMXTiledMap.getTileColumns();
+			tileNumY=mTMXTiledMap.getTileRows();
+			tileHeight=mTMXTiledMap.getTileHeight();
+			tileWight=mTMXTiledMap.getTileColumns();
 
 			
 		} catch (final TMXLoadException e) {
@@ -130,6 +124,14 @@ public class Map {
 			mMapScene.attachChild(this.mTMXTiledMap.getTMXLayers().get(layerID));
 	}
         // Loop through the object groups
+		
+		tileMatrix=new boolean[tileNumY][tileNumX];
+		
+		for(int i=0;i<tileNumY;i++){
+			for(int j=0;j<tileNumX;j++){
+				tileMatrix[i][j]=false;
+			}
+		}
         for(final TMXObjectGroup group: this.mTMXTiledMap.getTMXObjectGroups()) 
         {
         	if(group.getTMXObjectGroupProperties().containsTMXProperty("wall", "true"))
@@ -137,37 +139,38 @@ public class Map {
 	            // This is our "wall" layer. Create the boxes from it
 	            for(TMXObject object : group.getTMXObjects()) 
 	            {
+	            	setWalls(object);
 	                final Rectangle rect = new Rectangle(0.0f+object.getX(), 0.0f+object.getY(),0.0f+object.getWidth(), 0.0f+ object.getHeight(), app.getVertexBufferObjectManager());
-//	           		rect.setColor(1, 0, 0, 0.5f);
-                    PhysicsFactory.createBoxBody(mPhysicsWorld, rect, BodyType.StaticBody, WALL_FIXTURE_DEF);
-//                    rect.setVisible(false);
-//	           		mMapScene.attachChild(rect);
+	           		rect.setColor(1, 0, 0, 0.5f);
+                    PhysicsFactory.createBoxBody(mPhysicsWorld, rect, BodyType.StaticBody, app.WALL_FIXTURE_DEF).setUserData("wall");
+                    rect.setVisible(true);
+	           		mMapScene.attachChild(rect);
 	            }
             }
         	if(group.getTMXObjectGroupProperties().containsTMXProperty("object", "true"))
 	        {
-	            // This is our "wall" layer. Create the boxes from it
+	            // This is our "object" layer. Create the boxes from it
 	            for(final TMXObject object : group.getTMXObjects()) 
 	            {
-	           		int w=40,h=40;
-	    			BitmapTextureAtlas texture = new BitmapTextureAtlas(((Game) app).getTextureManager(), w, h, TextureOptions.BILINEAR);
-	    			ITextureRegion region = BitmapTextureAtlasTextureRegionFactory.createFromAsset(texture, ((Game) app), object.getTMXObjectProperties().get(2).getValue(), 0, 0);
-	    			texture.load();
-	    			final Sprite sprite= new Sprite(object.getX(), object.getY(),w,h,region,app.getVertexBufferObjectManager());
-	           		mMapScene.attachChild(sprite);
-	           		sprite.registerUpdateHandler(new IUpdateHandler() {
-		           		   @Override
-		           		   public void reset() { }
-		           		       
-		           		   @Override
-		           		   public void onUpdate(final float pSecondsElapsed) {
-		           		      if (sprite.collidesWith(player.getAnimatedSprite())&&sprite.isVisible()){
-		           		    	  Log.d("getObject", object.getType());
-		           		    	  app.menu.addItem(object.getTMXObjectProperties().get(2).getValue(), object.getName(), Integer.valueOf(object.getTMXObjectProperties().get(0).getValue()), Integer.valueOf(object.getTMXObjectProperties().get(1).getValue()), object.getType());
-		           		    	  sprite.setVisible(false);
-		           		      }
-		           		   }
-		           		});
+	            	new MapItem(object,app,this);
+	         
+		        }	
+            }
+        	if(group.getTMXObjectGroupProperties().containsTMXProperty("keys", "true"))
+	        {
+	            // This is our "object" layer. Create the boxes from it
+	            for(final TMXObject object : group.getTMXObjects()) 
+	            {
+	            	new Key(object,app,this);
+		        }	
+            }
+        	if(group.getTMXObjectGroupProperties().containsTMXProperty("pass", "true"))
+	        {
+	            // This is our "door" layer. Create the boxes from it
+	            for(final TMXObject object : group.getTMXObjects()) 
+	            {
+	            	Door door=new Door(object,app,this);
+	                getDoors().add(door);
 		        }	
             }
         	if(group.getTMXObjectGroupProperties().containsTMXProperty("pj", "true"))
@@ -177,50 +180,20 @@ public class Map {
 	        		
 	        		final Character anciano = new Character(object.getX(), object.getY(),object.getTMXObjectProperties().get(0).getValue(),app);
 	           		mMapScene.attachChild(anciano.getAnimatedSprite());
-	           		final Path path = new Path(5).to(0, 160).to(0, 500).to(1200, 500).to(1200, 160).to(0, 160);
-	           		anciano.getAnimatedSprite().registerUpdateHandler(new IUpdateHandler() {
-		           		   @Override
-		           		   public void reset() { }
-		           		       
-		           		   @Override
-		           		   public void onUpdate(final float pSecondsElapsed) {
-//		           			  anciano.setPosition(anciano.getAnimatedSprite().getX(), anciano.getAnimatedSprite().getY());
-		           		   }
-		           		});
-	        		anciano.getAnimatedSprite().registerEntityModifier(new LoopEntityModifier(new PathModifier(30, path, null, new IPathModifierListener() {
-	        			@Override
-	        			public void onPathStarted(final PathModifier pPathModifier, final IEntity pEntity) {
-
-	        			}
-
-	        			@Override
-	        			public void onPathWaypointStarted(final PathModifier pPathModifier, final IEntity pEntity, final int pWaypointIndex) {
-	        				switch(pWaypointIndex) {
-	        					case 0:
-	        						anciano.getAnimatedSprite().animate(new long[]{200, 200, 200}, 0, 2, true);
-	        						break;
-	        					case 1:
-	        						anciano.getAnimatedSprite().animate(new long[]{200, 200, 200}, 6, 8, true);
-	        						break;
-	        					case 2:
-	        						anciano.getAnimatedSprite().animate(new long[]{200, 200, 200}, 9, 11, true);
-	        						break;
-	        					case 3:
-	        						anciano.getAnimatedSprite().animate(new long[]{200, 200, 200}, 3, 5, true);
-	        						break;
-	        				}
-	        			}
-
-	        			@Override
-	        			public void onPathWaypointFinished(final PathModifier pPathModifier, final IEntity pEntity, final int pWaypointIndex) {
-
-	        			}
-
-	        			@Override
-	        			public void onPathFinished(final PathModifier pPathModifier, final IEntity pEntity) {
-
-	        			}
-	        		})));
+	           		anciano.addToPhysicsWorld(mPhysicsWorld, app.CHARACTER_FIXTURE_DEF);
+	           		
+		        }	
+            }
+        	if(group.getTMXObjectGroupProperties().containsTMXProperty("enemy", "true"))
+	        {
+	            for(TMXObject object : group.getTMXObjects()) 
+	            {
+	        		
+	        		final Enemy anciano = new Enemy(object.getX(), object.getY(),object.getTMXObjectProperties().get(0).getValue(),app,this);
+	           		mMapScene.attachChild(anciano.getAnimatedSprite());
+	           		anciano.addToPhysicsWorld(mPhysicsWorld, app.CHARACTER_FIXTURE_DEF);
+	           		anciano.startUpdate();
+	           		
 		        }	
             }
         }
@@ -228,25 +201,87 @@ public class Map {
 		/* Make the camera not exceed the bounds of the TMXEntity. */
 		app.mBoundChaseCamera.setBounds(0, 0, mTMXTiledMap.getTileRows()*mTMXTiledMap.getTileHeight(), mTMXTiledMap.getTileColumns()*mTMXTiledMap.getTileWidth());
 		app.mBoundChaseCamera.setBoundsEnabled(true);
-		player.addToPhysicsWorld(mPhysicsWorld, CHARACTER_FIXTURE_DEF);
-		mMapScene.attachChild(player.getAnimatedSprite());
 	}
 	
 	
-	public Map(String name,Game app1,Player player,int positionX,int positionY){
+	public Map(String name,Game app1,Player player,float positionX,float positionY){
 		this(name,app1, player);
-		float [] playerFootCordinates = mMapScene.convertLocalToSceneCoordinates(positionX,positionY);
-		player.setPosition(playerFootCordinates[Constants.VERTEX_INDEX_X], playerFootCordinates[Constants.VERTEX_INDEX_Y]);
+		player.setVelocity(0,0);
+		player.setPosition(positionX, positionY);
+		
+	}
 
+	public void addPlayer(Player player, float x, float y) {
+		addPlayer(player);
+		player.setPosition(x, y);
+	}
+	public void deletePlayer(final Player player){
+		player.unregisterUpdateHandler(mPhysicsWorld);
+		player.detach(mPhysicsWorld);
 	}
 
 	public Scene getMapScene(){
 		return mMapScene;
 	}
 
-	public void delete() {
-		mMapScene.detachChildren();
-		mPhysicsWorld.clearPhysicsConnectors();
+	public String getName() {
+		// TODO Auto-generated method stub
+		return mName;
+	}
+
+	public void addPlayer(Player player) {
+		player.registerUpdateHandler(mPhysicsWorld);
+		mMapScene.attachChild(player.getAnimatedSprite());
+		player.addToPhysicsWorld(mPhysicsWorld, app.CHARACTER_FIXTURE_DEF);
+		
+	}
+
+	public Doors getDoors() {
+		return doors;
+	}
+
+
+	public void setWalls(TMXObject object){
+		int startx, starty, finalx, finaly, i, j;
+		Log.d("Localitzacio tile", Float.toString(object.getX())+" "+Float.toString(object.getX()));
+		startx=object.getX()/tileWight;
+		starty=object.getY()/tileHeight;
+		finalx=(object.getX()+object.getWidth())/tileWight;
+		finaly=(object.getY()+object.getHeight())/tileHeight;
+		for(i=starty;i<finaly;i++){
+			for(j=startx;j<finalx;j++){
+				tileMatrix[i][j]=true;
+				Log.d("FIca wall tile",Integer.toString(i)+" "+Integer.toString(j));
+			}
+		}
+	}
+	
+	public boolean[][] getTileMap(){
+		return tileMatrix;
+	}
+
+	public float getPlayerX(){
+		return app.mPlayer.mAnimatedSprite.getX();
+	}
+	
+	public float getPlayerY(){
+		return app.mPlayer.mAnimatedSprite.getY();
+	}
+	
+	public int getTileX(){
+		return tileWight;
+	}
+	public int getTileY(){
+		return tileHeight;
+	}
+	public int getTileNumX(){
+		return tileNumX;
+	}
+	public int getTileNumY(){
+		return tileNumY;
+	}
+	public Point getPlayerTile(){
+		return new Point((int)(app.mPlayer.mAnimatedSprite.getX())/tileWight, (int)(app.mPlayer.mAnimatedSprite.getY())/tileHeight);
 	}
 
 	// ===========================================================

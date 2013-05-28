@@ -1,0 +1,19 @@
+--        The kinds of files known to the operating system - matching the
+--   encoding used in posix systems.
+
+15
+Pipe           :Pipe
+Char_Device    :Character Device
+:Unused
+Directory      :Directory
+Xenix_Special  :Xenix
+Block_Device   :Block Device
+:Unused
+Normal         :File
+:Unused
+Link_Only      :Link
+Network_Device :Network Device
+Driver_Socket  :Socket
+Door           :Door
+Hidden         :Hidden
+System_Special :Special

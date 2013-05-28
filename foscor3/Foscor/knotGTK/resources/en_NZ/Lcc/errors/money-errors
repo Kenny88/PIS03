@@ -1,0 +1,8 @@
+7
+Extras :<1:> on line <2:> is not valid after a copy directive!\n
+Illegal_Copy :Copy directive is invalid on line <1:>!\n
+Copy_Errors :Errors detected while copying from file <1:> at line <2:>!\n
+Semicolon :Missing semicolon on line <1:>!\n
+Bad_Date :Date format is not 'YYYYMMDD' on line <1:>!\n
+Exchange :Exchange Rate Numerator may not be negative or zero on line <1:>!\n
+Unknown:<1:> is an unknown keyword on line <2:>

@@ -1,0 +1,12 @@
+7
+
+--        The message text values for this class are specified in ISO/IEC 14652
+--   and should therefore not be altered.  See also the lcc-Data directory.
+
+Define :define
+Undefine :undef
+If_Defined :ifdef
+If_Not_Defined :ifndef
+Else_If :elif
+Else :else
+End_If :endif

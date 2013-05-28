@@ -1,0 +1,7 @@
+--        This file contains the description of the different ways in which
+--   spacing may be introduced as part of some monetary value representation.
+
+3
+None :None
+Value_Sep :Value separator
+Sign_Sep :Sign separator

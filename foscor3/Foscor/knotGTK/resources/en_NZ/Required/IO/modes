@@ -1,0 +1,13 @@
+12
+Read_Text :Read Text
+Read_Binary :Read Binary
+Write_Text :Write Text
+Write_Binary :Write Binary
+Append_Text :Append Text
+Append_Binary :Append Binary
+Update_Text :Update Text
+Update_Binary :Update Binary
+App_Upd_Text :Append Update Text
+App_Upd_Binary :Append Update Binary
+Create_Upd_Text :Create Update Text
+Create_Upd_Binary :Create Update Binary

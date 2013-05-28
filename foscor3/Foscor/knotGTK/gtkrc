@@ -1,0 +1,89 @@
+
+# pixmap_path "/usr/include/X11R6/pixmaps:/home/imain/pixmaps"
+
+style "menu"
+{
+  fg[NORMAL]      = "#333333"
+  bg[NORMAL]      = "#e0e0e0" # submenu, separate
+  fg[PRELIGHT]    = "#108010" # selected item
+  bg[PRELIGHT]    = "#c0c0c0" # selected background
+  fg[INSENSITIVE] = "#a0a0a0" # insensitive item
+#  bg[INSENSITIVE] = "#e0e0e0"
+#  fg[ACTIVE]      = "#ff0000"
+#  bg[ACTIVE]      = "#ff0000"
+#  fg[SELECTED]    = "#ff0000"
+#  bg[SELECTED]    = "#ff0000"
+  fontset = "-adobe-helvetica-bold-r-*-*-18-*-*-*-*-*-*-*"
+}
+
+style "graph"
+{
+  fg[NORMAL]      = "#202020" # line
+  fg[SELECTED]    = "#dde4e0" # background
+  fg[INSENSITIVE] = "#af5faf" # active line
+  fg[ACTIVE]      = "#ffffff" #
+  fg[PRELIGHT]    = "#ffffff" #
+}
+
+style "display"
+{
+  fg[NORMAL] = "#333399" # Blue
+  fontset = "-adobe-helvetica-bold-r-*-*-16-*-*-*-*-*-*-*"
+}
+
+style "dialog"
+{
+  fg[NORMAL]      = "#339999" # label color
+  bg[NORMAL]      = "#dddddd" # background color
+  fg[PRELIGHT]    = "#00ffff" # selected button
+  bg[PRELIGHT]    = "#888888" # selected background
+  fg[ACTIVE]      = "#202020" # at pressing button
+  bg[ACTIVE]      = "#f0f0f0" # at pressing button
+#  fg[SELECTED]    = "#0000ff"
+#  bg[SELECTED]    = "#d0d0d0"
+#  fg[INSENSITIVE] = "#0000ff" # insensitive item
+#  bg[INSENSITIVE] = "#ff0000"
+  fontset = "-adobe-helvetica-normal-r-*-*-18-*-*-*-*-*-*-*"
+}
+
+style "button"
+{
+  fg[NORMAL]      = "#003366" # button label color
+  bg[NORMAL]      = "#cccccc" # button background
+  fg[PRELIGHT]    = "#00ffff" # selected button
+  bg[PRELIGHT]    = "#888888" # selected button
+  fg[ACTIVE]      = "#202020" # at pressing button
+  bg[ACTIVE]      = "#f0f0f0" # at pressing button
+#  fg[SELECTED]    = "#0000ff"
+#  bg[SELECTED]    = "#d0d0d0"
+#  fg[INSENSITIVE] = "#0000ff"
+#  bg[INSENSITIVE] = "#ff0000"
+  fontset = "-adobe-helvetica-bold-r-*-*-16-*-*-*-*-*-*-*"
+}
+
+binding "my-own-gtkfilechooser-bindings" {
+	bind "<Alt><Shift>l" {
+		"location-popup" ()
+	}
+	bind "<Alt><Shift>Up" {
+		"up-folder" ()
+	}
+	bind "<Alt><Shift>Down" {
+		"down-folder" ()
+	}
+	bind "<Alt><Shift>Home" {
+		"home-folder-folder" ()
+	}
+}
+
+# class "GtkFileChooserDefault" binding "my-own-gtkfilechooser-bindings"
+
+widget_class "*GtkMenuItem*" style "menu"
+widget_class "*GtkDialog*" style "dialog"
+widget_class "*GtkButton*" style "button"
+
+widget "KnotKDM.*label_cmd*" style "display"
+widget "KnotKDM.*label_mpt*" style "display"
+widget "KnotKDM.*label_clk*" style "display"
+widget "KnotKDM.*drawarea*" style "graph"
+

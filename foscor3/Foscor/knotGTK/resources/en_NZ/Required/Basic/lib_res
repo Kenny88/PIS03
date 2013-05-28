@@ -1,0 +1,10 @@
+--   This file defines the file names of resource messages needed for abstract
+--   classes.
+
+CAST_EXC            cast
+
+--        The message texts for CAST_EXC should have the following semantics --
+--
+--        " Type case using "                [0]
+--        " attempted on a void object"      [1]
+--        " tried from an object of class "  [2]

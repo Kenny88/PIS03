@@ -1,0 +1,29 @@
+-- resource for error message in CODE_GROUP
+23
+--   Note that the first item is needed to specify the alphabet being used and
+--   (the two 'Fs) the last hexadecimal digit.
+
+Letters :azAZfF09
+
+Missing: CODE_GROUP: Run off end of locale file at line <1:>
+Extras: CODE_GROUP: <1:> found after copy directive at line <2:>
+Copy_Errors : CODE_GROUP: Errors detected while copying from file <1:> on line <2:>!\n
+Illegal_Copy: CODE_GROUP: Copy found after other components at line <1:>
+Unexpected: CODE_GROUP: <1:> not expected on line <2:>
+Unknown: CODE_GROUP: Unknown keyword '<1:>' on line <2:>
+Trans_Not_Def: CODE_GROUP: Synonym on line <1:> is not defined
+Invalid_Token: CODE_GROUP: Invalid '<1:>' in synonym definition on line <2:>
+Range_Error: CODE_GROUP: Invalid case maplet on line <1:>!\n
+Empty_Range: CODE_GROUP: Range [<1:> .. <2:>] is empty on line <3:>!\n
+Missing_First: CODE_GROUP: First map component missing on line <1:>!\n
+Missing_Second: CODE_GROUP: Second map component after <1:> not found on line <2:>!\n
+Missing_Scolon: CODE_GROUP: <1:> must be preceded by a semi-colon on line <2:>!\n
+Mandatory : CODE_GROUP: Both the cntrl and punct groups must be specified\n
+Not_Class : CODE_GROUP: <1:> is not a known character class on line <2:>!\n
+Unknown_Class : CODE_GROUP: String on line <1:> is not a known character class!\n
+Not_Map : CODE_GROUP: <1:> is not a known mapping on line <2:>!\n
+Unknown_Map : CODE_GROUP: String on line <1:> is not a known mapping\n
+Unexpected_Escape : CODE_GROUP: An unexpected escape character found on line <1:>!\n
+Unterminated_Name :CODE_GROUP: The string <1:> does not contain a valid code name on line <2:>!\n
+Unterminated_String : CODE_GROUP: An unterminated string is on line <1:>\n
+No_Start: CODE_GROUP: Range end [<1:>] found but no start on line <2:>!\n

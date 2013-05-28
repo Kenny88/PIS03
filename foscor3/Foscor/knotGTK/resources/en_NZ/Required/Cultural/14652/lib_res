@@ -1,0 +1,17 @@
+--        The following classes define enumerations with the corresponding text
+--   string form as specified by the ISO/IEC 14652 standard which are used in
+--   the Required library.
+
+ADDRESS_CODES      address-codes
+ADDRESS_KEYS       address-keys
+CATEGORIES         categories
+CAT_STANDARDS      cat-stds
+CHAR_CLASS         chclass
+CHAR_MAPPINGS      chmaps
+DT_CODES           dt-codes
+NAME_CODES         name-codes
+PHONE_CODES        phone-codes
+SALUTATIONS        titles
+TIME_SUFFIX        suffices
+VERSION_KEYS       version-keys
+

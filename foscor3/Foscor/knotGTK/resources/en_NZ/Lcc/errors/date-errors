@@ -1,0 +1,18 @@
+16
+Cut_Set :,-+:0123456789
+Rule_Codes :MJ
+No_Escape :Unexpected Escape character '<1:>' found on line <2:>\n
+Missing_Semicolon :Missing semicolon on line <1:>\n
+Bad_Key :Unknown keyword '<1:>' on line <2:>!\n
+Extras :<1:> may not appear after copy on line <2:>\n
+Bad_Year :<1:> is not a valid year string on line <2:>!\n
+Bad_Day :There are only <1:> days, not <2:>, in a week!\n
+Bad_Offset :Bad Offset definition on line <1:>!\n
+Offset_Syntax :Offset syntax error for <1:> on line <2:>!\n
+Missing :Missing data on line <1:>!\n
+Missing_Stop :Full stop separator missing on llne <1:>!\n
+Value_Error :Week/month value <1:> out of range on line <2:>!\n
+Missing_Data :Rule year is omitted on line <1:>!\n
+Copy_Errors :Errors were detected while copying from file <1:> on line <2:>!\n
+Illegal_Copy :Copy may not appear after other items on line <1:>\n 
+

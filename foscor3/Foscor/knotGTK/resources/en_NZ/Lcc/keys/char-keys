@@ -1,0 +1,22 @@
+-- CHAR_KEYS
+20
+Upper :upper
+Lower :lower
+Alpha :alpha
+Digit :digit
+Out_Digit :outdigit
+Space :space
+Control :cntrl
+Punctuation :punct
+Graphic :graph
+Printable :print
+Hex_Digit :xdigit
+Blank :blank
+Class :class
+Mapping :map
+To_Upper :toupper
+To_Lower :tolower
+Start_Translit :transform_start
+End_Translit :transform_end
+Include :include
+Default_Missing :default_missing

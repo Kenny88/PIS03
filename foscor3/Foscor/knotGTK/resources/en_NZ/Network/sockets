@@ -1,0 +1,5 @@
+3
+Temp_Dir :/tmp
+Death :Socket died while sending string
+Already_Dead :Socket found dead when preparing to send string
+

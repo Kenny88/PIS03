@@ -1,0 +1,5 @@
+--        This file contains the file names of the strings for date/time
+--   classes which may need to be imported by a running program
+
+MONTHS             months
+WEEKDAYS           weekdays

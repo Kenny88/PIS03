@@ -1,0 +1,9 @@
+8
+Cut_Set :" ;.
+Start_Miss :Range start <1:> not expected on line <2:>!\n
+Start_Error :Weight range start <1:> is incorrect on line <2:>\n
+End_Miss :No range end name on line <1:>\n
+Syntax_Error :Syntax error at character <1:> on line <2:> \n
+Too_Many_Weights :Too many weights at line <1:>, number <2:>\n
+Invalid_Quoted :Invalid quoted at <1:>. weight <2:>\n
+Unknown_Name :Unknown weight name <1:> on line <2:>!\n

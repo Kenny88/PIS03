@@ -1,0 +1,8 @@
+--        This is the resource descriptor file for the Sather Audio Library
+--   resources.  In addition to the class/file pairs listed here the following
+--   audio files are contained :-
+
+
+--   These audio files should be referenced in the message files of relevant
+--   classes in the audio library for direct file access during program
+--   execution.

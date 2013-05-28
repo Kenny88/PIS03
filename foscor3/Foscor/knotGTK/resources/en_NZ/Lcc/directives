@@ -1,0 +1,7 @@
+--        This file contains the directive keywords specified in ISO/IEC 14652
+
+3
+
+Comment :comment_char
+Escape_Char :escape_char
+Copy_Directive :copy

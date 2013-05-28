@@ -1,0 +1,21 @@
+--        This file gives the single letter 'code' name used in specifying
+--   address formatting in accordance with ISO/IEC 14652.
+
+15
+
+Care of            :a
+Building           :b
+Country            :c
+Country code       :C
+Department         :d
+Floor number       :e
+Organisation       :f
+House number       :h
+Conditional EOL    :N
+Room number        :r
+Street             :s
+Conditional space  :t
+Town               :T
+Post code          :z
+
+Romanize prefix    :R 

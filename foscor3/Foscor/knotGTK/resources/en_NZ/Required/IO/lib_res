@@ -1,0 +1,10 @@
+--        This file gives the locations of the standard library I/O message
+--   and name resources.
+
+CONDITIONALS       prepro
+FILE_LOCS          locs
+FILE_SYS           modes
+FLUSH_CMDS         flushing
+PROGRAM_ARGS       args
+SOURCE             textsource
+SYS_CHANS          chans

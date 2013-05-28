@@ -1,0 +1,8 @@
+--        This file contains the text form of the various possibilities when
+--   presenting a calendar to a human reader.
+
+4
+LR_TD :Left-right/Top-down
+TD_LR :Top-down/Left-right
+RL_TD :Right-left/Top-down
+TD_RL :Top-down/Right-left

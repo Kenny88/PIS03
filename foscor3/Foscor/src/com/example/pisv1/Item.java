@@ -16,7 +16,17 @@ public class Item {
 		id=idn;
 		type=tp;
 	}
+	public Item(String p, String n,int at, int d, String tp){
+		path=p;
+		name=n;
+		atk=at;
+		def=d;
+		type=tp;
+	}
 	
+	public void setId(int id){
+		this.id=id;
+	}
 	public String getPath(){
 		return path;
 	}

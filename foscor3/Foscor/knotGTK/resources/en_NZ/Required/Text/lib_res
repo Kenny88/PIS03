@@ -1,0 +1,4 @@
+--   This is the resource file for the text group of classes
+
+ERE_LEX_TOKENS     erelex
+ERE_ERROR_KINDS    ereerr

@@ -1,0 +1,8 @@
+--        The following are the names of the telephone code components as coded
+--   for ISO/IEF 14652.
+
+4
+Foreign :Country code
+External :External prefix
+Domestic :Internal STD access code
+Local :Exchange access code

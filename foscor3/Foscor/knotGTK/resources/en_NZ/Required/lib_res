@@ -1,0 +1,17 @@
+--          This file contains the names of the library resource files
+
+Basic/lib_res
+Codes/lib_res
+Concurrent/lib_res
+Cultural/lib_res
+DateTime/lib_res
+FileSys/lib_res
+Geometric/lib_res
+IO/lib_res
+NonNumeric/lib_res
+Numeric/lib_res
+Opsys/lib_res
+Represent/lib_res
+SatherRT/lib_res
+Strings/lib_res
+Text/lib_res

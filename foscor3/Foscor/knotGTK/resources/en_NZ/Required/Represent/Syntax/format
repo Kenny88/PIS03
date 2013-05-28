@@ -1,0 +1,13 @@
+12
+Illegal_Arg_No :Illegal argument number '<1:>'.
+Wrong_Type :<1:> needs character from "<2:>" set but has '<3:>'.
+Impossible_Happened :Formatter internal error!
+Unexpected_End :Unexpected end of format in "<1:>".
+Decimal_First :A number format must be defined before an exponent in "<1:>".
+Already_Anchored :Anchored and floating formatting cannot be mixed in "<1:>".
+Unexpected_Sign :A sign was not expected in "<1:>".
+Unexpected_Caret :An anchor point may only occur after fillers in "<1:>".
+Unexpected_Decimal :Unexpected decimal mark after number format in "<1:>".
+Unknown_Char :The character "<1:>" is not valid in a format descriptor.
+Filler_Already :Only one filler may be specified in "<1:>".
+Escapes_at_End :Format error, an escape must not occur at the end in "<1:>".

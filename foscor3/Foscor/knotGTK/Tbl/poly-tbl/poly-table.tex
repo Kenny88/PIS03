@@ -1,0 +1,108 @@
+% LaTeX 2.09 file
+%
+% K.Kodama 1997.11.29
+% kodama@kobe-kosen.ac.jp
+% 
+
+\documentstyle{article}
+
+%%% Paper size.
+\newlength{\pageheight}
+\newlength{\pagewidth}
+
+%%%%resetsize: Set \textheight and \textwidth.
+%% 
+%% Note. 
+%% Before use this, set \pageheight,\pagewidth,
+%%	\topmargin,\headheight,\headsep,\footskip,
+%%	\oddsidemargin and \evensidemargin.
+\def\resetsize{
+	%% height
+	\setlength{\textheight}{\pageheight}
+	\addtolength{\textheight}{-2in}
+	\addtolength{\textheight}{-2\topmargin}
+	\addtolength{\textheight}{-\headheight}
+	\addtolength{\textheight}{-\headsep}
+	\addtolength{\textheight}{-\footskip}
+	%% width
+	\setlength{\textwidth}{\pagewidth}
+	\addtolength{\textwidth}{-2in}
+	\addtolength{\textwidth}{-2\oddsidemargin}
+}
+
+%%%% Set page size: A4
+\def\paperAfour{
+\setlength{\pagewidth}{210mm}
+\setlength{\pageheight}{297mm}
+	%%%% height
+	\topmargin 0pt
+	\headheight 0pt %20pt%12pt
+	\headsep 0mm %25pt
+	\footskip 0pt
+	%%%% width
+	\oddsidemargin 0pt
+	\evensidemargin 0pt
+\resetsize
+}
+
+
+\paperAfour
+\setlength{\parindent}{0pt}
+\binoppenalty=0
+\relpenalty=0
+
+\begin{document}
+
+Table of polynomials (up to 10 crossings) \\
+{K.Kodama (kodama@kobe-kosen.ac.jp)\\}
+
+\tableofcontents
+
+
+\section{Alexander polynomial}
+\input{A-list.tex}
+\newpage
+
+
+\section{Conway polynomial}
+\input{C-list.tex}
+\newpage
+
+
+\section{Jones polynomial}
+$t V_{L+}-(1/t)V_{L-} = -(\sqrt{t}-1/\sqrt{t})V_{L0}$ \par
+\input{V-list.tex}
+\newpage
+
+
+\section{P-polynomial: $P(v,z)$}
+ $(1/v)P_{L+} -v P_{L-} = z P_{L0}$ \par
+\input{Pvz-list.tex}
+\newpage
+
+
+%\section{P-polynomial: $P(l,m)$} 
+% $l P_{L+} +(1/l)P_{L-} +m P_{L0} = 0$ \par
+%\input{Plm-list.tex}
+%\newpage
+
+
+%\section{P-polynomial: $P(x,y,z)$}
+%$x P_{L+} -y P_{L-} = z P_{L0}$ \par
+%\input{Pxyz-list.tex}
+%\newpage
+
+
+\section{F-polynomial}
+ $f_{L+} + f_{L-} = x (f_{L0} + f_{L\infty})$,
+  $F_L = a^{-w(L)} f_L$ \par
+\input{F-list.tex}
+\newpage
+
+
+\section{Q-polynomial}
+$Q_{L+} + Q_{L-} = x (Q_{L0} + Q_{L\infty})$ \par
+\input{Q-list.tex}
+%\newpage
+
+\end{document}

@@ -1,0 +1,76 @@
+--        The official names of scripts used in the world which have been
+--   defined by ISO/IEC JTC1/SC2.
+
+32
+Arabic :Arabic
+Arabic_Presentation :Arabic Presentation Forms
+Armenian :Armenian
+Bengali :Bengali
+Bopomofo :Bopomofo
+Canadian_Aboriginal :Canadian Syllabics
+Cherokee :Cherokee
+CJK_Unified :CJK-Unified - Hanzi/Kanji/Hanza
+Cyrillic :Cyrillic
+Devanagari :Devanagari
+Ethiopic :Ethiopic
+Georgian :Georgian
+Greek :Greek
+Gujarati :Gujarati
+Gurmukhi :Gurmukhi
+Hangul :Hangul Syllables
+Hangul_Jamo :Hangul Letter Forms
+Hebrew :Hebrew
+Hiragana :Hiragana
+IPA :IPA extensions
+Kannada :Kannada
+Katakana :Katakana
+Khmer :Khmer
+Lao :Lao
+Latin :Roman
+Malayalam :Malayalam
+Mongolian :Mongolian
+Myanmar :Myanmar
+Ogham :Ogham
+Oriya :Oriya
+Runic :Runic
+Sinhala :Sinhala
+Syriac :Syriac
+Tamil :Tamil
+Telugu :Telugu
+Thaana :Thaana
+Thai :Thai
+Tibetan :Tibetan
+Yi :Yi
+
+Numerics :Non-specific Numerics
+
+
+--        The following Scripts are either proposed or agreed but not yet
+--   fully defined and approved.
+
+--Avestan :Avestan
+--Blissymbolics :Bliss Symbolics
+--Buhid :Buhid
+--Cham :Cham
+--Cirth :Cirth
+--Coptic :Coptic
+--Cypriot :Cypriot
+--Hanunoo :Hanumoo
+--Kirat :Kirat
+--Lepcha :Lepcha
+--Manipuri :Manipuri
+--Moso :Moso
+--Old_Hungarian :Hungarian - Old
+--Old_Permic :Permic - Old
+--Pahawh :Pahawh
+--Pollard :Pollard
+--Shavian :Shavian
+--South_Arabian :South Arabian
+--Soyombo :Soyombo
+--Tagalog :Tagalog
+--Tagbanwa :Tagbanwa
+--Tengwar :Tengwar
+--Tai_Lu :Tai-Lu
+--Tai_Mau :Tai_Mau
+--Tifinagh :Tifinagh
+--TlhIngan_Hol :TlhIngan Hol

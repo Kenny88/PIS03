@@ -1,0 +1,9 @@
+     The sub-directories contained in this directory hold any literal text
+needed for this sub-section of the library.
+
+     Note that this Default directory will be used in the event that no cultural
+locale is specified in the program environment.
+
+     The Cultural sub-section of the library contains those classes used in
+obtaining these filed values when needed by a program.
+

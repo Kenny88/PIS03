@@ -1,0 +1,11 @@
+--        This file contains the messages for the class VIEW_TO_DOT
+
+8
+Header:Digraph - Sather graph {\n
+Node:<1:> [shape = record, label = "<2:>" ] ;\n\t
+Edge:<1:> -%> <2:>\n\t
+Trailer: \n}\n
+Non_Void: %< <1:> %> <2:>
+Ord_View: { %< <1:> %> <2:>
+Field_Sep: |
+Edge_End: } 

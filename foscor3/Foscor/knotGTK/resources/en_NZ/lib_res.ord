@@ -1,0 +1,12 @@
+BUILDER	salccomp
+CONFIG_KEYS	config_keys
+Required/lib_res
+Test/lib_res
+Audio/Audio_res
+Colour/Colour_res
+Compiler/Compiler_res
+Devices/Devices_res
+External/External_res
+Maths/Maths_res
+Network/Network_res
+-- Windows/lib_res

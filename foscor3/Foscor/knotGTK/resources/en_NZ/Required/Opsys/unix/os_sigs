@@ -1,0 +1,43 @@
+32
+
+--        This list of signal names is given the order in which signals are
+--   usually specified in unix systems.
+--
+--   NOTE The order of signal numbers may not correspond exactly to these (eg
+--        in a linux installation.  Whatever decision is made about
+--        implementation changes for this this file must correspond to
+--        the ordering contained in the class OS_SIGKINDS
+
+SIGHUP :SIGHUP (standard channels disconnected)
+SIGINT :SIGINT (an external interrupt has occurred)
+SIGQUIT :SIGQUIT (requested to finish by another process)
+SIGILL :SIGILL (An illegal instruction has been found)
+SIGTRAP :SIGTRAP 
+SIGABRT :SIGABRT (The process has been instructed to stop immediately)
+SIGEMT :SIGEMT
+SIGFPE :SIGFPE (A floating point (emulator) error signal)
+SIGKILL :SIGKILL
+SIGBUS :SIGBUS (memory alignment problem)
+SIGSEGV :SIGSEGV (attempt to write to an unknown memory location)
+SIGSYS :SIGSYS (Operating system signal)
+SIGPIPE :SIGPIPE (an attempt to write to a closed pipe)
+SIGALRM :SIGALRM (alarm has gone off)
+SIGTERM :SIGTERM (standard input attention signal)
+SIGUSR1 :SIGUSR1
+SIGUSR2 :SIGUSR2
+SIGCHLD :SIGCHLD (a signal that a child process is terminating)
+SIGPWR :SIGPWR
+SIGWINCH :SIGWINCH
+SIGURG :SIGURG
+SIGPOLL :SIGPOLL (request for data?)
+SIGSTOP :SIGSTOP
+SIGTSTP :SIGTSTP
+SIGCONT :SIGCONT (continue running - after suspension)
+SIGTTIN :SIGTTIN (stdin character available)
+SIGTTOU :SIGTTOU (stdout buffer is empty)
+SIGVTALRM :SIGVTALRM (virtual timer alarm has gone off)
+SIGPROF :SIGPROF (profiling action request)
+SIGXCPU :SIGXCPU
+SIGFSZ :SIGFSZ (maximum file size exceeded)
+SIGWAITING :SIGWAITING (calling process is waiting)
+

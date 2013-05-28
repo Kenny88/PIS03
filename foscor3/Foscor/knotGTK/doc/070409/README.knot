@@ -1,0 +1,280 @@
+KNOT ---- release note
+
+Kouji KODAMA  (kodama@kobe-kosen.ac.jp)
+
+These are the release and installation notes for KNOT.
+They explain you how to install the executable binary.
+
+********* CONTENTS *********
+** Abstract
+  * WHAT IS KNOT?
+  * DISTRIBUTION
+  * COPYING
+  * DOCUMENTATION
+* Miscellaneous
+* What KNOT can do
+* Condition for distribution
+* Hardware/OS
+* Distribution
+* Installation
+* How to check the installation
+* Recommendation for personal preference.
+* Registration to window manager(e.g. fvwm) (recommendation)
+* Use as a filter
+* How to report your problem
+* History
+****************************
+
+
+** Abstract
+
+* WHAT IS KNOT?
+
+KNOT is the program on X Window System for drawing knot/link diagrams
+and calculate various invariants of them.
+It can also treat surfaces in S^4.
+It is distributed under the GNU General Public License.
+
+
+* DISTRIBUTION
+
+You can get KNOT by anonymous FTP from
+"ftp://ftp.math.kobe-u.ac.jp/pub/knot/" .
+
+
+* COPYING
+
+KNOT is Copyright 1983 2003 Kouji KODAMA
+and is licensed under the terms of the GNU General Public License(GPL).
+Replecating, changing, re-distributing are permitted under GPL.
+Note that the GPL is copyrighted by the Free Software Foundation,
+but the instance of code that it refers to "KNOT" is copyrighted by me.
+See the accompanying COPYING file for more details.
+
+
+--------------------------------------------------- 
+
+* Miscellaneous
+Please don't hesitate to contact me by e-mail if you find any problem.
+It may be helpful if you will give a report precise enough to fix it.
+I cannot promise to mend it soon but the development will become quicker
+for there may be things that I cannot recognize myself.
+
+Thank you,
+
+
+* What KNOT can do
+
+KNOT is a program on X Window System which can draw knot/link diagrams and
+calculate various invariants of them.
+It can also treat surfaces in S^4.
+(The latest version can treat only orientable surfaces.)
+
+
+* Condition for distribution
+
+KNOT is distributed under GNU General Public License(GPL).
+Copying, changing, redistribution are allowed under GPL.
+For details refer to COPYING above.
+
+
+* Hardware/OS
+
+This program can run on machine which can use both LINUX(x86) and X Windows system.
+It is not known whether it can be compiled on SUN, FreeBSD etc.
+
+
+* Distribution
+The following is in the distribution archive:
+
+Set of executive files
+   Knot.bin.(DATE).tar.gz
+
+The following may not be necessary:
+
+Source code
+   Knot.src.(DATE).tar.gz
+
+
+* Installation
+
+It is assumed in the following that all the files are in /install directory.
+Using su command and become a root user.
+Unzip files as follows.
+Then you will find the directory "/usr/local/lib/Knot" and there will be the
+program itself and other files here.
+(Please replace the date in the file names with appropriate date.)
+
+1. Extract distrobution package. (as root administrator)
+
+$ su
+ (All the following tasks are assumed to be done in the root.)
+# cd /usr/local/lib
+# tar pxzvf /install/Knot.bin.1996-11-20.tar.gz
+# ls
+ (Check that there is the directory Knot.1996-11-20)
+# ln -s Knot.1996-11-20 Knot
+# cd Knot
+# ln -s /usr/local/lib/Knot/knot.Xdefs /usr/lib/X11/app-defaults/Knot
+ (You may use "cp" instead of "ln -s".)
+# ln -s /usr/local/lib/Knot/knot /usr/local/bin/knot
+ (You may use "cp" instead of "ln -s".)
+# exit
+$
+
+
+2. Setup your environment. (as user)
+
+Set env name e.g. in .bash_login as follows:
+
+# default or en_NZ
+export LOCALE=default
+# install directory
+export SATHER_HOME=/usr/local/lib/Knot
+## resources
+export SATHER_RESOURCES=${SATHER_HOME}/resources/${LOCALE}
+export SATHER_ENV=${SATHER_RESOURCES}/bin/LIBCHARS
+
+Or, use start up script "knot.sh" in your distrobution adapting to your enviroment.
+
+
+This completes the installation.
+You had better to check owner, group, permission etc by using "ls -l".
+
+
+Remark 1.
+removal:
+If you want to remove KNOT from your system, delete
+/usr/local/lib/Knot.1996-11-20
+/usr/local/lib/Knot
+/usr/lib/X11/app-defaults/Knot
+/usr/local/bin/knot
+
+
+Remark 2.
+You can also install to your own directory without becoming the root user as follows.
+(1) You have to change the file "knot" properly.
+(2) If necessary, you can write the contents of "knot.Xdefs" in "~/.Xdefaults".
+
+Contents of "knot.Xdefaults" :
+! KNOT program
+*canvas.width: 400
+*canvas.height: 400
+
+The corresponding contents in "~/.Xdefaults":
+! KNOT program
+Knot.*canvas.width: 400
+Knot.*canvas.height: 400
+
+
+* How to check the installation
+Type "knot (other options)" on xterm window.
+
+$ knot -help
+There will appear a help message on the terminal.
+
+$ knot
+There will appear a window to draw knots/links.
+
+or
+
+$ xterm -e knot &
+
+There will appear a window to display the result and a window to draw knots/links.
+
+$ knot -s -a < Tbl/kt/k3c1
+
+There will appear Alexander polynomial and some texts on terminal.
+
+
+* Recommendation for personal preference.
+(You can use the program without the following setting.)
+
+(1) Make a working directory "knotWork".
+(2) Since there are knot tables in the directories "kt" and "ka", make them
+visible from your directory.
+(3) Make another working directory 'kw', say, to keep your own figures.
+
+$ cd  ~
+$ mkdir knotWork
+$ cd knotWork
+$ ln -s /usr/local/lib/Knot/kt ./kt
+$ ln -s /usr/local/lib/Knot/ka ./ka
+$ mkdir kw
+$
+
+
+* Registration to window manager(e.g. fvwm) (recommendation)
+You can start the program by typing "knot" or "kterm -e knot &"
+but it would be convenient to register in the menu.
+You can start the program from the menu of fvwm(afterstep, gnome, enlightment, etc.)
+by editing the file "~/.fvwmrc" (or configuration file respectively) as follows.
+If there is not the file "~/.fvwmrc", copy "/usr/lib/X11/fvwm/system.fvwmrc" to
+"~/.fvwmrc." (c.f. man fvwm)
+
+Example:
+Popup "Applications"
+   Title  "Applications"
+   Exec   "Netscape"   exec netscape &
+   Exec   "Ghostview"  exec ghostview &
+   Exec   "MULE"       exec mule -fn 7x14 -geometry 80x25 &
+....
+   Exec   "Knot"       exec xterm -e /usr/local/bin/knot &
+   ^^^^^^^^^^^^^^^^^^^^^^^^here^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+If you restart fvwm, the setting above will be available.
+You can choose "Restart Fvwm" in "Exit Fvwm" menu.
+After restarting, check whether "KNOT" is registered in the menu.
+
+
+(Not checked yet:
+If you are using other window manager, edit its resource file.
+)
+
+
+* Use as a filter.
+
+We can use the program as a filter.
+For example, to calculate P-polynomial for trifoil knot as a data file k3c1,
+execute the program on command line as following sample.
+
+$ knot -s -p < Tbl/kt/k3c1 > result.txt (hit return)
+
+For more information, use -help option as follows:
+
+$ knot -help
+Usage: ./knot
+Usage: ./knot -s options < knot_data
+options with -s :
+  -p [type]       P polynomial(type=vz,lm,xyz. type=vz by default)
+  -f              F polynomial
+  -q              Q polynomial
+  ....
+
+
+* How to report your problem
+
+If you intend to report about errors, I hope as follows.
+(1) Check "What you did", "condition" and "error messages".
+
+To get error messages on your terminal xterm,
+simply execute "knot" as X application 
+or "knot -s (options) as a command line application.
+And then cut & paste the text on your console to your reporting.
+
+(2) Mail to kodama@kobe-kosen.ac.jp
+
+
+* History
+This document is originally written in Japanese by Kodama
+    and translated to English by Hitoshi Murakami.
+
+1999-04 Hitoshi Murakami.
+   This text is translated from Japanese version README.knot
+   Hitoshi Murakami hitoshi@uguisu.co.jp
+2001-10 K.Kodama
+   Revised for current version.
+   Kouji Kodama kodama@kobe-kosen.ac.jp
+2003-12 K.Kodama
+********************* end of the document *******************************

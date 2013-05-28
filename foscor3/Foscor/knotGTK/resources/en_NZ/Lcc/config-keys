@@ -1,0 +1,7 @@
+--        This file contains the messages for the CONFIG_KEYS enumeration
+
+4
+Culture :culture_src
+Rep_Map :rep_map_src
+Sather :libchars_src
+OutDir :out_dir

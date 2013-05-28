@@ -1,0 +1,7 @@
+5
+Illegal_Copy :The copy directive on line <1:> is not legal.\n
+Copy_Errors :Errors detected while copying from file <1:> on line <2:>!\n
+Unknown :Unknown keyword <1:> on line <2:>!\n
+Extras :Additional item '<1:>' on line <2:>!\n
+Bad_Reg_Exp :Regular expression error '<1:>' on line <2:>!\n
+

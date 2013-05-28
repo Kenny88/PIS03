@@ -1,0 +1,4 @@
+                                 WARNING
+                                 -------
+
+     This directory contains the enumeration string files for this section of the Required Library.  The sub-directory contains the tsxt files for those cultural enumerations defined by ISO/IEC 14652.  The text in those should only be altered when revising the imlementation to take account of changes to the standard.

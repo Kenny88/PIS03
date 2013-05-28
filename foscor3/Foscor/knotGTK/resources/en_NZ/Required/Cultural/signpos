@@ -1,0 +1,10 @@
+--        This file contains the text strings corresponding to the possible
+--   positions for a numeric sign in formatting monetary values.
+
+5
+Parentheses :Parentheses
+Preceding :Preceding
+Following :Following
+Before_SY :Before symbol
+After_SY :After symbol
+

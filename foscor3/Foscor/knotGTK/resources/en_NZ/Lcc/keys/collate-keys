@@ -1,0 +1,19 @@
+18
+Script :script
+Collating_Element :collating-element
+Collating_SY :collating-symbol
+Ellipsis :.
+From :from
+Order_Start :order_start
+Order_End :order_end
+Reorder_After :reorder-after
+Reorder_End :reorder-end
+Reorder_Script_After :reorder-scripts-after
+Reorder_Script_End :reorder-scripts-end
+Synonym :symbol-equivalence
+Forward :forward
+Backward :backward
+Position :position
+Weight_Max:COLL_WEIGHT_MAX
+UNDEFINED :UNDEFINED
+IGNORE :IGNORE

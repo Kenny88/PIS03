@@ -1,0 +1,49 @@
+42
+Mon_Decimal_Point :mon_decimal_point
+Mon_Thousands_Sep :mon_thousands_sep
+Mon_Grouping :mon_grouping
+Positive_Sign :positive_sign
+Negative_Sign :negative_sign
+
+Currency_SY :currency_symbol
+Frac_Digits :frac_digits
+Pos_Sign_Before :p_cs_precedes
+Pos_Space_Sep :p_sep_by_space
+Neg_Sign_Before :n_cs_precedes
+Neg_Space_Sep :n_sep_by_space
+Pos_Sign_Posn :p_sign_posn
+Neg_Sign_Posn :n_sign_posn
+
+Int_Currency_SY :int_curr_symbol
+Int_Frac_Digits :int_frac_digits
+Int_Pos_Sign_Before :int_p_cs_precedes
+Int_Pos_Space_Sep :int_p_sep_by_space
+Int_Neg_Sign_Before :int_n_cs_precedes
+Int_Neg_Space_Sep :int_n_sep_by_space
+Int_Pos_Sign_Posn :int_p_sign_posn
+Int_Neg_Sign_Posn :int_n_sign_posn
+
+Duo_Currency_SY :duo_currency_symbol
+Duo_Frac_Digits :duo_frac_digits
+Duo_Pos_Sign_Before :duo_p_cs_precedes
+Duo_Pos_Space_Sep :duo_p_sep_by_space
+Duo_Neg_Sign_Before :duo_n_cs_precedes
+Duo_Neg_Space_Sep :duo_n_sep_by_space
+Duo_Pos_Sign_Posn :duo_p_sign_posn
+Duo_Neg_Sign_Posn :duo_n_sign_posn
+
+Duo_Int_Currency_SY :duo_int_curr_symbol
+Duo_Int_Frac_Digits :duo_int_frac_digits
+Duo_Int_Pos_Sign_Before :duo_int_p_cs_precedes
+Duo_Int_Pos_Space_Sep :duo_int_p_sep_by_space
+Duo_Int_Neg_Sign_Before :duo_int_n_cs_precedes
+Duo_Int_Neg_Space_Sep :duo_int_n_sep_by_space
+Duo_Int_Pos_Sign_Posn :duo_int_p_sign_posn
+Duo_Int_Neg_Sign_Posn :duo_int_n_sign_posn
+
+Uno_Valid_From :uno_valid_from
+Uno_Valid_To :uno_valid_to
+Duo_Valid_From :duo_valid_from
+Duo_Valid_To :duo_valid_to
+
+Exchange_Rate :conversion_rate

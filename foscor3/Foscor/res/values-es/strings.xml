@@ -1,11 +1,36 @@
 <resources>
 
-    <string name="Continue">Continuar</string>
-    <string name="Exit">Salir</string>
-    <string name="Load">Cargar</string>
-    <string name="New">Nuevo</string>
-    <string name="Options">Opciones</string>
-    <string name="Start">Toca para empezar</string>
-    <string name="action_settings">Configuración</string>
+   
+    <string name="app_name">Oscuridad</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="Start">&quot;Toca para empezar&quot;</string>
+    <string name="Continue">&quot;Continuar&quot;</string>
+    <string name="Load">&quot;Cargar&quot;</string>
+    <string name="Options">&quot;Opciones&quot;</string>
+    <string name="Exit">&quot;Salir&quot;</string>
+    <string name="New">&quot;Nuevo&quot;</string>
+    <string name="textViewtest">Mensaje de debug</string>
+    <string name="Save1">&quot;Guardado1&quot;</string>
+    <string name="Save2">&quot;Guardado2&quot;</string>
+    <string name="Save3">&quot;Guardado3&quot;</string>
+    <string name="Return">&quot;Volver&quot;</string>
+    <string name="Sound">Sonido</string>
+    <string name="Difficulty">Dificultad</string>
+    <string-array name="Language">
+        <item>Inglés</item>
+        <item>Catalan</item>
+        <item>Español</item>
+    </string-array>
+    <string name="Language">Idioma</string>
+    <string name="TextoInicial">Tu nombre es Swil, vives en un pueblo de montaña a las afueras de Balmont prospera capital de Uggarden.
+\n\nEl país lleva años en paz pero tras tu decimoquinto cumpleaños escuchas rumores del este. 
+\n\nSe esta formando un terrible ejército de monstruos que lo destruyen todo a su paso. Una avanzada del ejército que buscaba algo en el pueblo te obliga a escapar. 
+\n\nTu hermano Thyre se sacrifica y se queda cubriendote las espaldas mientras sigues adentrándote en el bosque obligado a dejar atrás a amigos y família sin poder saber lo que les ha pasado.
+</string>
+<string name="TextoInicial2">¡Peparate! Tu historia comienza...</string>
+<string name="cantCross">Ups! parece que no puedes cruzar.</string>
+<string name="Yes">Sí</string>
+<string name="No">No</string>
+<string name="ExitQuestion">Estas seguro de que quieres salir de la partida?\n(pude haber contenido que no se haya guardado)</string>
 
 </resources>

@@ -1,0 +1,21 @@
+--        This is the resource index for salccomp version 1.1 for culture
+--   section keys as specified in ISO/IEC 14652.  No changes are permitted
+--   unless that standard is updated introducing new sections or keys.  Note
+--   the two sections which have key enumerations in the Required Library!
+
+-- ADDRESS_KEYS  see resources/default/Required/Cultural/14652/address-keys
+
+CHAR_KEYS		char-keys
+COLLATE_KEYS		collate-keys
+CONFIG_KEYS		config-keys
+LOGIC_KEYS		logic-keys
+MEASUREMENT_KEYS	measurement-keys
+MONEY_KEYS		money-keys
+NAME_KEYS		name-keys
+NUM_KEYS		number-keys
+PAPER_KEYS		paper-keys
+PHONE_KEYS		phone-keys
+SECTION_KEYS		section-keys
+TIME_KEYS		time-keys
+
+-- VERSION_KEYS  see resources/default/Required/Cultural/14652/version-keys

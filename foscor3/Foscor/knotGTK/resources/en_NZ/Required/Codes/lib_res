@@ -1,0 +1,9 @@
+--   Local enumeration names for the code classes in the required library.
+
+CODE_KINDS        kinds
+INFO_KINDS        map_info
+MAP_FILE          map_path_names
+MAP_MODES         map_modes
+MAP_PARTS         map_parts
+SCRIPTS           scripts
+SYMBOLS           symbols

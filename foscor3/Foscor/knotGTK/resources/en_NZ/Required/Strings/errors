@@ -1,0 +1,12 @@
+8
+--   The string values in this file represent error conditions detected when
+--   a cursor object is scanning a block [see skip_block and get_block]
+
+Not_Digit :A digit was expected
+Past_End :Run off the end of the string
+Past_Beginning :Run backwards off the beginning of the string
+Conversion_Error :In attempting to convert a string to a value an error occurred
+Element_Not_Found :One of the terminator strings was not found
+Format_Error : There is a string format error
+Bad_Block :The block is improperly nested
+Already_at_End :The block is empty!

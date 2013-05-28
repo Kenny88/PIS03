@@ -3,11 +3,10 @@ package com.example.pisv1;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.SeekBar;
@@ -27,9 +26,9 @@ public class OptionsActivity extends Activity {
             requestWindowFeature(Window.FEATURE_NO_TITLE);
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         	setContentView(R.layout.activity_options);
-        	audio = (AudioManager) getSystemService(OptionsActivity.AUDIO_SERVICE);
+        	audio = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         	volume= (SeekBar) findViewById( R.id.seekBar2);
-        	volume.setProgress((audio.getStreamVolume(AudioManager.STREAM_MUSIC)*100)/audio.getStreamMaxVolume(audio.STREAM_MUSIC));
+        	volume.setProgress((audio.getStreamVolume(AudioManager.STREAM_MUSIC)*100)/audio.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
         	
         	volume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 				
@@ -47,7 +46,7 @@ public class OptionsActivity extends Activity {
 				
 				@Override
 				public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-					 audio.setStreamVolume(AudioManager.STREAM_MUSIC, (audio.getStreamMaxVolume(audio.STREAM_MUSIC)*volume.getProgress())/100, 0);
+					 audio.setStreamVolume(AudioManager.STREAM_MUSIC, (audio.getStreamMaxVolume(AudioManager.STREAM_MUSIC)*volume.getProgress())/100, 0);
 				}
 			});
         	

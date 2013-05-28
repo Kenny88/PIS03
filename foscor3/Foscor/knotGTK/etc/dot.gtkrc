@@ -1,0 +1,14 @@
+
+style "knotGTK"
+{
+  fg[PRELIGHT] = { 0, 1.0, 1.0 }
+  fg[NORMAL] = {1.0, 0.5, 0.0}
+  fg[ACTIVE] = {1.0, 0.5, 0.0 }
+  fg[INSENSITIVE] = { 1.0, 0.5, 0.0 }
+#  bg[NORMAL] = {0.0, 0.5, 1.0}
+  fontset = "-adobe-helvetica-bold-r-*-*-18-*-*-*-*-*-*-*"
+  font = "-adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*"
+}
+
+
+widget "*KnotKDM*" style "knotGTK"

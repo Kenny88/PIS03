@@ -1,0 +1,9 @@
+-- resource for class CODE_NAME
+7
+Cut_Set :; ,
+Unterminated	: CODE_NAME:Unterminated line=<1:>.\n
+Unterminated_Name	: CODE_NAME:Unterminated_Name line=<1:>, code=<2:>.\n
+Unknown_Code	: CODE_NAME:Unknown_Code line=<1:>, code=<2:>.\n
+Num_Range	: CODE_NAME:Num_Range line=<1:>, position=<2:>.\n
+Insufficient	: CODE_NAME:Insufficient line=<1:>, str=<2:>.\n
+Escape_at_End	: CODE_NAME:Escape_at_End line=<1:>.\n

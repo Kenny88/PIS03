@@ -1,0 +1,5 @@
+--          This file contains the names of the syntax analysis resource files
+
+CONVERSION_RESULTS  results
+FMT                 format
+

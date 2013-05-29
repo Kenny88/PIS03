@@ -37,8 +37,9 @@ public class Player extends Character {
 	}
 	public void restVida(float f) {
 		cVida-=f;
+		app.setVida(cVida);
 		if (cVida<0){
-			detach(app.mMap.getmPhysicsWorld());
+			app.gameOver();
 		}
 	}
 	public IOnScreenControlListener getIOnScreenControlListener() {

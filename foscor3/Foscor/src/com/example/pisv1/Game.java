@@ -10,6 +10,7 @@ import org.andengine.engine.handler.IUpdateHandler;
 import org.andengine.engine.options.EngineOptions;
 import org.andengine.engine.options.ScreenOrientation;
 import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;
+import org.andengine.entity.primitive.Rectangle;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.scene.background.SpriteBackground;
 import org.andengine.entity.sprite.ButtonSprite;
@@ -24,6 +25,7 @@ import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextureRegion
 import org.andengine.opengl.texture.region.ITextureRegion;
 import org.andengine.opengl.texture.region.TextureRegion;
 import org.andengine.ui.activity.SimpleBaseGameActivity;
+import org.andengine.util.color.Color;
 
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
@@ -227,6 +229,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		}
 		
 	};
+	private Rectangle mVida;
+	private float vRed=0;
+	private float vGreen=1;
 
 	// ===========================================================
 	// Getter & Setter
@@ -443,6 +448,15 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mVisualScene.attachChild(mDigitalOnScreenControl2);
 		mMainScene.setChildScene(mVisualScene);
 		menu.startMenu();
+		Rectangle vida=new Rectangle(4, 4, 100, 4, mEngine.getVertexBufferObjectManager());
+		vida.setVisible(true);
+		vida.setColor(new Color(0, 0, 0));
+		mHud.attachChild(vida);
+		mVida=new Rectangle(4, 4, 100, 4, mEngine.getVertexBufferObjectManager());
+		mVida.setWidth(100);
+		mVida.setVisible(true);
+		mVida.setColor(new Color(vRed, vGreen, 0));
+		mHud.attachChild(mVida);
 		
 		mInventoryMenuButton = new ButtonSprite(16, 16, mInventoryMenuButtonTextureRegion, mEngine.getVertexBufferObjectManager()) {
 			@Override
@@ -472,6 +486,18 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mMainScene.attachChild(mHud);
 
 
+	}
+
+	public void gameOver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setVida(int cVida) {
+		vGreen=cVida/100f;
+		vRed=1-vGreen;
+		mVida.setColor(new Color(vRed,vGreen,0));
+		mVida.setWidth(cVida);
 	}
 
 	// ===========================================================

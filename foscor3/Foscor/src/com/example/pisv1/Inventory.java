@@ -1,3 +1,5 @@
+
+
 package com.example.pisv1;
 
 import java.util.ArrayList;
@@ -192,7 +194,7 @@ public class Inventory extends InGameMenu {
 		}
 		equip=setButton(EQP, mMenuResetTextureRegion, app.getCameraWidth()/3, app.getCameraHeight()/3-30+50*i);
 		equip.setWidth(100);
-		final Text statsE= new Text(app.getCameraWidth()/3+10,app.getCameraHeight()/3-25+50*i, this.mFont, "Equip", new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
+		final Text statsE= new Text(app.getCameraWidth()/3+10,app.getCameraHeight()/3-25+50*i, this.mFont, app.getResources().getString(R.string.equip), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 		invMenuScene.attachChild(statsE);
 		
 	}

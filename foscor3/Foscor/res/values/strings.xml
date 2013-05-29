@@ -7,6 +7,8 @@
     <color name="Blanco">#FFFFFFFF</color>
     <string name="Continue">&quot;Continue&quot;</string>
     <string name="inventory">Inventory</string>
+    <string name="gameOver">Game Over</string>
+    <string name="equip">Equip</string>
     <string name="quit">Quit</string>
     <string name="Options">&quot;Options&quot;</string>
     <string name="Exit">&quot;Exit&quot;</string>

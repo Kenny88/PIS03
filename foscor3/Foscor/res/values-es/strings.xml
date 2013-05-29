@@ -4,6 +4,8 @@
     <string name="Continue">&quot;Continuar&quot;</string>
     <string name="Load">&quot;Cargar&quot;</string>
     <string name="inventory">Inventario</string>
+    <string name="gameOver">Fin del juego</string>
+    <string name="equip">Equipar</string>
     <string name="quit">Salir</string>
     <string name="Options">&quot;Opciones&quot;</string>
     <string name="Exit">&quot;Salir&quot;</string>

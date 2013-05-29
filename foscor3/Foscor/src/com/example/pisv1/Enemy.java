@@ -105,16 +105,17 @@ public class Enemy extends Character {
 				// TODO Auto-generated method stub
 				//double angle=Math.atan2(mAnimatedSprite.getY()-app.mMap.getPlayerY(), mAnimatedSprite.getX()-app.mMap.getPlayerX())* 180 / Math.PI;
 				float dist1=MathUtils.distance(mAnimatedSprite.getX(), mAnimatedSprite.getY(), app.mMap.getPlayerX(), app.mMap.getPlayerY());
-				if(ranged){
-					int dir=getDirection();
-					if(dir!=-1){
-						direction=dir;
-						attackMagicRanged();
-					}
-				}
+				int dir=-4;
+				Log.d("Dirrection",Boolean.toString(ranged&&(dir=getDirection())!=-1));
+				Log.d("Dirrection",Integer.toString(dir));
 				if(dist1<distA){
 					move(0,0);
 					attack(0,1);
+				}else if(ranged&&(dir=getDirection())!=-1){
+					Log.d("Dirrection",Integer.toString(dir));
+					direction=dir;
+					attack(0,-1);
+
 				}else{
 					
 					
@@ -207,14 +208,14 @@ public class Enemy extends Character {
 		float epX, epY;
 		epX=mAnimatedSprite.getX()-app.mMap.getPlayerX();
 		epY=mAnimatedSprite.getY()-app.mMap.getPlayerY();
-		if((Math.abs(epX)<maxRange&&Math.abs(epY)<distA)||(epY)<maxRange&&Math.abs(epX)<distA){
-			if(epX<maxRange&&epX>distA)
+		if((Math.abs(epX)<maxRange&&Math.abs(epY)<distA*0.66)||Math.abs(epY)<maxRange&&Math.abs(epX)<distA*0.66){
+			if(epX<maxRange&&epX>distA*0.66)
 				return 1;
-			else if(epX<-maxRange&&epX>-distA)
+			else if(epX>-maxRange&&epX<-distA*0.66)
 				return 3;
-			else if(epY<maxRange&&epY>distA)
+			else if(epY<maxRange&&epY>distA*0.66)
 				return 0;
-			else if(epY<-maxRange&&epY>-distA)
+			else if(epY>-maxRange&&epY<-distA*0.66)
 				return 2;
 			
 		}

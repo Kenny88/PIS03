@@ -115,8 +115,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		@Override
 		public void beginContact(Contact arg0) {
 			mMainScene.setIgnoreUpdate(true);
-			Log.d("fixtureA", arg0.getFixtureA().getBody().getUserData().toString());
-			Log.d("fixtureB", arg0.getFixtureB().getBody().getUserData().toString());
+//			Log.d("fixtureA", arg0.getFixtureA().getBody().getUserData().toString());
+//			Log.d("fixtureB", arg0.getFixtureB().getBody().getUserData().toString());
 			java.lang.Object fixtureA=arg0.getFixtureA().getBody().getUserData();
 			java.lang.Object fixtureB=arg0.getFixtureB().getBody().getUserData(); 
 			String A=fixtureA.toString();

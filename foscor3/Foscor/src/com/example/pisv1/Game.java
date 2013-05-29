@@ -1,6 +1,7 @@
 package com.example.pisv1;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 import org.andengine.engine.Engine;
 import org.andengine.engine.camera.BoundCamera;
@@ -78,6 +79,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	private BitmapTextureAtlas mInventoryMenuButtonTexture;
 	private ITextureRegion mInventoryMenuButtonTextureRegion;
 	private ButtonSprite mInventoryMenuButton;
+	private ArrayList<Ataque> atacs= new ArrayList<Ataque>();
 	
 	private BitmapTextureAtlas mOnScreenControlTexture;
 	private ITextureRegion mOnScreenControlBaseTextureRegion;
@@ -273,6 +275,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
    		this.mOnScreenControlTexture.load();
    		this.mOnScreenControlTexture2.load();
 		itemTest();
+		
+		
 	}
 
 	@Override
@@ -285,6 +289,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		ITextureRegion region = BitmapTextureAtlasTextureRegionFactory.createFromAsset(texture, this, "cargando.png", 0, 0);
 		texture.load();
 		mMainScene.setBackground(new SpriteBackground(new Sprite(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT, region,getVertexBufferObjectManager() )));
+		
 		return mMainScene;
 	}
 	@Override
@@ -474,6 +479,29 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mHud.attachChild(mInventoryMenuButton);
 
 
+	}
+	public void clearAttack(Ataque atac){
+		atacs.add(atac);
+		runOnUpdateThread(new Runnable() {
+
+		    @Override
+		    // to safely detach and re-attach the sprites
+		    public void run() {
+		    	Ataque atac;
+				while(atacs.size()>0){
+					atac=atacs.get(atacs.size()-1);
+					atac.getAnimatedSprite().setVisible(false);
+					atac.getAnimatedSprite().detachSelf();
+					atac.getAnimatedSprite().clearUpdateHandlers();
+					atac.getAnimatedSprite().clearEntityModifiers();
+					mMap.getmPhysicsWorld().unregisterPhysicsConnector(mMap.getmPhysicsWorld().getPhysicsConnectorManager().findPhysicsConnectorByShape(atac.getAnimatedSprite()));
+					mMap.getmPhysicsWorld().destroyBody(atac.getBody());
+					atacs.remove(atac);
+				}
+			}
+
+
+		});
 	}
 
 	// ===========================================================

@@ -24,6 +24,7 @@ public class Ataque {
 	private float daño;
 	private Character creador;
 	private float velocidad;
+	private String type;
 	public Ataque(float x, float y,int direction,float velocidad,float daño,String image,IAnimationListener listener,Character creador,Game app1){
 		this.app=app1;
 		this.daño=daño;
@@ -75,6 +76,9 @@ public class Ataque {
 	public AnimatedSprite getAnimatedSprite() {
 		return mAnimatedSprite;
 	}
+	public Body getBody(){
+		return mBody;
+	}
 	public void setAnimatedSprite(AnimatedSprite mAnimatedSprite) {
 		this.mAnimatedSprite = mAnimatedSprite;
 	}
@@ -95,25 +99,13 @@ public class Ataque {
 		return mAnimatedSprite.convertLocalToSceneCoordinates(i,j);
 	}
 	public void detach(final PhysicsWorld mPhysicsWorld) {
-		getAnimatedSprite().registerUpdateHandler(new IUpdateHandler(){
-
-			@Override
-			public void onUpdate(float arg0) {
-				// TODO Auto-generated method stub
-				mPhysicsWorld.destroyBody(mBody);
-				mAnimatedSprite.detachSelf();
-	
-			}
-
-			@Override
-			public void reset() {
-				// TODO Auto-generated method stub
-				
-			}
-			
-		});
+		app.clearAttack(this);
 		creador.attack=true;
 		creador.move=true;
+	}
+	
+	public String getTypeAttack(){
+		return type;
 	}
 
 	public void unregisterUpdateHandler(PhysicsWorld mPhysicsWorld) {
@@ -130,5 +122,6 @@ public class Ataque {
 		// TODO Auto-generated method stub
 		return creador;
 	}
+	
 
 }

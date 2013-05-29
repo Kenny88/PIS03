@@ -100,8 +100,7 @@ public class Enemy extends Character {
 
 			@Override
 			public void onUpdate(float arg0) {
-				// TODO Auto-generated method stub
-				//double angle=Math.atan2(mAnimatedSprite.getY()-app.mMap.getPlayerY(), mAnimatedSprite.getX()-app.mMap.getPlayerX())* 180 / Math.PI;
+
 				float dist1=MathUtils.distance(mAnimatedSprite.getX(), mAnimatedSprite.getY(), app.mMap.getPlayerX(), app.mMap.getPlayerY());
 				int dir=-4;
 				if(dist1<distA){

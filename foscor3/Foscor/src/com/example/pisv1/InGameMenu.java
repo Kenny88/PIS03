@@ -48,7 +48,6 @@ public class InGameMenu implements IOnMenuItemClickListener {
 		this.mMenuScene.setBackgroundEnabled(false);
 
 		this.mMenuScene.setOnMenuItemClickListener(this);
-		System.out.print("Menu creat");
 	}
 	public MenuScene getScene(){
 		return mMenuScene;

@@ -243,7 +243,6 @@ public class Map {
 
 	public void setWalls(TMXObject object){
 		int startx, starty, finalx, finaly, i, j;
-		Log.d("Localitzacio tile", Float.toString(object.getX())+" "+Float.toString(object.getX()));
 		startx=object.getX()/tileWight;
 		starty=object.getY()/tileHeight;
 		finalx=(object.getX()+object.getWidth())/tileWight;
@@ -256,7 +255,6 @@ public class Map {
 		for(i=starty;i<=finaly;i++){
 			for(j=startx;j<=finalx;j++){
 				tileMatrix[i][j]=true;
-				Log.d("FIca wall tile",Integer.toString(i)+" "+Integer.toString(j));
 			}
 		}
 	}

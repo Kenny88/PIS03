@@ -37,6 +37,7 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import android.widget.Toast;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.opengl.GLES20;
 import android.os.Handler;
 import android.os.Message;
@@ -74,7 +75,6 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 
 	protected BoundCamera mBoundChaseCamera;
 	protected Scene mMainScene;
-
 	private HUD mHud;
 	
 	// MENU BUTTON
@@ -301,7 +301,6 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		ITextureRegion region = BitmapTextureAtlasTextureRegionFactory.createFromAsset(texture, this, "cargando.png", 0, 0);
 		texture.load();
 		mMainScene.setBackground(new SpriteBackground(new Sprite(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT, region,getVertexBufferObjectManager() )));
-		
 		return mMainScene;
 	}
 	@Override
@@ -403,6 +402,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 
 				@Override
 				public void onUpdate(float arg0) {
+					mMainScene.detachChild(mMap.getMapScene());
 					mMap.deletePlayer(mPlayer);
 					mMap=mapas.get(mapaName);
 					mMap.addPlayer(mPlayer,x, y);
@@ -458,7 +458,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mMainScene.setChildScene(mDigitalOnScreenControl);
 		mDigitalOnScreenControl.setChildScene(mDigitalOnScreenControl2);
 		menu.startMenu();
-		Rectangle vida=new Rectangle(0, 0, 104, 16, mEngine.getVertexBufferObjectManager());
+		Rectangle vida=new Rectangle(0, 0, 108, 16, mEngine.getVertexBufferObjectManager());
 		vida.setVisible(true);
 		vida.setColor(new Color(0, 0, 0));
 		mHud.attachChild(vida);
@@ -499,8 +499,10 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	}
 
 	public void gameOver() {
-		// TODO Auto-generated method stub
 		
+
+		 Intent intentContinue = new Intent(Game.this , GameOver.class);
+		 Game.this.startActivity(intentContinue);
 	}
 
 	public void setVida(int cVida) {

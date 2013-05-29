@@ -11,6 +11,7 @@ import org.andengine.engine.handler.IUpdateHandler;
 import org.andengine.engine.options.EngineOptions;
 import org.andengine.engine.options.ScreenOrientation;
 import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;
+import org.andengine.entity.primitive.Rectangle;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.scene.background.SpriteBackground;
 import org.andengine.entity.sprite.ButtonSprite;
@@ -25,6 +26,7 @@ import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextureRegion
 import org.andengine.opengl.texture.region.ITextureRegion;
 import org.andengine.opengl.texture.region.TextureRegion;
 import org.andengine.ui.activity.SimpleBaseGameActivity;
+import org.andengine.util.color.Color;
 
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
@@ -72,6 +74,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 
 	protected BoundCamera mBoundChaseCamera;
 	protected Scene mMainScene;
+	protected Scene mVisualScene;
 
 	private HUD mHud;
 	
@@ -228,6 +231,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		}
 		
 	};
+	private Rectangle mVida;
+	private float vRed=0;
+	private float vGreen=1;
 
 	// ===========================================================
 	// Getter & Setter
@@ -299,8 +305,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 				/* Remove the menu and reset it. */
 				menu.getScene().back();
 				bMenu=false;
-				mMainScene.setChildScene(this.mDigitalOnScreenControl);
-
+				mMainScene.setChildScene(mVisualScene);
 			} else {
 				/* Attach the menu. */
 				bMenu=true;
@@ -385,9 +390,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	public void changeMap(String name,final float x,final float y) {
 		mapaName=name;
 		mMainScene.detachChild(mMap.getMapScene());
-		mDigitalOnScreenControl.setVisible(false);
-		mDigitalOnScreenControl2.setVisible(false);
-		mInventoryMenuButton.setVisible(false);
+		mHud.setVisible(false);
+		mVisualScene.setVisible(false);
 		mPlayer.move(0, 0);
 			mMainScene.registerUpdateHandler(new IUpdateHandler(){
 
@@ -397,9 +401,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					mMap=mapas.get(mapaName);
 					mMap.addPlayer(mPlayer,x, y);
 					mMainScene.attachChild(mMap.getMapScene());
-					mDigitalOnScreenControl.setVisible(true);
-					mDigitalOnScreenControl2.setVisible(true);
-					mInventoryMenuButton.setVisible(true);
+					mHud.setVisible(true);
+					mVisualScene.setVisible(true);
 					message1="";
 					message2=0;
 					mMainScene.unregisterUpdateHandler(this);
@@ -445,12 +448,20 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mDigitalOnScreenControl2.getControlBase().setScale(1.3f);
 		this.mDigitalOnScreenControl2.getControlKnob().setScale(1.3f);
 		this.mDigitalOnScreenControl2.refreshControlKnobPosition();
-		mDigitalOnScreenControl.setChildScene(mDigitalOnScreenControl2);
-		
-		mMainScene.setChildScene(this.mDigitalOnScreenControl);
 
-		
+		mVisualScene.attachChild(mDigitalOnScreenControl);
+		mVisualScene.attachChild(mDigitalOnScreenControl2);
+		mMainScene.setChildScene(mVisualScene);
 		menu.startMenu();
+		Rectangle vida=new Rectangle(4, 4, 100, 4, mEngine.getVertexBufferObjectManager());
+		vida.setVisible(true);
+		vida.setColor(new Color(0, 0, 0));
+		mHud.attachChild(vida);
+		mVida=new Rectangle(4, 4, 100, 4, mEngine.getVertexBufferObjectManager());
+		mVida.setWidth(100);
+		mVida.setVisible(true);
+		mVida.setColor(new Color(vRed, vGreen, 0));
+		mHud.attachChild(mVida);
 		
 		mInventoryMenuButton = new ButtonSprite(16, 16, mInventoryMenuButtonTextureRegion, mEngine.getVertexBufferObjectManager()) {
 			@Override
@@ -462,13 +473,13 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					{
 						menu.getScene().back();
 						bMenu=false;
-						mMainScene.setChildScene(Game.this.mDigitalOnScreenControl);
+						mMainScene.setChildScene(mVisualScene);
 					}
 					else
 					{
 						bMenu=true;
 						
-						Game.this.mMainScene.setChildScene(Game.this.menu.getScene(), false, true, true);
+						Game.this.mMainScene.setChildScene(menu.getScene(), false, true, true);
 					}
 				}
 				
@@ -477,8 +488,21 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		};
 		mHud.registerTouchArea(mInventoryMenuButton);
 		mHud.attachChild(mInventoryMenuButton);
+		mMainScene.attachChild(mHud);
 
 
+	}
+
+	public void gameOver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setVida(int cVida) {
+		vGreen=cVida/100f;
+		vRed=1-vGreen;
+		mVida.setColor(new Color(vRed,vGreen,0));
+		mVida.setWidth(cVida);
 	}
 	public void clearAttack(Ataque atac){
 		atacs.add(atac);

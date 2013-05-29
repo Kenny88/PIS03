@@ -248,8 +248,8 @@ public class Map {
 		starty=object.getY()/tileHeight;
 		finalx=(object.getX()+object.getWidth())/tileWight;
 		finaly=(object.getY()+object.getHeight())/tileHeight;
-		for(i=starty;i<finaly;i++){
-			for(j=startx;j<finalx;j++){
+		for(i=starty;i<=finaly;i++){
+			for(j=startx;j<=finalx;j++){
 				tileMatrix[i][j]=true;
 				Log.d("FIca wall tile",Integer.toString(i)+" "+Integer.toString(j));
 			}

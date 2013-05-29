@@ -26,12 +26,10 @@ public class Enemy extends Character {
 	private int dirY;
 	protected float maxRange=200;
 	ArrayList<ArrayList<String>> visited;
-	private PathModifier cPath;
 	private IUpdateHandler update;
 	private Stack<Node> stack;
 	private Game app;
 	//private Game app1;
-	Path path;
 	Random ran=new Random();
 	boolean isWalking=false;
 	Node node1;

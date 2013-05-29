@@ -20,8 +20,6 @@ public class InGameMenu implements IOnMenuItemClickListener {
 
 	protected MenuScene mMenuScene;
 	private Game app;
-	private BitmapTextureAtlas mBitmapTextureAtlas;
-	private ITextureRegion mFaceTextureRegion;
 	protected Font mFont;
 	
 	protected static final int QUIT=0;
@@ -37,10 +35,10 @@ public class InGameMenu implements IOnMenuItemClickListener {
 		
 		this.mMenuScene = new MenuScene(( app).mBoundChaseCamera);
 
-		final IMenuItem inventoryMenuItem = new ColorMenuItemDecorator(new TextMenuItem(INVENTORY, this.mFont, "Inventory", ( app).getVertexBufferObjectManager()), new Color(1,0,0), new Color(0,0,0));
+		final IMenuItem inventoryMenuItem = new ColorMenuItemDecorator(new TextMenuItem(INVENTORY, this.mFont,app.getResources().getString(R.string.inventory),( app).getVertexBufferObjectManager()), new Color(1,0,0), new Color(0,0,0));
 		inventoryMenuItem.setBlendFunction(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA);
 		this.mMenuScene.addMenuItem(inventoryMenuItem);
-		final IMenuItem quitMenuItem = new ColorMenuItemDecorator(new TextMenuItem(QUIT, this.mFont, "Quit", ( app).getVertexBufferObjectManager()), new Color(1,0,0), new Color(0,0,0));
+		final IMenuItem quitMenuItem = new ColorMenuItemDecorator(new TextMenuItem(QUIT, this.mFont,app.getResources().getString(R.string.quit), ( app).getVertexBufferObjectManager()), new Color(1,0,0), new Color(0,0,0));
 		quitMenuItem.setBlendFunction(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA);
 		this.mMenuScene.addMenuItem(quitMenuItem);
 

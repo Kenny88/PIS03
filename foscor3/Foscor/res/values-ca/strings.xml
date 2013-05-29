@@ -4,6 +4,8 @@
     <string name="Start">&quot;Toca per començar&quot;</string>
     <string name="Continue">&quot;Continuar&quot;</string>
     <string name="Load">&quot;Carregar&quot;</string>
+    <string name="inventory">Inventari</string>
+    <string name="quit">Sortir</string>
     <string name="Options">&quot;Opcions&quot;</string>
     <string name="Exit">&quot;Sortir&quot;</string>
     <string name="New">&quot;Nou&quot;</string>

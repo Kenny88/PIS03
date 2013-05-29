@@ -6,7 +6,8 @@
     <string name="Start">&quot;Touch to start&quot;</string>
     <color name="Blanco">#FFFFFFFF</color>
     <string name="Continue">&quot;Continue&quot;</string>
-    <string name="Load">&quot;Load&quot;</string>
+    <string name="inventory">Inventory</string>
+    <string name="quit">Quit</string>
     <string name="Options">&quot;Options&quot;</string>
     <string name="Exit">&quot;Exit&quot;</string>
     <string name="New">&quot;New&quot;</string>

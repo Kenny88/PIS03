@@ -20,7 +20,7 @@ import android.util.Log;
 
 public class Enemy extends Character {
 	
-	private int distV=200;
+	private int distV=180;
 	private int distA=40;
 	private int dirX;
 	private int dirY;
@@ -162,9 +162,10 @@ public class Enemy extends Character {
 						}else{
 							dirX=0;
 						}
+						Log.d("Dirrection",Integer.toString(node1.x)+" "+Integer.toString(node1.y)+" "+Float.toString(dist1));
 						move(dirX,dirY);
 						if(dirX==0&&dirY==0){
-							if(stack!=null&&stack.size()>0){
+							if(stack.size()>0){
 								node1=stack.pop();
 							}
 							
@@ -204,7 +205,7 @@ public class Enemy extends Character {
 		float epX, epY;
 		epX=mAnimatedSprite.getX()-app.mMap.getPlayerX();
 		epY=mAnimatedSprite.getY()-app.mMap.getPlayerY();
-		if((Math.abs(epX)<maxRange&&Math.abs(epY)<distA*0.66)||Math.abs(epY)<maxRange&&Math.abs(epX)<distA*0.66){
+		if((Math.abs(epX)<maxRange&&Math.abs(epY)<distA*0.5)||Math.abs(epY)<maxRange&&Math.abs(epX)<distA*0.5){
 			if(epX<maxRange&&epX>distA*0.66)
 				return 3;
 			else if(epX>-maxRange&&epX<-distA*0.66)

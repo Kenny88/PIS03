@@ -378,10 +378,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		menu.addItem("greataxe8hv.png", "axe3", 0, 0, "Weapon");
 		menu.addItem("emeraldring4om.png", "ring3", 0, 0, "Accessory");
 	}
-	/*@Override
-	public void onGameCreated() {
-		this.showDialog(DIALOG_ALLOWDIAGONAL_ID);
-	}*/
+
 
 	public int getCameraHeight() {
 		return CAMERA_HEIGHT;

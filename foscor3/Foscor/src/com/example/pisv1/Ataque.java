@@ -117,7 +117,6 @@ public class Ataque {
 			
 		});
 
-		//app.clearAttack(this);
 		creador.move=true;
 	}
 	

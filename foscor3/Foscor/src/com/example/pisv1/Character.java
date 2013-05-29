@@ -1,5 +1,8 @@
 package com.example.pisv1;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import org.andengine.engine.handler.IUpdateHandler;
 import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.sprite.AnimatedSprite.IAnimationListener;
@@ -148,6 +151,15 @@ public class Character {
 			        // Y = -1 => Up
 			    	attackMagicRanged();
 				}
+				new Timer().schedule(new TimerTask(){
+
+					@Override
+					public void run() {
+						attack=true;
+					}
+					
+				}, 500);
+				
 			}
 			
 		}
@@ -162,7 +174,6 @@ public class Character {
 			@Override
 			public void onAnimationFinished(AnimatedSprite arg0) {
 
-				attack=true;
 			}
 
 			@Override
@@ -175,11 +186,6 @@ public class Character {
 			@Override
 			public void onAnimationLoopFinished(AnimatedSprite arg0, int arg1,
 					int arg2) {
-				// TODO Auto-generated method stub
-				/*espera++;
-				if (espera>8){
-					attack=true;
-				}*/
 			}
 
 			@Override

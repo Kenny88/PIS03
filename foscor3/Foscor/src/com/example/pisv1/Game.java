@@ -397,7 +397,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 
 	public void changeMap(String name,final float x,final float y) {
 		mapaName=name;
-		mVisualScene.detachChild(mMap.getMapScene());
+		mHud.detachChild(mMap.getMapScene());
 		mHud.setVisible(false);
 		mVisualScene.setVisible(false);
 		mPlayer.move(0, 0);
@@ -408,7 +408,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					mMap.deletePlayer(mPlayer);
 					mMap=mapas.get(mapaName);
 					mMap.addPlayer(mPlayer,x, y);
-					mVisualScene.attachChild(mMap.getMapScene());
+					mHud.attachChild(mMap.getMapScene());
 					mHud.setVisible(true);
 					mVisualScene.setVisible(true);
 					message1="";
@@ -438,7 +438,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mapas.setGame(this);
 		this.mMap=mapas.get(mapaName);
 		mMap.addPlayer(mPlayer);
-		mVisualScene.attachChild(mMap.getMapScene());
+		mHud.attachChild(mMap.getMapScene());
 		this.mDigitalOnScreenControl = new DigitalOnScreenControl(0, CAMERA_HEIGHT - this.mOnScreenControlBaseTextureRegion.getHeight(), 
 				this.mBoundChaseCamera, this.mOnScreenControlBaseTextureRegion, this.mOnScreenControlKnobTextureRegion, 0.1f, 
 				this.getVertexBufferObjectManager(), mPlayer.getIOnScreenControlListener());

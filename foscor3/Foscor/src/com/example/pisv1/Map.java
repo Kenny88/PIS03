@@ -141,10 +141,10 @@ public class Map {
 	            {
 	            	setWalls(object);
 	                final Rectangle rect = new Rectangle(0.0f+object.getX(), 0.0f+object.getY(),0.0f+object.getWidth(), 0.0f+ object.getHeight(), app.getVertexBufferObjectManager());
-	           		rect.setColor(1, 0, 0, 0.5f);
+	           		//rect.setColor(1, 0, 0, 0.5f);
                     PhysicsFactory.createBoxBody(mPhysicsWorld, rect, BodyType.StaticBody, app.WALL_FIXTURE_DEF).setUserData("wall");
-                    rect.setVisible(true);
-	           		mMapScene.attachChild(rect);
+                    //rect.setVisible(true);
+	           		//mMapScene.attachChild(rect);
 	            }
             }
         	if(group.getTMXObjectGroupProperties().containsTMXProperty("object", "true"))
@@ -189,7 +189,7 @@ public class Map {
 	            for(TMXObject object : group.getTMXObjects()) 
 	            {
 	        		
-	        		final Enemy anciano = new Enemy(object.getX(), object.getY(),object.getTMXObjectProperties().get(0).getValue(),app,this);
+	        		final Enemy anciano = new Enemy(object.getX(), object.getY(),object.getTMXObjectProperties().get(0).getValue(),app,this,false);
 	           		mMapScene.attachChild(anciano.getAnimatedSprite());
 	           		anciano.addToPhysicsWorld(mPhysicsWorld, app.CHARACTER_FIXTURE_DEF);
 	           		anciano.startUpdate();

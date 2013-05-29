@@ -24,6 +24,7 @@ public class Enemy extends Character {
 	private int distA=40;
 	private int dirX;
 	private int dirY;
+	protected float maxRange;
 	ArrayList<ArrayList<String>> visited;
 	private PathModifier cPath;
 	private IUpdateHandler update;
@@ -38,8 +39,9 @@ public class Enemy extends Character {
 	private int tileNumY;
 	private int tileSizeX;
 	private int tileSizeY;
+
 	
-	public Enemy(float x, float y, String image,final Game app1, Map map) {
+	public Enemy(float x, float y, String image,final Game app1, Map map, boolean range) {
 		super(x, y, image, app1);
 		// TODO Auto-generated constructor stub
 		app=app1;
@@ -47,6 +49,7 @@ public class Enemy extends Character {
 		tileNumY=map.getTileNumY();
 		tileSizeX=map.getTileX();
 		tileSizeY=map.getTileY();
+		ranged=range;
 		
 	}
 
@@ -102,6 +105,13 @@ public class Enemy extends Character {
 				// TODO Auto-generated method stub
 				//double angle=Math.atan2(mAnimatedSprite.getY()-app.mMap.getPlayerY(), mAnimatedSprite.getX()-app.mMap.getPlayerX())* 180 / Math.PI;
 				float dist1=MathUtils.distance(mAnimatedSprite.getX(), mAnimatedSprite.getY(), app.mMap.getPlayerX(), app.mMap.getPlayerY());
+				if(ranged){
+					int dir=getDirection();
+					if(dir!=-1){
+						direction=dir;
+						attackMagicRanged();
+					}
+				}
 				if(dist1<distA){
 					move(0,0);
 					attack(0,1);
@@ -143,14 +153,14 @@ public class Enemy extends Character {
 						int error=10;
 						if(node1.y*tileSizeY+error<mAnimatedSprite.getY()){
 							dirY=-1;
-						}else if(node1.y*tileSizeY>mAnimatedSprite.getY()){
+						}else if(node1.y*tileSizeY-3>mAnimatedSprite.getY()){
 							dirY=1;
 						}else{
 							dirY=0;
 						}
 						if(node1.x*tileSizeX+error<mAnimatedSprite.getX()){
 							dirX=-1;
-						}else if(node1.x*tileSizeX>mAnimatedSprite.getX()){
+						}else if(node1.x*tileSizeX-3>mAnimatedSprite.getX()){
 							dirX=1;
 						}else{
 							dirX=0;
@@ -191,6 +201,24 @@ public class Enemy extends Character {
 	public Node getPropers(Node node){
 		
 		return node;
+	}
+	
+	public int getDirection(){
+		float epX, epY;
+		epX=mAnimatedSprite.getX()-app.mMap.getPlayerX();
+		epY=mAnimatedSprite.getY()-app.mMap.getPlayerY();
+		if((Math.abs(epX)<maxRange&&Math.abs(epY)<distA)||(epY)<maxRange&&Math.abs(epX)<distA){
+			if(epX<maxRange&&epX>distA)
+				return 1;
+			else if(epX<-maxRange&&epX>-distA)
+				return 3;
+			else if(epY<maxRange&&epY>distA)
+				return 0;
+			else if(epY<-maxRange&&epY>-distA)
+				return 2;
+			
+		}
+		return -1;
 	}
 
 }

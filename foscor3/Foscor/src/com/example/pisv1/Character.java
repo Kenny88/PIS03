@@ -22,6 +22,7 @@ public class Character {
 	protected int cDefense=1;
 	protected int cMagic=1;
 	protected int cVida=100;
+	
 	protected AnimatedSprite mAnimatedSprite;
 	protected Body mBody;
 	protected Game app;
@@ -29,6 +30,7 @@ public class Character {
 	protected AtaqueMelee ataqueMelee;
 	protected boolean attack=true;
 	protected boolean move=true;
+	protected boolean ranged=false;
 	protected AtaqueMagicoRanged ataqueMagicoRanged;
 	public Character(float x, float y, String image,Game app1){
 		this.app=app1;

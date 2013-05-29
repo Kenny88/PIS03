@@ -2,8 +2,12 @@ package com.example.pisv1;
 
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -19,5 +23,20 @@ public class GameOver extends Activity {
             requestWindowFeature(Window.FEATURE_NO_TITLE);
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         	setContentView(R.layout.activity_game_over);
+        	final View Start = findViewById(R.id.click_to_start);
+        	
+          
+            
+            Start.setOnClickListener(new View.OnClickListener() {
+    			@Override
+    			public void onClick(View v) {
+    				 MediaPlayer mp = MediaPlayer.create(GameOver.this, R.raw.click);
+				        mp.setLooping(false);
+				        mp.start();
+    				 Intent intentStart = new Intent(GameOver.this , StartActivity.class);
+    				 GameOver.this.startActivity(intentStart);
+    				 Log.i("Content "," Main layout ");
+    					
+    		}});
         }
 }

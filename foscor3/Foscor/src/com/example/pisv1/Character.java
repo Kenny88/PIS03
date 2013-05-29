@@ -176,10 +176,10 @@ public class Character {
 			public void onAnimationLoopFinished(AnimatedSprite arg0, int arg1,
 					int arg2) {
 				// TODO Auto-generated method stub
-				espera++;
+				/*espera++;
 				if (espera>8){
 					attack=true;
-				}
+				}*/
 			}
 
 			@Override

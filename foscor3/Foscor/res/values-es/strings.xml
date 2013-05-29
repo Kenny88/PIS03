@@ -32,6 +32,6 @@
 <string name="cantCross">Ups! parece que no puedes cruzar.</string>
 <string name="Yes">Sí</string>
 <string name="No">No</string>
-<string name="ExitQuestion">Estas seguro de que quieres salir de la partida?\n(pude haber contenido que no se haya guardado)</string>
+<string name="ExitQuestion">Estas seguro de que quieres salir de la partida?\n(puede haber contenido que no se haya guardado)</string>
 
 </resources>

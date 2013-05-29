@@ -24,7 +24,7 @@ public class Enemy extends Character {
 	private int distA=40;
 	private int dirX;
 	private int dirY;
-	protected float maxRange;
+	protected float maxRange=200;
 	ArrayList<ArrayList<String>> visited;
 	private PathModifier cPath;
 	private IUpdateHandler update;

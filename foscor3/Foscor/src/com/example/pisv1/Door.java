@@ -49,9 +49,9 @@ public class Door{
 			}
 		}
 		final Rectangle rect = new Rectangle(x, y,w,h,app.getVertexBufferObjectManager());
-   		mMapScene.attachChild(rect);
-       	rect.setColor(1,1, 0, 0.5f);
-        rect.setVisible(true);
+   		//SmMapScene.attachChild(rect);
+       	//rect.setColor(1,1, 0, 0.5f);
+        //rect.setVisible(true);
         this.mBody=PhysicsFactory.createBoxBody(mMap.getmPhysicsWorld(), rect, BodyType.StaticBody, app.WALL_FIXTURE_DEF);
    		mMap.getmPhysicsWorld().registerPhysicsConnector(new PhysicsConnector(rect, mBody, true, false));
         mBody.setUserData(this);

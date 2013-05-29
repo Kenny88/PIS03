@@ -382,6 +382,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mMainScene.detachChild(mMap.getMapScene());
 		mDigitalOnScreenControl.setVisible(false);
 		mDigitalOnScreenControl2.setVisible(false);
+		mInventoryMenuButton.setVisible(false);
 		mPlayer.move(0, 0);
 			mMainScene.registerUpdateHandler(new IUpdateHandler(){
 
@@ -393,6 +394,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					mMainScene.attachChild(mMap.getMapScene());
 					mDigitalOnScreenControl.setVisible(true);
 					mDigitalOnScreenControl2.setVisible(true);
+					mInventoryMenuButton.setVisible(true);
 					message1="";
 					message2=0;
 					mMainScene.unregisterUpdateHandler(this);

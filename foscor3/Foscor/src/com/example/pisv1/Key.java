@@ -20,9 +20,9 @@ private Rectangle rect;
 
 public Key(TMXObject object,Game app, Map mMap){
 	this.rect = new Rectangle(object.getX(), object.getY(),object.getWidth(),object.getHeight(),app.getVertexBufferObjectManager());
-	mMap.getMapScene().attachChild(rect);
-   	rect.setColor(0,1, 0, 0.5f);
-    rect.setVisible(true);
+//	mMap.getMapScene().attachChild(rect);
+//   	rect.setColor(0,1, 0, 0.5f);
+//    rect.setVisible(true);
     this.mBody=PhysicsFactory.createBoxBody(mMap.getmPhysicsWorld(), rect, BodyType.KinematicBody, app.ZERO_FIXTURE_DEF);
     this.map=object.getName();
 	mMap.getmPhysicsWorld().registerPhysicsConnector(new PhysicsConnector(rect, mBody, false, false));

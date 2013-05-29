@@ -14,7 +14,7 @@ public class Player extends Character {
 	private IOnScreenControlListener mBotonsControlListener;
 	public Player(float x, float y, String image,final Game app) {
 		super(x, y, image, app);
-		cAttack=100;
+		setStatistics(80,80, 80);
 		mIOnScreenControlListener=new IOnScreenControlListener() {
 	
 			@Override

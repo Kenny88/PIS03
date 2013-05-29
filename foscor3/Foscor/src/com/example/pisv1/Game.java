@@ -191,6 +191,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					if (!ataque.getCreator().toString().equals("player")){
 						Player character=(Player)fixtureB;
 						character.restVida(ataque.getDaño()/character.cDefense);
+						if(ataque.getTypeAttack().equals("magicRanged")){
+							ataque.detach(mMap.getmPhysicsWorld());
+						}
 					}
 				}else if(B.equals("wall")){
 					Ataque ataque= (Ataque)fixtureA;

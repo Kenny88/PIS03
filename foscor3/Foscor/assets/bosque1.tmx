@@ -319,9 +319,10 @@
     <property name="imagen" value="evil.png"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="339" y="127" width="36" height="67">
+  <object name="personaje" type="anciano" x="1052" y="229" width="36" height="67">
    <properties>
     <property name="imagen" value="evil.png"/>
+    <property name="ranged" value="true"/>
    </properties>
   </object>
  </objectgroup>

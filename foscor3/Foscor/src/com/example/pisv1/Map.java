@@ -189,7 +189,7 @@ public class Map {
 	            for(TMXObject object : group.getTMXObjects()) 
 	            {
 	        		
-	        		final Enemy anciano = new Enemy(object.getX(), object.getY(),object.getTMXObjectProperties().get(0).getValue(),app,this,true);
+	        		final Enemy anciano = new Enemy(object.getX(), object.getY(),object.getTMXObjectProperties().get(0).getValue(),app,this,object.getTMXObjectProperties().containsTMXProperty("ranged", "true"));
 	           		mMapScene.attachChild(anciano.getAnimatedSprite());
 	           		anciano.addToPhysicsWorld(mPhysicsWorld, app.CHARACTER_FIXTURE_DEF);
 	           		anciano.startUpdate();

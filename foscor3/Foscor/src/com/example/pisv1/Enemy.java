@@ -104,8 +104,6 @@ public class Enemy extends Character {
 				//double angle=Math.atan2(mAnimatedSprite.getY()-app.mMap.getPlayerY(), mAnimatedSprite.getX()-app.mMap.getPlayerX())* 180 / Math.PI;
 				float dist1=MathUtils.distance(mAnimatedSprite.getX(), mAnimatedSprite.getY(), app.mMap.getPlayerX(), app.mMap.getPlayerY());
 				int dir=-4;
-				Log.d("Dirrection",Boolean.toString(ranged&&(dir=getDirection())!=-1));
-				Log.d("Dirrection",Integer.toString(dir));
 				if(dist1<distA){
 					move(0,0);
 					attack(0,1);

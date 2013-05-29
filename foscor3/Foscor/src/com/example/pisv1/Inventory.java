@@ -111,29 +111,17 @@ public class Inventory extends InGameMenu {
 		setButton(EQUIPMENT+cont, box, app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
 		
 		if(item==null){
-			/*SpriteMenuItem def=new SpriteMenuItem(EQUIPMENT+cont, box, app.getVertexBufferObjectManager());
-			def.setPosition(app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
-			invMenuScene.addMenuItem(def);*/
-			
-			
-			
+		
 			final Text statsA= new Text(app.getCameraWidth()/3+24+40*cont,app.getCameraHeight()/3-100, this.mFont, equipChar[cont], new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 			invMenuScene.attachChild(statsA);
 		}
 		else{
-			/*SpriteMenuItem def=new SpriteMenuItem(EQUIPMENT+cont, box, app.getVertexBufferObjectManager());
-			def.setPosition(app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
-			invMenuScene.addMenuItem(def);*/
 			
 			setButton(EQUIPMENT+cont, box, app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
 			
 			BitmapTextureAtlas sprite1 = new BitmapTextureAtlas(app.getTextureManager(), 40, 40, TextureOptions.BILINEAR);
 			ITextureRegion region1 = BitmapTextureAtlasTextureRegionFactory.createFromAsset(sprite1, app, item.getPath(), 0, 0);
 			sprite1.load();
-			
-			/*SpriteMenuItem item1=new SpriteMenuItem(EQUIPMENT+cont, region1, app.getVertexBufferObjectManager());
-			item1.setPosition(app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
-			invMenuScene.attachChild(item1);*/
 			
 			setChild(EQUIPMENT+cont, region1, app.getCameraWidth()/3+20+40*cont, app.getCameraHeight()/3-100);
 						
@@ -171,32 +159,16 @@ public class Inventory extends InGameMenu {
 			texture.get(i).load();
 			
 			
-//			SpriteMenuItem item1=new SpriteMenuItem(BACKGROUND+i, mMenuResetTextureRegion, app.getVertexBufferObjectManager());
-//			item1.setPosition(app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
-//			invMenuScene.addMenuItem(item1);
-			
 			setButton(BACKGROUND+i, mMenuResetTextureRegion, app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
-
-//			sprite.add(new SpriteMenuItem(BACKGROUND+i, cell.get(i), app.getVertexBufferObjectManager()));
-//			sprite.get(i).setPosition(app.getCameraWidth()/3+10, app.getCameraHeight()/3-40+50*i);
-//			invMenuScene.attachChild(sprite.get(i));
 			
 			setButton(BACKGROUND+i, cell.get(i), app.getCameraWidth()/3+10, app.getCameraHeight()/3-40+50*i);
 			
-//			SpriteMenuItem att=new SpriteMenuItem(BACKGROUND+i, attackTextureRegion, app.getVertexBufferObjectManager());
-//			att.setPosition(app.getCameraWidth()/3+60, app.getCameraHeight()/3-37+50*i);
-//			invMenuScene.attachChild(att);
-//			
-			setButton(BACKGROUND+i, attackTextureRegion, app.getCameraWidth()/3+60, app.getCameraHeight()/3-37+50*i);
+			setChild(BACKGROUND+i, attackTextureRegion, app.getCameraWidth()/3+60, app.getCameraHeight()/3-37+50*i);
 			
 			final Text statsA= new Text(app.getCameraWidth()/3+90,app.getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getAtk()), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 			invMenuScene.attachChild(statsA);
 			
-//			SpriteMenuItem def=new SpriteMenuItem(BACKGROUND+i, deffenceTextureRegion, app.getVertexBufferObjectManager());
-//			def.setPosition(app.getCameraWidth()/3+117, app.getCameraHeight()/3-38+50*i);
-//			invMenuScene.attachChild(def);
-			
-			setButton(BACKGROUND+i, deffenceTextureRegion, app.getCameraWidth()/3+117, app.getCameraHeight()/3-38+50*i);
+			setChild(BACKGROUND+i, deffenceTextureRegion, app.getCameraWidth()/3+117, app.getCameraHeight()/3-38+50*i);
 			
 			final Text statsD= new Text(app.getCameraWidth()/3+150,app.getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getDef()), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 			invMenuScene.attachChild(statsD);
@@ -213,39 +185,21 @@ public class Inventory extends InGameMenu {
 		sprite1.load();
 		
 		if(select!=id){
-//			SpriteMenuItem sprite = new SpriteMenuItem(id, highlightTextureRegion, app.getVertexBufferObjectManager());
-//			sprite.setPosition(app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
-//			invMenuScene.addMenuItem(sprite);			
+	
 			setButton(id, highlightTextureRegion, app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
 			select=id;
 		}else{
-//			SpriteMenuItem sprite = new SpriteMenuItem(id, mMenuResetTextureRegion, app.getVertexBufferObjectManager());
-//			sprite.setPosition(app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
-//			invMenuScene.addMenuItem(sprite);
+
 			setButton(id, mMenuResetTextureRegion, app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
 			select=-1;
 		}
-//		SpriteMenuItem item1=new SpriteMenuItem(id, region1, app.getVertexBufferObjectManager());
-//		item1.setPosition(app.getCameraWidth()/3+10, app.getCameraHeight()/3-40+50*i);
-//		invMenuScene.attachChild(item1);
+
 		
-		setButton(id, region1, app.getCameraWidth()/3+10, app.getCameraHeight()/3-40+50*i);
-		
-//		SpriteMenuItem att=new SpriteMenuItem(id, attackTextureRegion, app.getVertexBufferObjectManager());
-//		att.setPosition(app.getCameraWidth()/3+60, app.getCameraHeight()/3-37+50*i);
-//		invMenuScene.attachChild(att);
-		
-		setButton(id, attackTextureRegion, app.getCameraWidth()/3+60, app.getCameraHeight()/3-37+50*i);
-		
+		setChild(id, region1, app.getCameraWidth()/3+10, app.getCameraHeight()/3-40+50*i);	
+		setChild(id, attackTextureRegion, app.getCameraWidth()/3+60, app.getCameraHeight()/3-37+50*i);		
 		final Text statsA= new Text(app.getCameraWidth()/3+90,app.getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getAtk()), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
-		invMenuScene.attachChild(statsA);
-		
-//		SpriteMenuItem def=new SpriteMenuItem(id, deffenceTextureRegion, app.getVertexBufferObjectManager());
-//		def.setPosition(app.getCameraWidth()/3+117, app.getCameraHeight()/3-38+50*i);
-//		invMenuScene.attachChild(def);
-		
-		setButton(id, deffenceTextureRegion, app.getCameraWidth()/3+117, app.getCameraHeight()/3-38+50*i);
-		
+		invMenuScene.attachChild(statsA);		
+		setChild(id, deffenceTextureRegion, app.getCameraWidth()/3+117, app.getCameraHeight()/3-38+50*i);		
 		final Text statsD= new Text(app.getCameraWidth()/3+150,app.getCameraHeight()/3-40+50*i, this.mFont, Integer.toString(items.get(i+pos).getDef()), new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
 		invMenuScene.attachChild(statsD);
 		
@@ -346,7 +300,9 @@ public class Inventory extends InGameMenu {
 				app.mPlayer.cAttack+=item2.getAtk();
 				app.mPlayer.cAttack+=item2.getDef();
 			}
+			Log.d("Tamany del array abans", Integer.toString(items.size()));
 			items.remove(item2);
+			Log.d("Tamany del array despres", Integer.toString(items.size()));
 			invReset();
 			return true;
 			
@@ -365,12 +321,13 @@ public class Inventory extends InGameMenu {
 	}
 	
 	public void invReset(){
+		pos=0;
 		invMenuScene.detachChildren();
 		drawInventory();
 		drawEquipment(weapon, 0, boxTextureRegion);
 		drawEquipment(accessory, 1, boxTextureRegion);
 		drawEquipment(defense, 2, boxTextureRegion);
-		pos=0;
+		
 		selectBox=-1;
 		select=-1;
 	}

@@ -24,7 +24,7 @@ public class Ataque {
 	private float daño;
 	private Character creador;
 	private float velocidad;
-	private String type;
+	protected String type;
 	public Ataque(float x, float y,int direction,float velocidad,float daño,String image,IAnimationListener listener,Character creador,Game app1){
 		this.app=app1;
 		this.daño=daño;
@@ -100,7 +100,6 @@ public class Ataque {
 	}
 	public void detach(final PhysicsWorld mPhysicsWorld) {
 		app.clearAttack(this);
-		creador.attack=true;
 		creador.move=true;
 	}
 	

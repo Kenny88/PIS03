@@ -149,7 +149,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 						if (!ataque.getCreator().toString().equals("player")){
 							Character character=(Character)fixtureA;
 							character.restVida(ataque.getDaño()/character.cDefense);
-							ataque.detach(mMap.getmPhysicsWorld());
+							if(ataque.getTypeAttack().equals("magicRanged")){
+								ataque.detach(mMap.getmPhysicsWorld());
+							}
 						}
 		       		}
 			}else if(A.equals("object")){
@@ -181,14 +183,15 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					if (!ataque.getCreator().toString().equals("enemy")){
 						Character character=(Character)fixtureB;
 						character.restVida(ataque.getDaño()/character.cDefense);
-						ataque.detach(mMap.getmPhysicsWorld());
+						if(ataque.getTypeAttack().equals("magicRanged")){
+							ataque.detach(mMap.getmPhysicsWorld());
+						}
 					}
 				}else if(B.equals("player")){
 					Ataque ataque= (Ataque)fixtureA;
 					if (!ataque.getCreator().toString().equals("player")){
 						Player character=(Player)fixtureB;
 						character.restVida(ataque.getDaño()/character.cDefense);
-						ataque.detach(mMap.getmPhysicsWorld());
 					}
 				}else if(B.equals("wall")){
 					Ataque ataque= (Ataque)fixtureA;
@@ -200,13 +203,17 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					if (!ataque.getCreator().toString().equals("enemy")){
 						Character character=(Character)fixtureA;
 						character.restVida(ataque.getDaño()/character.cDefense);
-						ataque.detach(mMap.getmPhysicsWorld());
+						if(ataque.getTypeAttack().equals("magicRanged")){
+							ataque.detach(mMap.getmPhysicsWorld());
+						}
 					}
 				}
 			}else if(A.equals("wall")){
 				if(B.equals("attack")){
 					Ataque ataque= (Ataque)fixtureB;
-					ataque.detach(mMap.getmPhysicsWorld());
+					if(ataque.getTypeAttack().equals("magicRanged")){
+						ataque.detach(mMap.getmPhysicsWorld());
+					}
 				}
 			}
 			mMainScene.setIgnoreUpdate(false);

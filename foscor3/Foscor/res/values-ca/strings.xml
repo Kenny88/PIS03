@@ -1,6 +1,5 @@
 <resources>
 <string name="search_occurs">\'{string}\' occurs {times}</string>
-    <string name="app_name">Foscor</string>
     <string name="action_settings">Adjustaments</string>
     <string name="Start">&quot;Toca per començar&quot;</string>
     <string name="Continue">&quot;Continuar&quot;</string>

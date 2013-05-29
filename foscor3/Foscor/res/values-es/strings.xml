@@ -1,7 +1,4 @@
 <resources>
-
-   
-    <string name="app_name">Oscuridad</string>
     <string name="action_settings">Ajustes</string>
     <string name="Start">&quot;Toca para empezar&quot;</string>
     <string name="Continue">&quot;Continuar&quot;</string>

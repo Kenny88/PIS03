@@ -20,8 +20,6 @@ public class InGameMenu implements IOnMenuItemClickListener {
 
 	protected MenuScene mMenuScene;
 	private Game app;
-	private BitmapTextureAtlas mBitmapTextureAtlas;
-	private ITextureRegion mFaceTextureRegion;
 	protected Font mFont;
 	
 	protected static final int QUIT=0;

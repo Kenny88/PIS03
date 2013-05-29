@@ -186,7 +186,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 				}else if(B.equals("player")){
 					Ataque ataque= (Ataque)fixtureA;
 					if (!ataque.getCreator().toString().equals("player")){
-						Character character=(Character)fixtureB;
+						Player character=(Player)fixtureB;
 						character.restVida(ataque.getDaño()/character.cDefense);
 						ataque.detach(mMap.getmPhysicsWorld());
 					}
@@ -390,7 +390,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 
 	public void changeMap(String name,final float x,final float y) {
 		mapaName=name;
-		mMainScene.detachChild(mMap.getMapScene());
+		mVisualScene.detachChild(mMap.getMapScene());
 		mHud.setVisible(false);
 		mVisualScene.setVisible(false);
 		mPlayer.move(0, 0);
@@ -401,7 +401,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					mMap.deletePlayer(mPlayer);
 					mMap=mapas.get(mapaName);
 					mMap.addPlayer(mPlayer,x, y);
-					mMainScene.attachChild(mMap.getMapScene());
+					mVisualScene.attachChild(mMap.getMapScene());
 					mHud.setVisible(true);
 					mVisualScene.setVisible(true);
 					message1="";
@@ -431,7 +431,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mapas.setGame(this);
 		this.mMap=mapas.get(mapaName);
 		mMap.addPlayer(mPlayer);
-		mMainScene.attachChild(mMap.getMapScene());
+		mVisualScene.attachChild(mMap.getMapScene());
 		this.mDigitalOnScreenControl = new DigitalOnScreenControl(0, CAMERA_HEIGHT - this.mOnScreenControlBaseTextureRegion.getHeight(), 
 				this.mBoundChaseCamera, this.mOnScreenControlBaseTextureRegion, this.mOnScreenControlKnobTextureRegion, 0.1f, 
 				this.getVertexBufferObjectManager(), mPlayer.getIOnScreenControlListener());
@@ -454,12 +454,11 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mDigitalOnScreenControl.setChildScene(mDigitalOnScreenControl2);
 		mMainScene.setChildScene(mVisualScene);
 		menu.startMenu();
-		Rectangle vida=new Rectangle(4, 4, 100, 4, mEngine.getVertexBufferObjectManager());
+		Rectangle vida=new Rectangle(0, 0, 104, 16, mEngine.getVertexBufferObjectManager());
 		vida.setVisible(true);
 		vida.setColor(new Color(0, 0, 0));
 		mHud.attachChild(vida);
-		mVida=new Rectangle(4, 4, 100, 4, mEngine.getVertexBufferObjectManager());
-		mVida.setWidth(100);
+		mVida=new Rectangle(4, 4, 100, 8, mEngine.getVertexBufferObjectManager());
 		mVida.setVisible(true);
 		mVida.setColor(new Color(vRed, vGreen, 0));
 		mHud.attachChild(mVida);
@@ -502,7 +501,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	public void setVida(int cVida) {
 		vGreen=cVida/100f;
 		vRed=1-vGreen;
-		mVida.setColor(new Color(vRed,vGreen,0));
+		Log.d("vida",Integer.toString(cVida));
+		mVida.setColor(new Color(vRed, vGreen, 0));
 		mVida.setWidth(cVida);
 	}
 	public void clearAttack(Ataque atac){

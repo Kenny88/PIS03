@@ -37,9 +37,10 @@ public class Player extends Character {
 	}
 	public void restVida(float f) {
 		cVida-=f;
-		app.setVida(cVida);
 		if (cVida<0){
 			app.gameOver();
+		}else{
+			app.setVida(cVida);
 		}
 	}
 	public IOnScreenControlListener getIOnScreenControlListener() {

@@ -48,7 +48,7 @@ public class Character {
    		mPhysicsWorld.registerPhysicsConnector(new PhysicsConnector(mAnimatedSprite, mBody, true, false));
    		mBody.setUserData(this);
 	}
-	public void setStatistics(Integer attack, Integer defense,Integer magic) {
+	public void setStatistics(int attack, int defense,int magic) {
 		cAttack=attack;
 		cDefense=defense;
 		cMagic=magic;

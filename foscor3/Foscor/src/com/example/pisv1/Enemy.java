@@ -149,14 +149,14 @@ public class Enemy extends Character {
 						int error=10;
 						if(node1.y*tileSizeY+error<mAnimatedSprite.getY()){
 							dirY=-1;
-						}else if(node1.y*tileSizeY-3>mAnimatedSprite.getY()){
+						}else if(node1.y*tileSizeY>mAnimatedSprite.getY()){
 							dirY=1;
 						}else{
 							dirY=0;
 						}
 						if(node1.x*tileSizeX+error<mAnimatedSprite.getX()){
 							dirX=-1;
-						}else if(node1.x*tileSizeX-3>mAnimatedSprite.getX()){
+						}else if(node1.x*tileSizeX>mAnimatedSprite.getX()){
 							dirX=1;
 						}else{
 							dirX=0;

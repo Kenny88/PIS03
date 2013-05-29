@@ -191,7 +191,7 @@ public class Map {
 	            {
 	        		TMXProperties<TMXObjectProperty> prop=object.getTMXObjectProperties();
 	        		final Enemy anciano = new Enemy(object.getX(), object.getY(),prop.get(3).getValue(),app,this,prop.containsTMXProperty("ranged", "true"));
-	        		anciano.setStatistics(Integer.getInteger(prop.get(0).getValue()),Integer.getInteger(prop.get(1).getValue()),Integer.getInteger(prop.get(2).getValue()));
+	        		anciano.setStatistics(Integer.parseInt(prop.get(0).getValue()),Integer.parseInt(prop.get(1).getValue()),Integer.parseInt(prop.get(2).getValue()));
 	           		mMapScene.attachChild(anciano.getAnimatedSprite());
 	           		anciano.addToPhysicsWorld(mPhysicsWorld, app.CHARACTER_FIXTURE_DEF);
 	           		anciano.startUpdate();

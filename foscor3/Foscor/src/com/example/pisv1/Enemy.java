@@ -221,6 +221,8 @@ public class Enemy extends Character {
 		return "enemy";
 	}
 
+
+
 }
 
 class Node{

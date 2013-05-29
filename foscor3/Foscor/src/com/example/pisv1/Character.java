@@ -48,6 +48,12 @@ public class Character {
    		mPhysicsWorld.registerPhysicsConnector(new PhysicsConnector(mAnimatedSprite, mBody, true, false));
    		mBody.setUserData(this);
 	}
+	public void setStatistics(Integer attack, Integer defense,Integer magic) {
+		cAttack=attack;
+		cDefense=defense;
+		cMagic=magic;
+		
+	}
 	public AnimatedSprite getAnimatedSprite() {
 		return mAnimatedSprite;
 	}

@@ -99,7 +99,25 @@ public class Ataque {
 		return mAnimatedSprite.convertLocalToSceneCoordinates(i,j);
 	}
 	public void detach(final PhysicsWorld mPhysicsWorld) {
-		app.clearAttack(this);
+		getAnimatedSprite().registerUpdateHandler(new IUpdateHandler(){
+
+			@Override
+			public void onUpdate(float arg0) {
+			// TODO Auto-generated method stub
+			mPhysicsWorld.destroyBody(mBody);
+			mAnimatedSprite.detachSelf();
+	
+			}
+
+			@Override
+			public void reset() {
+			// TODO Auto-generated method stub
+				
+			}
+			
+		});
+
+		//app.clearAttack(this);
 		creador.move=true;
 	}
 	

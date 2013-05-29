@@ -30,6 +30,7 @@ public class Inventory extends InGameMenu {
 	private final int EQUIPMENT=5;
 	private final int UP=2;
 	private final int DOWN=3;
+	private final int EQP=4;
 	
 	private ArrayList<Item> items = new ArrayList<Item>();
 	private Item weapon=null, accessory=null, defense=null;
@@ -55,6 +56,7 @@ public class Inventory extends InGameMenu {
 	protected ITextureRegion highboxTextureRegion;
 	
 	private MenuScene invMenuScene;
+	private SpriteMenuItem equip;
 	
 	public Inventory(Game application) {
 		super(application);
@@ -174,6 +176,10 @@ public class Inventory extends InGameMenu {
 			invMenuScene.attachChild(statsD);
 			
 		}
+		equip=setButton(EQP, mMenuResetTextureRegion, app.getCameraWidth()/3, app.getCameraHeight()/3-50+50*i);
+		equip.setWidth(100);
+		final Text statsE= new Text(app.getCameraWidth()/3+10,app.getCameraHeight()/3-45+50*i, this.mFont, "Equip", new TextOptions(HorizontalAlign.LEFT), app.getVertexBufferObjectManager());
+		invMenuScene.attachChild(statsE);
 		
 	}
 	public void highlight(int id){
@@ -212,6 +218,7 @@ public class Inventory extends InGameMenu {
 		if(BACKGROUND<=pMenuItem.getID()&&pMenuItem.getID()<BACKGROUND+items.size()){
 			drawInventory();
 			highlight(pMenuItem.getID());
+			
 		}
 		else if(EQUIPMENT<=pMenuItem.getID()&&pMenuItem.getID()<BACKGROUND){
 			if(pMenuItem.getID()!=selectBox){
@@ -240,6 +247,35 @@ public class Inventory extends InGameMenu {
 					drawEquipment(defense, 2, region1);
 					break;
 			}
+		}else if(pMenuItem.getID()==EQP&&select!=-1){
+			Item item=null,item2=items.get(select-BACKGROUND+pos);
+			if(item2.getType().equals("Weapon")){
+				item=weapon;
+				weapon=item2;
+			}
+			else if(item2.getType().equals("Accessory")){
+				item=accessory;
+				accessory=item2;
+			}
+			else if(item2.getType().equals("Defense")){
+				item=defense;
+				defense=item2;
+			}else{
+				invReset();
+				return true;
+			}
+			if(item!=null){
+				app.mPlayer.cAttack+=-item.getAtk()+item2.getAtk();
+				app.mPlayer.cDefense+=-item.getDef()+item2.getDef();
+				items.add(item);
+			}else{
+				app.mPlayer.cAttack+=item2.getAtk();
+				app.mPlayer.cAttack+=item2.getDef();
+			}
+			items.remove(item2);
+			invReset();
+			return true;
+			
 		}
 		else{
 			switch(pMenuItem.getID()) {
@@ -275,17 +311,17 @@ public class Inventory extends InGameMenu {
 				return false;
 			}
 		}
-		if(select!=-1&&selectBox!=-1){
+		if(pMenuItem.getID()==EQP&&select!=-1){
 			Item item=null,item2=items.get(select-BACKGROUND+pos);
-			if(item2.getType().equals("Weapon")&&selectBox-EQUIPMENT==0){
+			if(item2.getType().equals("Weapon")){
 				item=weapon;
 				weapon=item2;
 			}
-			else if(item2.getType().equals("Accessory")&&selectBox-EQUIPMENT==1){
+			else if(item2.getType().equals("Accessory")){
 				item=accessory;
 				accessory=item2;
 			}
-			else if(item2.getType().equals("Defense")&&selectBox-EQUIPMENT==2){
+			else if(item2.getType().equals("Defense")){
 				item=defense;
 				defense=item2;
 			}else{
@@ -300,19 +336,50 @@ public class Inventory extends InGameMenu {
 				app.mPlayer.cAttack+=item2.getAtk();
 				app.mPlayer.cAttack+=item2.getDef();
 			}
-			Log.d("Tamany del array abans", Integer.toString(items.size()));
 			items.remove(item2);
-			Log.d("Tamany del array despres", Integer.toString(items.size()));
 			invReset();
 			return true;
 			
 		}
+//		if(select!=-1&&selectBox!=-1){
+//			Item item=null,item2=items.get(select-BACKGROUND+pos);
+//			if(item2.getType().equals("Weapon")&&selectBox-EQUIPMENT==0){
+//				item=weapon;
+//				weapon=item2;
+//			}
+//			else if(item2.getType().equals("Accessory")&&selectBox-EQUIPMENT==1){
+//				item=accessory;
+//				accessory=item2;
+//			}
+//			else if(item2.getType().equals("Defense")&&selectBox-EQUIPMENT==2){
+//				item=defense;
+//				defense=item2;
+//			}else{
+//				invReset();
+//				return true;
+//			}
+//			if(item!=null){
+//				app.mPlayer.cAttack+=-item.getAtk()+item2.getAtk();
+//				app.mPlayer.cDefense+=-item.getDef()+item2.getDef();
+//				items.add(item);
+//			}else{
+//				app.mPlayer.cAttack+=item2.getAtk();
+//				app.mPlayer.cAttack+=item2.getDef();
+//			}
+//			Log.d("Tamany del array abans", Integer.toString(items.size()));
+//			items.remove(item2);
+//			Log.d("Tamany del array despres", Integer.toString(items.size()));
+//			invReset();
+//			return true;
+//			
+//		}
 		return true;
 	}
-	public void setButton(int id, ITextureRegion region, float pX, float pY){
+	public SpriteMenuItem setButton(int id, ITextureRegion region, float pX, float pY){
 		SpriteMenuItem def=new SpriteMenuItem(id, region, app.getVertexBufferObjectManager());
 		def.setPosition(pX, pY);
 		invMenuScene.addMenuItem(def);
+		return def;
 	}
 	public void setChild(int id, ITextureRegion region, float pX, float pY){
 		SpriteMenuItem def=new SpriteMenuItem(id, region, app.getVertexBufferObjectManager());

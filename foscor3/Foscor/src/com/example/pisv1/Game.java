@@ -291,6 +291,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mEngine.registerUpdateHandler(new FPSLogger());
 
 		mMainScene = new Scene();
+		mVisualScene=new Scene();
 		BitmapTextureAtlas texture = new BitmapTextureAtlas(getTextureManager(), 1024, 768, TextureOptions.BILINEAR);
 		ITextureRegion region = BitmapTextureAtlasTextureRegionFactory.createFromAsset(texture, this, "cargando.png", 0, 0);
 		texture.load();
@@ -429,8 +430,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mBoundChaseCamera.setChaseEntity(mPlayer.getAnimatedSprite());
 		this.mapas.setGame(this);
 		this.mMap=mapas.get(mapaName);
-		mMainScene.attachChild(mMap.getMapScene());
 		mMap.addPlayer(mPlayer);
+		mMainScene.attachChild(mMap.getMapScene());
 		this.mDigitalOnScreenControl = new DigitalOnScreenControl(0, CAMERA_HEIGHT - this.mOnScreenControlBaseTextureRegion.getHeight(), 
 				this.mBoundChaseCamera, this.mOnScreenControlBaseTextureRegion, this.mOnScreenControlKnobTextureRegion, 0.1f, 
 				this.getVertexBufferObjectManager(), mPlayer.getIOnScreenControlListener());
@@ -449,8 +450,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mDigitalOnScreenControl2.getControlKnob().setScale(1.3f);
 		this.mDigitalOnScreenControl2.refreshControlKnobPosition();
 
-		mVisualScene.attachChild(mDigitalOnScreenControl);
-		mVisualScene.attachChild(mDigitalOnScreenControl2);
+		mVisualScene.setChildScene(mDigitalOnScreenControl);
+		mDigitalOnScreenControl.setChildScene(mDigitalOnScreenControl2);
 		mMainScene.setChildScene(mVisualScene);
 		menu.startMenu();
 		Rectangle vida=new Rectangle(4, 4, 100, 4, mEngine.getVertexBufferObjectManager());

@@ -18,7 +18,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 
 public class Character {
-	protected int cAttack=0;
+	protected int cAttack=1;
 	protected int cDefense=1;
 	protected int cMagic=1;
 	protected int cVida=100;

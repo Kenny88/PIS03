@@ -17,6 +17,7 @@ import org.andengine.extension.tmx.TMXLoader;
 import org.andengine.extension.tmx.TMXLoader.ITMXTilePropertiesListener;
 import org.andengine.extension.tmx.TMXObject;
 import org.andengine.extension.tmx.TMXObjectGroup;
+import org.andengine.extension.tmx.TMXObjectProperty;
 import org.andengine.extension.tmx.TMXProperties;
 import org.andengine.extension.tmx.TMXTile;
 import org.andengine.extension.tmx.TMXTileProperty;
@@ -188,8 +189,9 @@ public class Map {
 	        {
 	            for(TMXObject object : group.getTMXObjects()) 
 	            {
-	        		
-	        		final Enemy anciano = new Enemy(object.getX(), object.getY(),object.getTMXObjectProperties().get(0).getValue(),app,this,object.getTMXObjectProperties().containsTMXProperty("ranged", "true"));
+	        		TMXProperties<TMXObjectProperty> prop=object.getTMXObjectProperties();
+	        		final Enemy anciano = new Enemy(object.getX(), object.getY(),prop.get(3).getValue(),app,this,prop.containsTMXProperty("ranged", "true"));
+	        		anciano.setStatistics(Integer.parseInt(prop.get(0).getValue()),Integer.parseInt(prop.get(1).getValue()),Integer.parseInt(prop.get(2).getValue()));
 	           		mMapScene.attachChild(anciano.getAnimatedSprite());
 	           		anciano.addToPhysicsWorld(mPhysicsWorld, app.CHARACTER_FIXTURE_DEF);
 	           		anciano.startUpdate();

@@ -314,13 +314,19 @@
   <properties>
    <property name="enemy" value="true"/>
   </properties>
-  <object name="personaje" type="anciano" x="122" y="128" width="36" height="67">
+  <object name="personaje" type="anciano" x="172" y="124" width="36" height="67">
    <properties>
+    <property name="eAttack" value="12"/>
+    <property name="eDefense" value="12"/>
+    <property name="eMagic" value="12"/>
     <property name="imagen" value="evil.png"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="1052" y="229" width="36" height="67">
+  <object name="personaje" type="anciano" x="1048" y="218" width="36" height="67">
    <properties>
+    <property name="eAttack" value="12"/>
+    <property name="eDefense" value="12"/>
+    <property name="eMagic" value="12"/>
     <property name="imagen" value="evil.png"/>
     <property name="ranged" value="true"/>
    </properties>

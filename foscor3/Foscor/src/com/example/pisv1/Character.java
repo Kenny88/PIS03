@@ -31,8 +31,8 @@ public class Character {
 	protected Game app;
 	protected int direction;	// 0 - Up, 1 - Right, 2 - Down, 3 - left (Sentit horari)
 	protected AtaqueMelee ataqueMelee;
-	protected boolean attack=true;
 	protected boolean move=true;
+	protected boolean attack=true;
 	protected boolean ranged=false;
 	protected AtaqueMagicoRanged ataqueMagicoRanged;
 	public Character(float x, float y, String image,Game app1){
@@ -78,7 +78,6 @@ public class Character {
 			public void onUpdate(float arg0) {
 				// TODO Auto-generated method stub
 				mPhysicsWorld.destroyBody(mBody);
-				mAnimatedSprite.clearUpdateHandlers();
 				mAnimatedSprite.detachSelf();
 	
 			}
@@ -136,6 +135,7 @@ public class Character {
 	}
 	protected void attack(float pValueX, float pValueY) { 
 			if(attack){
+				attack=false;
 				if(pValueX > 0){
 		        // X = 1 => Right
 					attackRanged();
@@ -158,14 +158,13 @@ public class Character {
 						attack=true;
 					}
 					
-				}, 500);
+				}, 1500);
 				
 			}
 			
 		}
 	protected void attackMagicRanged() {
 		move(0,0);
-		attack=false;
 		final Map map=app.mMap;
 		IAnimationListener listener=new IAnimationListener(){
 
@@ -199,8 +198,8 @@ public class Character {
 	}
 	protected void attackMelee() {
 		move(0,0);
-		attack=false;
 		final Map map=app.mMap;
+		move=false;
 		IAnimationListener listener=new IAnimationListener(){
 
 			@Override
@@ -219,7 +218,6 @@ public class Character {
 			public void onAnimationLoopFinished(AnimatedSprite arg0, int arg1,
 					int arg2) {
 				// TODO Auto-generated method stub
-				attack=true;
 				move=true;
 				ataqueMelee.detach(map.getmPhysicsWorld());
 			}
@@ -243,7 +241,7 @@ public class Character {
 		
 	}
 	public String toString(){
-		return "enemy";
+		return "character";
 	}
 	public void restVida(float f) {
 		cVida-=f;

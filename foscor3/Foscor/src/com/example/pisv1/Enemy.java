@@ -219,6 +219,9 @@ public class Enemy extends Character {
 		}
 		return -1;
 	}
+	public String toString(){
+		return "enemy";
+	}
 
 }
 

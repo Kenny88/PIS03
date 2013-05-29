@@ -74,7 +74,6 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 
 	protected BoundCamera mBoundChaseCamera;
 	protected Scene mMainScene;
-	protected Scene mVisualScene;
 
 	private HUD mHud;
 	
@@ -256,8 +255,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		DisplayMetrics metrics= new DisplayMetrics();
 		Display display= this.getWindowManager().getDefaultDisplay();
 		display.getMetrics(metrics);
-		CAMERA_WIDTH=(int) ((metrics.widthPixels)/metrics.xdpi*120);
-		CAMERA_HEIGHT=(int) ((metrics.heightPixels)/metrics.ydpi*120);
+		CAMERA_WIDTH=(int) ((metrics.widthPixels)/metrics.xdpi*170);
+		CAMERA_HEIGHT=(int) ((metrics.heightPixels)/metrics.ydpi*170);
 		Toast( CAMERA_WIDTH+"   "+CAMERA_HEIGHT);
 		this.mBoundChaseCamera = new BoundCamera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
 
@@ -298,7 +297,6 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mEngine.registerUpdateHandler(new FPSLogger());
 
 		mMainScene = new Scene();
-		mVisualScene=new Scene();
 		BitmapTextureAtlas texture = new BitmapTextureAtlas(getTextureManager(), 1024, 768, TextureOptions.BILINEAR);
 		ITextureRegion region = BitmapTextureAtlasTextureRegionFactory.createFromAsset(texture, this, "cargando.png", 0, 0);
 		texture.load();
@@ -313,7 +311,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 				/* Remove the menu and reset it. */
 				menu.getScene().back();
 				bMenu=false;
-				mMainScene.setChildScene(mVisualScene);
+				mMainScene.setChildScene(mDigitalOnScreenControl);
 			} else {
 				/* Attach the menu. */
 				bMenu=true;
@@ -331,7 +329,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	    {
 	        if(bMenu){
 	            bMenu=false;
-		    	mMainScene.setChildScene(this.mDigitalOnScreenControl);
+		    	mMainScene.setChildScene(mDigitalOnScreenControl);
 	        }
 	        else{
 	        	new AlertDialog.Builder(this)
@@ -399,7 +397,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mapaName=name;
 		mHud.detachChild(mMap.getMapScene());
 		mHud.setVisible(false);
-		mVisualScene.setVisible(false);
+		mDigitalOnScreenControl.setVisible(false);
 		mPlayer.move(0, 0);
 			mMainScene.registerUpdateHandler(new IUpdateHandler(){
 
@@ -408,9 +406,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					mMap.deletePlayer(mPlayer);
 					mMap=mapas.get(mapaName);
 					mMap.addPlayer(mPlayer,x, y);
-					mHud.attachChild(mMap.getMapScene());
+					mMainScene.attachChild(mMap.getMapScene());
 					mHud.setVisible(true);
-					mVisualScene.setVisible(true);
+					mDigitalOnScreenControl.setVisible(true);
 					message1="";
 					message2=0;
 					mMainScene.unregisterUpdateHandler(this);
@@ -438,7 +436,6 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mapas.setGame(this);
 		this.mMap=mapas.get(mapaName);
 		mMap.addPlayer(mPlayer);
-		mHud.attachChild(mMap.getMapScene());
 		this.mDigitalOnScreenControl = new DigitalOnScreenControl(0, CAMERA_HEIGHT - this.mOnScreenControlBaseTextureRegion.getHeight(), 
 				this.mBoundChaseCamera, this.mOnScreenControlBaseTextureRegion, this.mOnScreenControlKnobTextureRegion, 0.1f, 
 				this.getVertexBufferObjectManager(), mPlayer.getIOnScreenControlListener());
@@ -457,9 +454,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mDigitalOnScreenControl2.getControlKnob().setScale(1.3f);
 		this.mDigitalOnScreenControl2.refreshControlKnobPosition();
 
-		mVisualScene.setChildScene(mDigitalOnScreenControl);
+		mMainScene.attachChild(mMap.getMapScene());
+		mMainScene.setChildScene(mDigitalOnScreenControl);
 		mDigitalOnScreenControl.setChildScene(mDigitalOnScreenControl2);
-		mMainScene.setChildScene(mVisualScene);
 		menu.startMenu();
 		Rectangle vida=new Rectangle(0, 0, 104, 16, mEngine.getVertexBufferObjectManager());
 		vida.setVisible(true);
@@ -480,7 +477,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					{
 						menu.getScene().back();
 						bMenu=false;
-						mMainScene.setChildScene(mVisualScene);
+						mMainScene.setChildScene(mDigitalOnScreenControl);
 					}
 					else
 					{
@@ -496,6 +493,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mHud.registerTouchArea(mInventoryMenuButton);
 		mHud.attachChild(mInventoryMenuButton);
 		mMainScene.attachChild(mHud);
+		mMainScene.setChildScene(mDigitalOnScreenControl);
 
 
 	}

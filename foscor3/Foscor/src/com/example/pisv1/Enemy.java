@@ -182,7 +182,7 @@ public class Enemy extends Character {
 			}
 			
 		};
-		app.mMainScene.registerUpdateHandler(update);
+		mAnimatedSprite.registerUpdateHandler(update);
 	}
 	
 

@@ -249,8 +249,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		DisplayMetrics metrics= new DisplayMetrics();
 		Display display= this.getWindowManager().getDefaultDisplay();
 		display.getMetrics(metrics);
-		CAMERA_WIDTH=(int) ((metrics.widthPixels)/metrics.xdpi*180);
-		CAMERA_HEIGHT=(int) ((metrics.heightPixels)/metrics.ydpi*180);
+		CAMERA_WIDTH=(int) ((metrics.widthPixels)/metrics.xdpi*120);
+		CAMERA_HEIGHT=(int) ((metrics.heightPixels)/metrics.ydpi*120);
 		Toast( CAMERA_WIDTH+"   "+CAMERA_HEIGHT);
 		this.mBoundChaseCamera = new BoundCamera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
 

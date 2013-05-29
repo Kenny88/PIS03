@@ -208,9 +208,9 @@ public class Enemy extends Character {
 		epY=mAnimatedSprite.getY()-app.mMap.getPlayerY();
 		if((Math.abs(epX)<maxRange&&Math.abs(epY)<distA*0.66)||Math.abs(epY)<maxRange&&Math.abs(epX)<distA*0.66){
 			if(epX<maxRange&&epX>distA*0.66)
-				return 1;
-			else if(epX>-maxRange&&epX<-distA*0.66)
 				return 3;
+			else if(epX>-maxRange&&epX<-distA*0.66)
+				return 1;
 			else if(epY<maxRange&&epY>distA*0.66)
 				return 0;
 			else if(epY>-maxRange&&epY<-distA*0.66)

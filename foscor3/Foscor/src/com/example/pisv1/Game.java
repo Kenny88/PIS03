@@ -397,12 +397,12 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mHud.detachChild(mMap.getMapScene());
 		mHud.setVisible(false);
 		mDigitalOnScreenControl.setVisible(false);
+		mMainScene.detachChild(mMap.getMapScene());
 		mPlayer.move(0, 0);
 			mMainScene.registerUpdateHandler(new IUpdateHandler(){
 
 				@Override
 				public void onUpdate(float arg0) {
-					mMainScene.detachChild(mMap.getMapScene());
 					mMap.deletePlayer(mPlayer);
 					mMap=mapas.get(mapaName);
 					mMap.addPlayer(mPlayer,x, y);

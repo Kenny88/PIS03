@@ -500,9 +500,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 
 	public void gameOver() {
 		
-
-		 Intent intentContinue = new Intent(Game.this , GameOver.class);
-		 Game.this.startActivity(intentContinue);
+		finish();
+		Intent intentContinue = new Intent(Game.this , GameOver.class);
+		Game.this.startActivity(intentContinue);
 	}
 
 	public void setVida(int cVida) {

@@ -30,12 +30,7 @@ public class GameOver extends Activity {
             Start.setOnClickListener(new View.OnClickListener() {
     			@Override
     			public void onClick(View v) {
-    				 MediaPlayer mp = MediaPlayer.create(GameOver.this, R.raw.click);
-				        mp.setLooping(false);
-				        mp.start();
-    				 Intent intentStart = new Intent(GameOver.this , StartActivity.class);
-    				 GameOver.this.startActivity(intentStart);
-    				 Log.i("Content "," Main layout ");
+					 finish();
     					
     		}});
         }

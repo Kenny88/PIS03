@@ -512,29 +512,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mVida.setColor(new Color(vRed, vGreen, 0));
 		mVida.setWidth(cVida);
 	}
-	public void clearAttack(Ataque atac){
-		atacs.add(atac);
-		runOnUpdateThread(new Runnable() {
 
-		    @Override
-		    // to safely detach and re-attach the sprites
-		    public void run() {
-		    	Ataque atac;
-				while(atacs.size()>0){
-					atac=atacs.get(atacs.size()-1);
-					atac.getAnimatedSprite().setVisible(false);
-					atac.getAnimatedSprite().detachSelf();
-					atac.getAnimatedSprite().clearUpdateHandlers();
-					atac.getAnimatedSprite().clearEntityModifiers();
-					mMap.getmPhysicsWorld().unregisterPhysicsConnector(mMap.getmPhysicsWorld().getPhysicsConnectorManager().findPhysicsConnectorByShape(atac.getAnimatedSprite()));
-					mMap.getmPhysicsWorld().destroyBody(atac.getBody());
-					atacs.remove(atac);
-				}
-			}
-
-
-		});
-	}
 
 	// ===========================================================
 	// Methods

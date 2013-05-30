@@ -223,6 +223,7 @@ public class Enemy extends Character {
 	}
 
 
+
 	
 	public void setFacing(){
 		if(app.mMap.getPlayerY()<mAnimatedSprite.getY()){
@@ -241,6 +242,7 @@ public class Enemy extends Character {
 		}
 
 	}
+
 }
 
 

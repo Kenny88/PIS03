@@ -20,7 +20,7 @@ import android.media.MediaPlayer;
 public class NewGameActivity extends Activity {
     private MediaPlayer mp;
     private  Animation intro;
-    boolean can=false;
+    boolean can=true;
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +37,13 @@ public class NewGameActivity extends Activity {
     }
 class MyTimerTask extends TimerTask {
 	  public void run() {
-
-	 	finish();
-		Intent intentNewGame = new Intent(NewGameActivity.this , Game.class);//NewGameActivity instead TMXTiledMapExample
-       	NewGameActivity.this.startActivity(intentNewGame);
-       	Log.i("Content "," Main layout ");	
+		  if(can){
+			  	can=false;
+			 	finish();
+				Intent intentNewGame = new Intent(NewGameActivity.this , Game.class);//NewGameActivity instead TMXTiledMapExample
+		       	NewGameActivity.this.startActivity(intentNewGame);
+		       	Log.i("Content "," Main layout ");	
+		  }
 	}
  
     }
@@ -59,6 +61,7 @@ final View Start = findViewById(R.id.click_new);
     			public void onClick(View v) {
     				
     		   		 if(intro.hasEnded()){
+    					  	can=false;
     		   			 	finish();
      		   	        	Intent intentNewGame = new Intent(NewGameActivity.this , Game.class);//NewGameActivity instead TMXTiledMapExample
          		        	NewGameActivity.this.startActivity(intentNewGame);

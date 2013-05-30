@@ -38,7 +38,8 @@ public class NewGameActivity extends Activity {
 class MyTimerTask extends TimerTask {
 	  public void run() {
 
-		  Intent intentNewGame = new Intent(NewGameActivity.this , Game.class);//NewGameActivity instead TMXTiledMapExample
+	 	finish();
+		Intent intentNewGame = new Intent(NewGameActivity.this , Game.class);//NewGameActivity instead TMXTiledMapExample
        	NewGameActivity.this.startActivity(intentNewGame);
        	Log.i("Content "," Main layout ");	
 	}

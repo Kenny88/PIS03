@@ -296,31 +296,44 @@
   <properties>
    <property name="enemy" value="true"/>
   </properties>
-  <object name="personaje" type="anciano" x="270" y="379" width="38" height="124">
+  <object name="personaje" type="anciano" x="294" y="371" width="38" height="124">
    <properties>
+    <property name="eAttack" value="55"/>
+    <property name="eDefense" value="56"/>
+    <property name="eMagic" value="45"/>
     <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="120" y="711" width="38" height="124">
+  <object name="personaje" type="anciano" x="779" y="579" width="38" height="124">
    <properties>
+    <property name="eAttack" value="55"/>
+    <property name="eDefense" value="56"/>
+    <property name="eMagic" value="45"/>
     <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="360" y="707" width="38" height="124">
+  <object name="personaje" type="anciano" x="125" y="717" width="38" height="124">
    <properties>
+    <property name="eAttack" value="55"/>
+    <property name="eDefense" value="56"/>
+    <property name="eMagic" value="45"/>
     <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="890" y="460" width="38" height="124">
+  <object name="personaje" type="anciano" x="359" y="677" width="38" height="124">
    <properties>
-    <property name="imagen" value="oscuro.png"/>
-    <property name="ranged" value="true"/>
+    <property name="eAttack" value="55"/>
+    <property name="eDefense" value="56"/>
+    <property name="eMagic" value="45"/>
+    <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="984" y="592" width="38" height="124">
+  <object name="personaje" type="anciano" x="1018" y="600" width="38" height="124">
    <properties>
-    <property name="imagen" value="oscuro.png"/>
-    <property name="ranged" value="true"/>
+    <property name="eAttack" value="55"/>
+    <property name="eDefense" value="56"/>
+    <property name="eMagic" value="45"/>
+    <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
  </objectgroup>

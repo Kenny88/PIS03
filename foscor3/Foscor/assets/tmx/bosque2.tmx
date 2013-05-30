@@ -298,34 +298,54 @@
   </properties>
   <object name="personaje" type="anciano" x="492" y="305" width="35" height="46">
    <properties>
+    <property name="eAttack" value="42"/>
+    <property name="eDefense" value="45"/>
+    <property name="eMagic" value="43"/>
     <property name="imagen" value="ninja.png"/>
-   </properties>
-  </object>
-  <object name="personaje" type="anciano" x="715" y="380" width="46" height="45">
-   <properties>
-    <property name="imagen" value="ninja.png"/>
-   </properties>
-  </object>
-  <object name="personaje" type="anciano" x="733" y="147" width="39" height="87">
-   <properties>
-    <property name="imagen" value="oscuro.png"/>
-    <property name="ranged" value="true"/>
    </properties>
   </object>
   <object name="personaje" type="anciano" x="147" y="482" width="43" height="65">
    <properties>
+    <property name="eAttack" value="43"/>
+    <property name="eDefense" value="43"/>
+    <property name="eMagic" value="42"/>
     <property name="imagen" value="oscuro.png"/>
     <property name="ranged" value="true"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="114" y="955" width="39" height="85">
+  <object name="personaje" type="anciano" x="680" y="377" width="35" height="46">
    <properties>
+    <property name="eAttack" value="42"/>
+    <property name="eDefense" value="45"/>
+    <property name="eMagic" value="43"/>
     <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="997" y="622" width="41" height="70">
+  <object name="personaje" type="anciano" x="1077" y="160" width="43" height="65">
    <properties>
-    <property name="imagen" value="ninja.png"/>
+    <property name="eAttack" value="43"/>
+    <property name="eDefense" value="43"/>
+    <property name="eMagic" value="42"/>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="1043" y="617" width="43" height="65">
+   <properties>
+    <property name="eAttack" value="43"/>
+    <property name="eDefense" value="43"/>
+    <property name="eMagic" value="42"/>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="115" y="1068" width="43" height="65">
+   <properties>
+    <property name="eAttack" value="43"/>
+    <property name="eDefense" value="43"/>
+    <property name="eMagic" value="42"/>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
    </properties>
   </object>
  </objectgroup>

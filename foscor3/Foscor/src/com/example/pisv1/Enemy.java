@@ -162,7 +162,7 @@ public class Enemy extends Character {
  						}else{
  							dirX=0;
  						}
- 						move(dirX,dirY);
+ 						move(dirX*0.7f,dirY*0.7f);
  						if(dirX==0&&dirY==0){
 							if(stack==null||stack.size()>0){
  								node1=stack.pop();

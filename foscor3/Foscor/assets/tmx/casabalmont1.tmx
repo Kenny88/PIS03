@@ -242,7 +242,9 @@
   <object x="166" y="11" width="209" height="41"/>
   <object x="198" y="133" width="86" height="84"/>
   <object x="416" y="38" width="33" height="87"/>
-  <object x="258" y="131" width="75" height="60"/>
+  <object x="330" y="132" width="8" height="70"/>
+  <object x="292" y="118" width="37" height="16"/>
+  <object x="283" y="199" width="53" height="8"/>
  </objectgroup>
  <objectgroup name="Capa de Objetos 3" width="40" height="40">
   <properties>
@@ -266,7 +268,7 @@
   <properties>
    <property name="keys" value="true"/>
   </properties>
-  <object name="tmx/balmont4.tmx" type="puertaArriba" x="282" y="126" width="59" height="75">
+  <object name="tmx/balmont4.tmx" type="puertaArriba" x="281" y="121" width="71" height="101">
    <properties>
     <property name="abrir" value="true"/>
    </properties>
@@ -276,7 +278,7 @@
   <properties>
    <property name="pj" value="true"/>
   </properties>
-  <object name="personaje" type="anciano" x="286" y="139" width="33" height="36">
+  <object name="personaje" type="anciano" x="291" y="151" width="33" height="36">
    <properties>
     <property name="imagen" value="reese.png"/>
    </properties>

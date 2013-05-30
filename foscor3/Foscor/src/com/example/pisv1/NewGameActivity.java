@@ -58,6 +58,7 @@ final View Start = findViewById(R.id.click_new);
     			public void onClick(View v) {
     				
     		   		 if(intro.hasEnded()){
+    		   			 	finish();
      		   	        	Intent intentNewGame = new Intent(NewGameActivity.this , Game.class);//NewGameActivity instead TMXTiledMapExample
          		        	NewGameActivity.this.startActivity(intentNewGame);
          		        	Log.i("Content "," Main layout ");	

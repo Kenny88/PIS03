@@ -287,20 +287,38 @@
   <properties>
    <property name="enemy" value="true"/>
   </properties>
-  <object name="personaje" type="anciano" x="179" y="1069" width="38" height="124">
+  <object name="personaje" type="anciano" x="404" y="813" width="38" height="124">
    <properties>
-    <property name="imagen" value="oscuro.png"/>
-    <property name="ranged" value="true"/>
-   </properties>
-  </object>
-  <object name="personaje" type="anciano" x="289" y="904" width="38" height="124">
-   <properties>
+    <property name="eAttack" value="45"/>
+    <property name="eDefense" value="45"/>
+    <property name="eMagic" value="65"/>
     <property name="imagen" value="oscuro.png"/>
     <property name="ranged" value="true"/>
    </properties>
   </object>
   <object name="personaje" type="anciano" x="404" y="813" width="38" height="124">
    <properties>
+    <property name="eAttack" value="45"/>
+    <property name="eDefense" value="45"/>
+    <property name="eMagic" value="65"/>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="108" y="782" width="38" height="124">
+   <properties>
+    <property name="eAttack" value="45"/>
+    <property name="eDefense" value="45"/>
+    <property name="eMagic" value="65"/>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="182" y="1054" width="38" height="124">
+   <properties>
+    <property name="eAttack" value="45"/>
+    <property name="eDefense" value="45"/>
+    <property name="eMagic" value="65"/>
     <property name="imagen" value="oscuro.png"/>
     <property name="ranged" value="true"/>
    </properties>

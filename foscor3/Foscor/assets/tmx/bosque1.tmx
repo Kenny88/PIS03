@@ -220,7 +220,7 @@
   <properties>
    <property name="pj" value="true"/>
   </properties>
-  <object name="Anciano" x="571" y="94" width="25" height="28">
+  <object name="Anciano" x="521" y="91" width="30" height="36">
    <properties>
     <property name="imagen" value="anciano.png"/>
    </properties>
@@ -236,7 +236,7 @@
   <object x="453" y="600" width="51" height="281"/>
   <object x="510" y="0" width="704" height="14"/>
   <object x="786" y="493" width="50" height="51"/>
-  <object x="564" y="77" width="48" height="52"/>
+  <object x="566" y="81" width="47" height="48"/>
   <object x="838" y="173" width="22" height="14"/>
   <object x="262" y="108" width="20" height="13"/>
   <object x="106" y="391" width="18" height="24"/>
@@ -257,7 +257,9 @@
   <object x="1121" y="99" width="24" height="11"/>
   <object x="572" y="70" width="33" height="18"/>
   <object x="801" y="481" width="22" height="15"/>
-  <object x="551" y="83" width="80" height="56"/>
+  <object x="556" y="84" width="80" height="56"/>
+  <object x="516" y="69" width="56" height="11"/>
+  <object x="511" y="135" width="57" height="8"/>
  </objectgroup>
  <objectgroup name="Capa de Objetos 3" width="40" height="40">
   <properties>
@@ -295,7 +297,7 @@
   <properties>
    <property name="keys" value="true"/>
   </properties>
-  <object name="tmx/bosque1.tmx" type="puertaArriba" x="545" y="64" width="97" height="84">
+  <object name="tmx/bosque1.tmx" type="puertaArriba" x="512" y="51" width="135" height="117">
    <properties>
     <property name="abrir" value="true"/>
     <property name="texto" value="anciano"/>
@@ -308,11 +310,17 @@
   </properties>
   <object name="personaje" type="anciano" x="122" y="128" width="36" height="67">
    <properties>
+    <property name="eAttack" value="32"/>
+    <property name="eDefense" value="32"/>
+    <property name="eMagic" value="21"/>
     <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
   <object name="personaje" type="anciano" x="1001" y="231" width="36" height="67">
    <properties>
+    <property name="eAttack" value="32"/>
+    <property name="eDefense" value="33"/>
+    <property name="eMagic" value="34"/>
     <property name="imagen" value="oscuro.png"/>
     <property name="ranged" value="true"/>
    </properties>

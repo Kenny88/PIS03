@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="portal" tilewidth="32" tileheight="32">
+  <image source="/gfx/portal.png" width="288" height="224"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACxNkYGAQHMVDAgsDsQgQc2PBIHFREs2ThWKYuSJI5sDkhMgwDx8eSPNUgVgNhzkgcXUSzUM3Vw3JHJgcOebhw0PRPCkKsDSV3TeKqYsBgdhH2UAGAAA=
+  </data>
+ </layer>
+ <layer name="Capa de patrones 2" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACxNioC4QIkINIxAzIWFmMs2DmcONBeMyF595XDjMgmGeATSPHY89yICTSPMEgFiGgFlyWMSIMQ9EswAxKxCzIZmDzTxpKpunAsQcWLARkhpc5mEDunjkkAGyedQAvEDMB8T8VDKPWICefigFxJQHpJqnTAFWGTWPQYcCjJ4fADweEwJABgAA
+  </data>
+ </layer>
+ <layer name="Capa de patrones 3" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGBigB8T6QGxAJfPMgdgCiC2pZJ4YEIsDsQSVzJMHYgUgVqSSeRpArAnEWlQybxSMglEwCkgFAIwo1CBABgAA
+  </data>
+ </layer>
+ <objectgroup name="muro" width="20" height="20">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="33" y="460" width="571" height="41"/>
+  <object x="-1" y="417" width="35" height="119"/>
+  <object x="0" y="207" width="29" height="130"/>
+  <object x="23" y="253" width="175" height="41"/>
+  <object x="167" y="152" width="30" height="104"/>
+  <object x="187" y="145" width="36" height="31"/>
+  <object x="224" y="187" width="62" height="129"/>
+  <object x="225" y="169" width="15" height="25"/>
+  <object x="290" y="218" width="39" height="128"/>
+  <object x="288" y="200" width="12" height="23"/>
+  <object x="401" y="220" width="45" height="127"/>
+  <object x="448" y="192" width="62" height="125"/>
+  <object x="431" y="203" width="16" height="18"/>
+  <object x="487" y="173" width="25" height="19"/>
+  <object x="537" y="180" width="43" height="335"/>
+  <object x="509" y="60" width="79" height="120"/>
+  <object x="196" y="64" width="28" height="88"/>
+  <object x="216" y="31" width="73" height="34"/>
+  <object x="217" y="60" width="38" height="27"/>
+  <object x="292" y="7" width="176" height="28"/>
+  <object x="284" y="27" width="22" height="24"/>
+  <object x="441" y="36" width="121" height="29"/>
+  <object x="496" y="58" width="21" height="23"/>
+  <object x="428" y="28" width="20" height="19"/>
+  <object x="334" y="36" width="68" height="56"/>
+ </objectgroup>
+</map>

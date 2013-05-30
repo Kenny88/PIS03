@@ -39,6 +39,7 @@ public class Maps extends ArrayList<Map> {
 	String [] inicial={"tmx/bosque1.tmx"};
 	String [] balmont={"tmx/balmont1.tmx","tmx/casabalmont1.tmx","tmx/balmont2.tmx","tmx/balmont3.tmx","tmx/balmont4.tmx"};
 	String [] bosque={"tmx/bosque2.tmx","tmx/bosque3.tmx","tmx/bosque4.tmx","tmx/bosque5.tmx"};
-	String [][]mapas={inicial,bosque,balmont};
+	String [] alasar={"tmx/desierto.tmx"};
+	String [][]mapas={inicial,bosque,balmont,alasar};
 
 }

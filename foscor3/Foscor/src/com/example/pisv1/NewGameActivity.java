@@ -2,6 +2,9 @@ package com.example.pisv1;
 
 
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -28,7 +31,18 @@ public class NewGameActivity extends Activity {
         TextView tv = (TextView) findViewById(R.id.NewText);
         intro= AnimationUtils.loadAnimation(this, R.anim.animationfile);
         tv.startAnimation(intro);
-    	
+        MyTimerTask myTask = new MyTimerTask();
+        Timer myTimer = new Timer();
+        myTimer.schedule(myTask, 45000);        
+    }
+class MyTimerTask extends TimerTask {
+	  public void run() {
+
+		  Intent intentNewGame = new Intent(NewGameActivity.this , Game.class);//NewGameActivity instead TMXTiledMapExample
+       	NewGameActivity.this.startActivity(intentNewGame);
+       	Log.i("Content "," Main layout ");	
+	}
+ 
     }
         
         public void main(){
@@ -38,8 +52,7 @@ public class NewGameActivity extends Activity {
         	
 final View Start = findViewById(R.id.click_new);
         	
-          
-            
+
             Start.setOnClickListener(new View.OnClickListener() {
     			@Override
     			public void onClick(View v) {

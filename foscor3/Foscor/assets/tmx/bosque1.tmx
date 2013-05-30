@@ -213,14 +213,14 @@
  </layer>
  <layer name="arboles" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC8WYTU7EMAyFcypYApsBVsAGhhUgoQIbNBskWHU34keiRxhxA47QK3AjXAlLlrEdO0kh0lNmOnXy8sVNk1mmlM5Bp6CzQL38iZurYPu3oDtQB7oJ1Aegwxn9oS/0uQ6Kxu2AdkF7mRip5NpHn9p9b8p15Dd9PgIdg04q/PEx5vg9BPhdgC5BVw7umkc+Ro3fu+HvQ+GnaSCfcR60wsfYMv8omxJ+Upw3/zRJ/LS+Sjx6+eF88zakuJWDi+dZifKT2rHyz/K2Bdo2+upTnt/KMU4apxVvXlj5bfGz+qVx2j2SR4nHINwn8XsN+HsEPQn3Td+/DH90XNra7+Fnlen3Z9CL4s/KQe96lnt+c/68nC1+kjD3PfxyPnNeJvH3amt+EY+j0A5/r3rfBzXPLy1Wrk2i79WUfvPolTjP+8PyRNdZj28sc/PD3/j+WctZ/n3u55ePL1r+ih/G4Tx7a+yXX2+Vf3gd4xag/UCN/fLrEX6D4o36w7jouVSrS/jRnNfyvEuxc6lWl+SfNefavHB5z56l/DSP2rxwec+eUX5jJp7Py6dyX+Ts2YrfNVEkTpK0N63JP+4v51Hrfw5+G/I5d86pVe35tzSuhp+1FvB50riPRp/0Gbov4BdZC/6DX24toOctzs86i3nVC+1bHDZGWy34WWPi/Frtk1rVnN8itdkntapr90f4/0Gr/ZXWfpfK9kP4/0FpvLf9b21+wgwAGQAA
+   H4sIAAAAAAAAC92YPU4EMQyF51RQUADNAhXQwG4FNPw0iBKqaVmQ2COsuAFHmCtwI1xgKbLyPI7jzCCKJ6+y4yT+nHGSWXZdtyJdkC4L7PLXb6+RuP970gPplnRXYI9JJw3nx/Pyckj99kkHpMOG/NBz76A95XdKOiOdV8xHxhjJ74p0TbqpmJ+MEfH7UPr4BPyQNoY8sGSMkfxayLr+kP7K+4vynfN7+gf8dki7yv+9gZ+Fg3f9WeOq5ef1y8W1UfpPn38rGOeZ9AL++zbGpdWcWn6vpHUQPy2O1nWsdF3w2q/lZ5XcV+fkN2Ta5L5q5TEVP7mvSh498KvlN1Znvesvip93/5hq/Xn9puLHfpxnq+VxZXsrfgvSUYHlcWV7Cb/cfojiK72XItuKX+m9FNno9YfyIuW9e9byQ3mR8t49x/gNI/4yL1/gOe/dc67zixR6F6fafy21IIrfNvnt3X+tmuv+UcNPqwUyT4j7oIyZvkOPDn4ltWAOfmO1IL1vSX5j338s6jP9axy2Sl8R/LSYJL+oc1KUlfyizklRtvZ8xN8Pos5XqH/veYi/H0Sdr1D/P11b5uUAGQAA
   </data>
  </layer>
  <objectgroup name="monstruos" width="40" height="40">
   <properties>
    <property name="pj" value="true"/>
   </properties>
-  <object name="Anciano" x="654" y="110">
+  <object name="Anciano" x="571" y="94" width="25" height="28">
    <properties>
     <property name="imagen" value="anciano.png"/>
    </properties>
@@ -257,6 +257,7 @@
   <object x="1121" y="99" width="24" height="11"/>
   <object x="572" y="70" width="33" height="18"/>
   <object x="801" y="481" width="22" height="15"/>
+  <object x="551" y="83" width="80" height="56"/>
  </objectgroup>
  <objectgroup name="Capa de Objetos 3" width="40" height="40">
   <properties>
@@ -269,7 +270,7 @@
     <property name="image" value="Attack.png"/>
    </properties>
   </object>
-  <object name="arma2" type="Weapon" x="746" y="303" width="25" height="23">
+  <object name="arma2" type="Weapon" x="746" y="303" width="29" height="21">
    <properties>
     <property name="attack" value="7"/>
     <property name="defense" value="2"/>
@@ -281,32 +282,23 @@
   <properties>
    <property name="pass" value="true"/>
   </properties>
-  <object name="puertaArriba" type="tmx/bosque2.tmx" x="511" y="19" width="703" height="18">
+  <object name="puertaArriba" type="tmx/bosque2.tmx" x="511" y="19" width="703" height="10">
    <properties>
-    <property name="abierta" value="true"/>
+    <property name="abierta" value="false"/>
     <property name="image" value="null"/>
     <property name="x" value="0"/>
     <property name="y" value="35"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="llaves" width="40" height="40">
+ <objectgroup color="#00ff00" name="llaves" width="40" height="40">
   <properties>
    <property name="keys" value="true"/>
   </properties>
-  <object name="tmx/bosque2.tmx" type="puertaAbajo" x="849" y="506" width="31" height="28">
+  <object name="tmx/bosque1.tmx" type="puertaArriba" x="545" y="64" width="97" height="84">
    <properties>
     <property name="abrir" value="true"/>
-   </properties>
-  </object>
-  <object name="tmx/bosque1.tmx" type="puertaArriba" x="1174" y="121" width="31" height="28">
-   <properties>
-    <property name="abrir" value="true"/>
-   </properties>
-  </object>
-  <object name="tmx/bosque2.tmx" type="puertaAbajo" x="519" y="806" width="689" height="357">
-   <properties>
-    <property name="abrir" value="true"/>
+    <property name="texto" value="anciano"/>
    </properties>
   </object>
  </objectgroup>
@@ -314,20 +306,14 @@
   <properties>
    <property name="enemy" value="true"/>
   </properties>
-  <object name="personaje" type="anciano" x="172" y="124" width="36" height="67">
+  <object name="personaje" type="anciano" x="122" y="128" width="36" height="67">
    <properties>
-    <property name="eAttack" value="12"/>
-    <property name="eDefense" value="12"/>
-    <property name="eMagic" value="12"/>
-    <property name="imagen" value="evil.png"/>
+    <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
-  <object name="personaje" type="anciano" x="1048" y="218" width="36" height="67">
+  <object name="personaje" type="anciano" x="1001" y="231" width="36" height="67">
    <properties>
-    <property name="eAttack" value="12"/>
-    <property name="eDefense" value="12"/>
-    <property name="eMagic" value="12"/>
-    <property name="imagen" value="evil.png"/>
+    <property name="imagen" value="oscuro.png"/>
     <property name="ranged" value="true"/>
    </properties>
   </object>

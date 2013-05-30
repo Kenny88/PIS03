@@ -213,7 +213,7 @@
  </layer>
  <layer name="arboles" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC72YPU/DQAyG71fBCCwwdAAWKBNUagtsXZBgYov4kNqpIMFQsRQJFn5CfxqOqCVjbN/ZSbD06trkfHnzxJeP66eUTkBHoONA21X0174uQJegMeg80GL0WvaHvtBn5dCQqMdk5Umh9eX8tH6P/+RvC7QN2ln/z/G7KmRYOfxJHnH7PugAdJjhNzX8vSn+NM2E66D5OwWdgQaF/EprkLOJ8ovWn9ef16PWp5TfVNlO/eHviYNPm/yksTZAmx22Fr+J4I1GzWoXtNdhW8JPiyHJjz4Xc63E78Hhr+lzMdfm+FlB+Xnrf0Rk1Xxu/ub80fPSQjpuzh/Wfgk/a35gvuWl1hPoGTRn/vj+KD/NI+bTWAnjLEHvhj/cH7n/WUHPi54L15wopb/X91bJK3l+aEHztX7aNSidH1F+PB+D1pHm0+MvOn95PgbWUS5K/fH7dJTfqCXxY4/T7/u0x18i59WVP9wu8Zsp3qi/tvm9gF4FfyXPKYmnhx/OHavPB+iTedP4WcK4Bt0I+0dCq92DuRdpW+T7o4470H2mX67GKsa2tP5qrTLHpt/A9f+vjMeBsl9j24Qf99ZEM2V7tP64P883cIl4TXj4Lchv/I5pys+qxyi/qkFeTsv0U48SP75GY10njfvKODbOIe2dVLrGlANfo+mKHzIq8Uc58DUaLrrWxvlJ63Be0XfVkvpbGGO1UX/WOXF+3vWHaF50nWM3+dYfonne8aPrD/h+0NX6Bo4/TrH1B3w/iOaXjv8No3IfVwAZAAA=
+   H4sIAAAAAAAAC82Yv04DMQzG76lgBBY6MAALlKmw8GfrCBMrUInbQIKhYgEJFh7hHo1vqKXISuLYFx/5pE+pck3i/s6XSz3vuu4MPoFPDe2Bk+ebuK7hG/gSvjK0XvFRXBSn1zq1+KW+t5oonh14F95rlN8hfAQfC/yeM3N8KNfsFfdhAZ/DF43y4y7Nv/9yKb/c/eZeNsRvC952bHP8SjjswzPHdiw/Gm99L0ptjN+TIr6x70WprcXPS2P3PxpfW8tNOxW/F/jVcN2D3xBZ5xP+ysSXut5K/t0n+lvNP1JtflKeaVWbn5RnWvF9urX9j+/TreUfKcav76bn9wa/R/qn4Ffy7HzDP5F+a/7dwneF8Y15dqz8HuBH45qhJLYpfoMQH9evMT6JrZVfLfXCde99QlpfkmafWAef6X9MbfF8tPLz4s7zMeQX1mi4+H1KcR8ya9MzpDlLhBzCGo1mnFaa/TDkQDWalFaJcfyaVbGzao7DOtEvjStVyW8iDtr6g3Wctc6hrT9Yx2nnt9Yf6HzgVd+g+a31BzofeNU3aP4/UFapTQAZAAA=
   </data>
  </layer>
  <objectgroup name="monstruos" width="40" height="40">
@@ -253,7 +253,6 @@
   <object x="1163" y="980" width="42" height="36"/>
   <object x="939" y="1043" width="42" height="36"/>
   <object x="1259" y="684" width="14" height="489"/>
-  <object x="1241" y="784" width="1"/>
  </objectgroup>
  <objectgroup name="Capa de Objetos 3" width="40" height="40">
   <properties>
@@ -293,5 +292,36 @@
    <property name="keys" value="true"/>
   </properties>
  </objectgroup>
- <objectgroup name="personajes" width="40" height="40"/>
+ <objectgroup name="personajes" width="40" height="40">
+  <properties>
+   <property name="enemy" value="true"/>
+  </properties>
+  <object name="personaje" type="anciano" x="270" y="379" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="120" y="711" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="360" y="707" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="890" y="460" width="38" height="124">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="984" y="592" width="38" height="124">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

@@ -38,6 +38,7 @@ import android.widget.Toast;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.opengl.GLES20;
 import android.os.Handler;
 import android.os.Message;
@@ -47,11 +48,6 @@ import android.view.Display;
 import android.view.KeyEvent;
 
 public class Game extends SimpleBaseGameActivity implements Serializable {
-	// ===========================================================
-	// Constants
-	// ===========================================================
-	
-	
 	/* The categories. */
 	public static final short CATEGORYBIT_WALL = 1;
 	public static final short CATEGORYBIT_CHARACTER = 2;
@@ -77,6 +73,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	protected Scene mMainScene;
 	private HUD mHud;
 	
+	//Reproductor
+    private MediaPlayer mp;
 	// MENU BUTTON
 	private BitmapTextureAtlas mInventoryMenuButtonTexture;
 	private ITextureRegion mInventoryMenuButtonTextureRegion;
@@ -133,6 +131,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 						Key key=(Key) fixtureB;
 		  		    	  Door puerta=mapas.get(key.map).getDoors().get(key.door);
 	         		    	if(key.abrir()&&!puerta.isAbierta()){
+	         		    		
 		           				puerta.abrir();
 		           		    	key.detach(mMap.getmPhysicsWorld());
 	         		    	}
@@ -140,6 +139,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		           				puerta.cerrar();
 		           		    	key.detach(mMap.getmPhysicsWorld());
 	         		    	}
+	         		   hablar(key.texto);
 					}else if(B.equals("door")){
 						Door door=(Door) fixtureB; 
 	       				door.pasar((Player)fixtureA);
@@ -148,6 +148,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 						if (!ataque.getCreator().toString().equals("player")){
 							Character character=(Character)fixtureA;
 							character.restVida(ataque.getDaño()/character.cDefense);
+							 mp = MediaPlayer.create(Game.this, R.raw.hurt);
+						     mp.setLooping(false);
+						     mp.start();
 							if(ataque.getTypeAttack().equals("magicRanged")){
 								ataque.detach(mMap.getmPhysicsWorld());
 							}
@@ -162,6 +165,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 			}else if(A.equals("key")){
 				if(B.equals("player")){
 					Key key=(Key) fixtureA;
+					
 	  		    	  Door puerta=mapas.get(key.map).getDoors().get(key.door);
          		    	if(key.abrir()&&!puerta.isAbierta()){
 	           				puerta.abrir();
@@ -171,6 +175,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	           				puerta.cerrar();
 	           		    	key.detach(mMap.getmPhysicsWorld());
          		    	}
+         		   hablar(key.texto);
 				}
 			}else if(A.equals("door")){
 				if(B.equals("player")){
@@ -183,12 +188,18 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 						Character character=(Character)fixtureB;
 						character.restVida(ataque.getDaño()/character.cDefense);
 						if(ataque.getTypeAttack().equals("magicRanged")){
+							mp = MediaPlayer.create(Game.this, R.raw.volume);
+						     mp.setLooping(false);
+						     mp.start();
 							ataque.detach(mMap.getmPhysicsWorld());
 						}
 					}
 				}else if(B.equals("player")){
 					Ataque ataque= (Ataque)fixtureA;
 					if (!ataque.getCreator().toString().equals("player")){
+						 mp = MediaPlayer.create(Game.this, R.raw.hurt);
+					     mp.setLooping(false);
+					     mp.start();
 						Player character=(Player)fixtureB;
 						character.restVida(ataque.getDaño()/character.cDefense);
 						if(ataque.getTypeAttack().equals("magicRanged")){
@@ -203,6 +214,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 				if(B.equals("attack")){
 					Ataque ataque= (Ataque)fixtureB;
 					if (!ataque.getCreator().toString().equals("enemy")){
+						 mp = MediaPlayer.create(Game.this, R.raw.volume);
+					     mp.setLooping(false);
+					     mp.start();
 						Character character=(Character)fixtureA;
 						character.restVida(ataque.getDaño()/character.cDefense);
 						if(ataque.getTypeAttack().equals("magicRanged")){
@@ -260,7 +274,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		display.getMetrics(metrics);
 		CAMERA_WIDTH=(int) ((metrics.widthPixels)/metrics.xdpi*170);
 		CAMERA_HEIGHT=(int) ((metrics.heightPixels)/metrics.ydpi*170);
-		Toast( CAMERA_WIDTH+"   "+CAMERA_HEIGHT);
+		//Toast( CAMERA_WIDTH+"   "+CAMERA_HEIGHT);
 		this.mBoundChaseCamera = new BoundCamera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
 
 		EngineOptions engineOptions= new EngineOptions(true, ScreenOrientation.LANDSCAPE_FIXED, new RatioResolutionPolicy(CAMERA_WIDTH, CAMERA_HEIGHT), this.mBoundChaseCamera);
@@ -371,12 +385,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		}
 	
 	public void itemTest(){
-		menu.addItem("greataxe8hv.png", "axe1", 3, 0, "Weapon");
-		menu.addItem("emeraldring4om.png", "ring1", 0, 2, "Accessory");
 		menu.addItem("greataxe8hv.png", "axe2", 3, 2, "Weapon");
 		menu.addItem("emeraldring4om.png", "ring2", 2, 2, "Accessory");
-		menu.addItem("greataxe8hv.png", "axe3", 0, 0, "Weapon");
-		menu.addItem("emeraldring4om.png", "ring3", 0, 0, "Accessory");
 	}
 
 
@@ -397,12 +407,12 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mHud.detachChild(mMap.getMapScene());
 		mHud.setVisible(false);
 		mDigitalOnScreenControl.setVisible(false);
-		mMainScene.detachChild(mMap.getMapScene());
 		mPlayer.move(0, 0);
 			mMainScene.registerUpdateHandler(new IUpdateHandler(){
 
 				@Override
 				public void onUpdate(float arg0) {
+					mMainScene.detachChild(mMap.getMapScene());
 					mMap.deletePlayer(mPlayer);
 					mMap=mapas.get(mapaName);
 					mMap.addPlayer(mPlayer,x, y);
@@ -499,10 +509,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	}
 
 	public void gameOver() {
-		
-		finish();
-		Intent intentContinue = new Intent(Game.this , GameOver.class);
-		Game.this.startActivity(intentContinue);
+		 Intent intentContinue = new Intent(Game.this , GameOver.class);
+		 Game.this.startActivity(intentContinue);
 	}
 
 	public void setVida(int cVida) {
@@ -512,14 +520,20 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mVida.setColor(new Color(vRed, vGreen, 0));
 		mVida.setWidth(cVida);
 	}
+	
+	public void hablar(String texto){
+		//Implementar AlertDialog para las conversaciones (no funciona)
+		
+		/*if(texto.equals("anciano")){
+			new AlertDialog.Builder(this)
+	        .setIcon(R.drawable.caraanciano)
+	        .setTitle("Anciano")
+	        .setMessage(R.string.cantCross)
+	        .setPositiveButton("Continuar", null)
+	        .show();
+		}*/
 
+	}
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
-
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
 }
 

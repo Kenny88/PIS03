@@ -104,13 +104,11 @@ public class Enemy extends Character {
 				float dist1=MathUtils.distance(mAnimatedSprite.getX(), mAnimatedSprite.getY(), app.mMap.getPlayerX(), app.mMap.getPlayerY());
 				int dir=-4;
 				if(dist1<distA){
-
 					move(0,0);
 					attack(0,1);
 				}else if(ranged&&(dir=getDirection())!=-1){
-					setFacing();
+					Log.d("Dirrection",Integer.toString(dir));
 					direction=dir;
-					move(0.01f*dirX,0.01f*dirY);
 					attack(0,-1);
 
 				}else{
@@ -151,21 +149,22 @@ public class Enemy extends Character {
 						int error=10;
 						if(node1.y*tileSizeY+error<mAnimatedSprite.getY()){
 							dirY=-1;
-						}else if(node1.y*tileSizeY>mAnimatedSprite.getY()){
+						}else if(node1.y*tileSizeY-3>mAnimatedSprite.getY()){
 							dirY=1;
 						}else{
 							dirY=0;
 						}
 						if(node1.x*tileSizeX+error<mAnimatedSprite.getX()){
 							dirX=-1;
-						}else if(node1.x*tileSizeX>mAnimatedSprite.getX()){
+						}else if(node1.x*tileSizeX-3>mAnimatedSprite.getX()){
 							dirX=1;
 						}else{
 							dirX=0;
 						}
+						Log.d("Dirrection",Integer.toString(node1.x)+" "+Integer.toString(node1.y)+" "+Float.toString(dist1));
 						move(dirX,dirY);
 						if(dirX==0&&dirY==0){
-							if(stack==null||stack.size()>0){
+							if(stack.size()>0){
 								node1=stack.pop();
 							}
 							
@@ -222,30 +221,7 @@ public class Enemy extends Character {
 		return "enemy";
 	}
 
-
-
-	
-	public void setFacing(){
-		if(app.mMap.getPlayerY()<mAnimatedSprite.getY()){
-			dirY=-1;
-		}else if(app.mMap.getPlayerY()>mAnimatedSprite.getY()){
-			dirY=1;
-		}else{
-			dirY=0;
-		}
-		if(app.mMap.getPlayerX()<mAnimatedSprite.getX()){
-			dirX=-1;
-		}else if(app.mMap.getPlayerX()>mAnimatedSprite.getX()){
-			dirX=1;
-		}else{
-			dirX=0;
-		}
-
-	}
-
 }
-
-
 
 class Node{
 	int x;

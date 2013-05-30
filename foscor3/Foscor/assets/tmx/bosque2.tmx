@@ -226,7 +226,7 @@
  </layer>
  <layer name="arboles" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC81Yu04DQQz0V/FQCqAJUAENjwqQIh5dSqjSRUAk6KFAtNDwCfkF/ggjZSRjrXfn9nLRWRrtHbLXk8na8bIhIpuKNcV6j9aNBa89xb5iqNjt0Qpep4ozxbHipIcreF4prnu4Qr/pAq+KN/MeAfb3PDIoxUV+4vYcLAD94Pep+Ar2/gj4RXgxz7NKfl4/Fgy/Jvp5RPr1gd9AeP2eJX0uU/zGhoNd2/Bj9bPncmT4jSoR5Zk4jin9xpn4rvmx+uX6jOVXOmeeT4rfi3uXQL8n45PrM6X6+CF4/z3PMnu3qV/ox/SJtvXB9D8YZgoYO4tE33sqF84+YqEfY953KNwsYvmw/Rmx0I8x71uaPeBfww+xTfS7Udya9yvJzx7wz/GbSJqfn/8YS/kyGjStj5R+TO1BD1vDuTr1+uV6tP9N9Pox/ODL1q0/f03QRj+2bkv6RZBK/e4U98LfHeBfwy+nn/89BB4Uj8LfHeC/Kv18DXaBKaFfhC3FtmIn2Nf3uNoZq1a/A8Wh4ojIUeKZi2P0myf+dq64UFwm8nwTHKeJuGXqF+WsOa9RLYr877W18x/L0ecvxYFfjX7viTzL/lyMfrZOS7na8vP75PSD2TotfU+ew5zkFumY0w9m63RZ+rE9BpbTT4JYe9/yOaK7WJPzh1lVAv38Z4h4+lwlXikraVgzP6/Sau4fqzSvX+3/2bsy8Go6E/u1KwOvXzUWzswAGQAA
+   H4sIAAAAAAAAC9WYv07DMBCH/VRQxEBZCkzQBdqpsPBnywgTKxSp3emAusLCI+QVeCN+Q06yrMQ5O5fLZfjkur2kpy++5JyJc+4IHIBDQ+OkyuscXIAZODM0Ul4LsATX4MbgSHnegweDI/k7rvgEO28+NOSP5t/gpyF2n3jurff5IzO/0J81Qn/WaPO3qUbOuiwG9Bdbl5K8Mvz14UHan+Z9Zhv5zfe3Frqef8w4zj1n7PXrQz0Fzbm9SEo+RXDuFH9hLLcXyfFGx6b4C2Pbeo8uzyY6NsXfI3jy5m29RxhfR3i/C69VF3/S8dL+pOOl/HHrdih/3LrV9vcMXhx/70Dx0v6anodv4N3x9w4Ur+VPk5z1dwKm4FQhvxx/l+AKzA34K2u+W4FbcFfz268Bf33QVIs560/y//vw96XoNeZPs05z/NXVKfc6lQr+YnVqwV8Tsf1W7vsfH79X1apfTX+ajM1f7nv2vv2l9sQSe1sOlNc/dRPA9gAZAAA=
   </data>
  </layer>
  <objectgroup color="#eb1515" name="muro" width="40" height="40">
@@ -260,13 +260,13 @@
   </properties>
   <object name="puertaAbajo" type="tmx/bosque1.tmx" x="507" y="1234" width="697" height="27">
    <properties>
-    <property name="abierta" value="false"/>
+    <property name="abierta" value="true"/>
     <property name="image" value="null"/>
     <property name="x" value="0"/>
     <property name="y" value="-35"/>
    </properties>
   </object>
-  <object name="puertaDerecha" type="tmx/bosque3.tmx" x="1236" y="115" width="21" height="343">
+  <object name="puertaDerecha" type="tmx/bosque3.tmx" x="1249" y="117" width="10" height="343">
    <properties>
     <property name="abierta" value="true"/>
     <property name="image" value="null"/>
@@ -291,14 +291,41 @@
   <properties>
    <property name="keys" value="true"/>
   </properties>
-  <object name="tmx/bosque1.tmx" type="puertaArriba" x="105" y="1002" width="35" height="50">
+ </objectgroup>
+ <objectgroup name="personajes" width="40" height="40">
+  <properties>
+   <property name="enemy" value="true"/>
+  </properties>
+  <object name="personaje" type="anciano" x="492" y="305" width="35" height="46">
    <properties>
-    <property name="cerrar" value="true"/>
+    <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
-  <object name="tmx/bosque2.tmx" type="puertaAbajo" x="565" y="590" width="35" height="50">
+  <object name="personaje" type="anciano" x="715" y="380" width="46" height="45">
    <properties>
-    <property name="abrir" value="true"/>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="733" y="147" width="39" height="87">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="147" y="482" width="43" height="65">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="114" y="955" width="39" height="85">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="997" y="622" width="41" height="70">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
    </properties>
   </object>
  </objectgroup>

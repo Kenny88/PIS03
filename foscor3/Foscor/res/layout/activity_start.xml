@@ -36,9 +36,9 @@
         android:layout_height="40dp"
         android:layout_above="@+id/button3"
         android:layout_alignLeft="@+id/button3"
+        android:enabled="false"
         android:text="@string/Continue"
-        android:textColor="@color/Blanco" 
-    />
+        android:textColor="@color/Blanco" />
 
     <Button
         android:id="@+id/button6"

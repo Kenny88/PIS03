@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="50" height="50" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="elfos" tilewidth="32" tileheight="32">
+  <image source="/gfx/elfos.png" width="640" height="416"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3RsQ0AMAgDQaZg/2kyFxOQIg0iuuJ6v5wRkQAAAAAAAAA8OxfT23TomNbt39by8x8bOwA6BUpyGJMQJwAA
+  </data>
+ </layer>
+ <layer name="Capa de patrones 2" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC9WaR47UQBSGPSzgDnAKwpooBrZkLkBmDkBmDkDmAmSWBJFZAc2IjEDEERmBCBsy0gzhKzEllQo/l1/ZXd3+pU+udndZrve7yu+13Ztl2SyYDRfgIlxqSHsm9I6c/wSYCJPgPjyAhw1pj3fO347H+PEePsDHhrQlP37Dn+yfmtCW/GiaJD+qaLjqSUWok37UOd52+FGHJsMUmArTYDrMKPh9u/04CscEjgt95sBcmAfzYQEshEWwWOhT1o8j3uey8WrBZYGBnOMaLYGlsAyWwwpYCatgtTCOGD808QqNI09rYC2sg/WwATbCJtgs9ImZH5p4xYxjC2yFbbAddsBO2AW7hT4xfmji9QgeCwwKx98De2Ef7IcDcBAOwWGhT4wfMfHS6ASchFNwGs7AWTgH54U+MX7ExEujK3AVrsFoGAM34RbcFvrE+KGN19DItk84nrvfrF9P4Ck8g7EwDl7CK3gtHCPGDzde1+FGFo6XUb9i/2f4Al/hG3yHH/BTOEaMH268nsOLrDhefd5W+30Zafyw96xPmS5e/d5W+33RuVilzq/8PMXmJlVzxpAfQ3mdKsi/L0r3Qq1S+9GucaSoP9x57N/fB7N65nkKP9oxz63svAr5UVQ/aOsKG29/zlXxwSrkR1G+qs1jNfdBrUJ+1DmOOiStnyn9sCpbS+bVipJS+xFTexvdydl312kX+TFc0zjcuMbU3kZvcva9ddqp/Yipvcso9fyIrSVD11VqP2JrSf+6Mte8e12F/PDziJ6e/897VE+5/w+MYmrvMtLmV3n+aO4XsbVkSNr8qmgcZdZ7bS1ZVqn9KFtLhvI6P4fT+pH3v1rRfNDIzTlagd/6sevW51FmHGZcUh3sj6Nbn3+0vK3VgLe16mY/3K2VOw73v4lUfkj5trTGpfAjtL7W8dzPnn9ePW/UtPkhqSnzo+i5Sd5a361+aCX50en3d6q879Ppd3aqtO857U6/s1Ol/c5pd/qdnSrtX077L73aYQYQJwAA
+  </data>
+ </layer>
+ <layer name="Capa de patrones 3" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2aWUoDQRRFX9Bfxx04LkGNO3DcgbPfzroAZ12Asy5ARXfgAC4hgkuIIOivUcHbWEUXlQ9TnUpXvaYOHPqlSbpv0SHpC030xyPFcJmfqJxnhvMLlfPKcH6jcn4YzoHKaYCNsAk2wxbY6jRRMtpgO+yAnbALdjtNlIwBOAiH4DAcgaMWjvtp4RgmjMFxOCmcgtMpZ7DBIlyCK8JVuOY0UTK24DbcFe7BfaeJknEMT+CZ8BxeOE0UCGSLWv9XlJT5q8bn8o05OA8XXAcxpKS9XocbcNNBFpscwEN45DhHtffgl/AKXlvOVSkyv34PbrqeO3gPH+xH/Bc1fw/shX0wT7w6hZpfmhfK9fSL96bdC0yIcle6Dp+Jrof+veK4DvV66B2V0zrUjj0DZ4XRbLNz1xq1Y09Q3LXlzKVzqx17meKuLWcunVvt2DsUd205p9W53+FHFZ9XO/YpxV1bzml17rocUX0uhRMFAo74Flu9X2WVguF+Xyka7vedgrblSlHbmuJLH8rq9eD2Oxd+r7LHDbxlNuv48PxOeN4nxofnd2w878OdX/lo2vgQJwAA
+  </data>
+ </layer>
+ <layer name="Capa de patrones 4" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XUQ6DIAyG6xV2Qo/hHbbXPW+vHmLJrmCyK5DsCr6NRplIikZFodgvYTCC+FdKKQCCIAjhuMQWIIwpYgs4JwrgifVdl6sut77NlVqXB3RG1XGlbAK1K6sN3f8yjprlfPCn6GurT8G4L3W+Tu3rEwSBhu154uQknM+T3OB0Fo7ofUpNj9qfAPl2TBtM3krRDmPKQ8SsROt7h5gntfjazg8hSSG+TvlVbndUsz9S3CfUOrw87aPZtN+0DzUw3LWbIIrmoWL1kv1GrQdqN3dt145qwdwxwe/SeNrWmDL0e40PtbA+XhpifmvKh9bmBfZzlE3Rc6YTYu97Lns6Fez8LlSuR7xjN9y5K08/J3LwYWXVeDZxsgnjCeolNTPMr9Eeez2449qQ4t3Ax197MfYvbutCrEEWcUsQhO38AIoDYewQJwAA
+  </data>
+ </layer>
+ <layer name="Capa de patrones 5" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3VwQ2AIAwFUNbUSRzMIVzEPfDixcARacl7CaHh1PAbKAUA+MsxuwGWkHmO7s/eOwNgjMx/yOpkM17kO47cG8Cr9VadnTqbq1NnI49Y5AEAsL7tWfvsJmiqWGscrhAnAAA=
+  </data>
+ </layer>
+ <objectgroup color="#e20202" name="muro" width="50" height="50">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="1503" y="3" width="97" height="1597"/>
+  <object x="3" y="0" width="76" height="1597"/>
+  <object x="3" y="1445" width="1591" height="152"/>
+  <object x="15" y="-3" width="1498" height="123"/>
+  <object x="224" y="718" width="316" height="277"/>
+  <object x="498" y="985" width="28" height="22"/>
+  <object x="242" y="986" width="27" height="21"/>
+  <object x="319" y="992" width="31" height="190"/>
+  <object x="420" y="995" width="23" height="186"/>
+  <object x="240" y="694" width="281" height="23"/>
+  <object x="275" y="670" width="214" height="24"/>
+  <object x="331" y="651" width="108" height="17"/>
+  <object x="364" y="641" width="40" height="10"/>
+  <object x="419" y="511" width="57" height="61"/>
+  <object x="352" y="319" width="195" height="174"/>
+  <object x="401" y="491" width="94" height="19"/>
+  <object x="320" y="351" width="38" height="128"/>
+  <object x="545" y="352" width="31" height="130"/>
+  <object x="369" y="306" width="161" height="19"/>
+  <object x="395" y="289" width="98" height="18"/>
+  <object x="833" y="564" width="93" height="124"/>
+  <object x="847" y="686" width="62" height="16"/>
+  <object x="850" y="549" width="60" height="14"/>
+  <object x="900" y="400" width="22" height="47"/>
+  <object x="835" y="399" width="27" height="47"/>
+  <object x="740" y="400" width="28" height="48"/>
+  <object x="675" y="400" width="29" height="50"/>
+  <object x="703" y="206" width="189" height="145"/>
+  <object x="848" y="346" width="32" height="20"/>
+  <object x="718" y="345" width="31" height="21"/>
+  <object x="717" y="189" width="160" height="16"/>
+  <object x="743" y="171" width="110" height="18"/>
+  <object x="777" y="158" width="43" height="12"/>
+  <object x="963" y="481" width="28" height="126"/>
+  <object x="1026" y="543" width="30" height="64"/>
+  <object x="1027" y="704" width="27" height="62"/>
+  <object x="964" y="705" width="25" height="129"/>
+  <object x="771" y="705" width="27" height="127"/>
+  <object x="707" y="704" width="25" height="63"/>
+  <object x="707" y="543" width="26" height="63"/>
+  <object x="772" y="480" width="25" height="127"/>
+  <object x="1316" y="975" width="58" height="49"/>
+  <object x="1336" y="960" width="14" height="17"/>
+  <object x="1410" y="992" width="29" height="63"/>
+  <object x="1410" y="895" width="28" height="66"/>
+  <object x="1248" y="896" width="31" height="65"/>
+  <object x="1249" y="993" width="31" height="61"/>
+  <object x="1344" y="1164" width="31" height="52"/>
+  <object x="1344" y="1359" width="30" height="48"/>
+  <object x="1155" y="1358" width="27" height="50"/>
+  <object x="1156" y="1164" width="25" height="53"/>
+  <object x="1219" y="1231" width="27" height="50"/>
+  <object x="1283" y="1231" width="25" height="49"/>
+  <object x="1283" y="1293" width="25" height="51"/>
+  <object x="1217" y="1291" width="32" height="54"/>
+  <object x="1181" y="432" width="69" height="67"/>
+  <object x="1086" y="286" width="256" height="130"/>
+  <object x="1119" y="412" width="183" height="20"/>
+  <object x="1118" y="255" width="197" height="33"/>
+  <object x="1139" y="236" width="155" height="19"/>
+  <object x="1188" y="225" width="56" height="14"/>
+  <object x="803" y="928" width="254" height="128"/>
+  <object x="891" y="1070" width="69" height="65"/>
+  <object x="835" y="1053" width="187" height="20"/>
+  <object x="833" y="897" width="197" height="31"/>
+  <object x="850" y="882" width="163" height="17"/>
+  <object x="879" y="870" width="102" height="15"/>
+ </objectgroup>
+</map>

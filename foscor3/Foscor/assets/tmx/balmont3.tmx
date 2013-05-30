@@ -226,7 +226,7 @@
  </layer>
  <layer name="arboles" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC82XTU4DMQxGfSooFygg9vzsaQs7btDdbCrRIyBuwBF6BW5UV8KSa+zYTiZVIn3KSE2TN09JJlkAwA3mCnM9UL3447rD3GOWmNuBauJ6xDwNWD9jXjBrzGbAmvytnExGqJyeX1ms9pNoa/VHfZK/DN+3wWdlz553ST7Nn/fuE2sX4cv4k9H8eVy8XW++qL9PhY8i+T4YA697+7PYAM7XRibWWFvDn+ZB8nEHvfho7kh/lifNL+fz5pnk0fj28J8vuv9xdtkH5+NtfwPcp+ed0UbzF/G2YmNAoH3t+uX+6LzgtdfWR+TdtLlRYqS5T/6Is1Ss9Zvh43tOZv8jzixfNlm+jL9WTs4k+bbQ7s/j8/by7PrQ/HntNScQaMf9lfZo+U2U/nrfJ7LfF+lvCX3vExk2UPz1vk9k+aS/NfS9T7T689aHtgZ7RH5/o+vX45JrsOWMVesve46rYYv6OwTHot9/AozR/bnWn8bZ6l07m04Bf3MxyvG9/xFfjb8vZZy53yviL+JmLj7ZT8kflcg8sfgOQTbLQclfia/VX3SPoVLyB8Z/+X1LjmHdxTLzj86qYPiT72BxRueo1h8Vz2HN+fmSpeb+ccki/T1UplchrjfM+4B8xHUEONiWeQAZAAA=
+   H4sIAAAAAAAAC+2Yyw3CMAyGMxUUcech7jwW4HFjgw6AREdAbMAIXYGN+A+11ENa2UBSY3z45CpKUutLEzktQggTMAJjRbFo8lqAJZiBuaJIea3BRmHcgh3Yg4PCSP6mSiF/kjF3Yf+q9XwRjrXoLydcf1fBnOc/8Fcy/H3TgwV/VaQt5f59Mvv1nTma/MUgf1QvDJ0PQd8++dN6TlNeWtdZi7+yo939fYb7c3/uz/0N5a8Wzvcw6i9Wm3L8pX5/Cn+3jF6t7V/uOtXur5O++5b0/0+Mdq1q0V9Ofs3f6k1S+zuCk8L8KK8XjctF3AAZAAA=
   </data>
  </layer>
  <objectgroup color="#df0000" name="muro" width="40" height="40">
@@ -237,7 +237,6 @@
   <object x="61" y="1259" width="1151" height="12"/>
   <object x="5" y="462" width="53" height="819"/>
   <object x="21" y="39" width="1218" height="67"/>
-  <object x="57" y="664" width="779" height="81"/>
   <object x="5" y="44" width="12" height="413"/>
   <object x="364" y="1097" width="18" height="15"/>
   <object x="585" y="1097" width="18" height="12"/>
@@ -250,15 +249,15 @@
   </properties>
   <object name="puertaAbajo" type="tmx/balmont2.tmx" x="63" y="1243" width="1148" height="10">
    <properties>
-    <property name="abierta" value="true"/>
+    <property name="abierta" value="false"/>
     <property name="image" value="null"/>
     <property name="x" value="0"/>
     <property name="y" value="-35"/>
    </properties>
   </object>
-  <object name="puertaIzquierda" type="tmx/balmont4.tmx" x="23" y="115" width="15" height="341">
+  <object name="puertaIzquierda" type="tmx/balmont4.tmx" x="23" y="115" width="7" height="338">
    <properties>
-    <property name="abierta" value="true"/>
+    <property name="abierta" value="false"/>
     <property name="image" value="null"/>
     <property name="x" value="35"/>
     <property name="y" value="0"/>
@@ -274,5 +273,100 @@
   <properties>
    <property name="keys" value="true"/>
   </properties>
+  <object name="tmx/balmont3.tmx" type="puertaAbajo" x="42" y="161" width="17" height="279">
+   <properties>
+    <property name="abrir" value="true"/>
+   </properties>
+  </object>
+  <object name="tmx/balmont3.tmx" type="puertaIzquierda" x="1093" y="140" width="108" height="159">
+   <properties>
+    <property name="abrir" value="true"/>
+   </properties>
+  </object>
+  <object name="tmx/balmont3.tmx" type="puertaAbajo" x="491" y="170" width="192" height="327">
+   <properties>
+    <property name="abrir" value="true"/>
+   </properties>
+  </object>
+  <object name="tmx/balmont3.tmx" type="puertaIzquierda" x="901" y="581" width="191" height="308">
+   <properties>
+    <property name="abrir" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="personajes" width="40" height="40">
+  <properties>
+   <property name="enemy" value="true"/>
+  </properties>
+  <object name="personaje" type="anciano" x="238" y="543" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="480" y="579" width="48" height="94">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="602" y="597" width="48" height="94">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="320" y="307" width="48" height="94">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="709" y="317" width="48" height="94">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="824" y="508" width="48" height="94">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="371" y="697" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="802" y="737" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="545" y="305" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="867" y="159" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="175" y="138" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="1113" y="297" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="1075" y="648" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

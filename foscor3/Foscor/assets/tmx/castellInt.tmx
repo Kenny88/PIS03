@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="41" height="74" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="interiorCastillo" tilewidth="32" tileheight="32">
+  <image source="/gfx/interiorCastillo.png" width="480" height="320"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="41" height="74">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2aQVLDMAxFvYGuoLTrToF1ackFaC4AuQBw/2vgDJuOkGxZFjYZvmb+LopfPInsfCsEn3gqUI/YR71EnRUao3adGF+j3hSawLh4xveoD4U+OzLeRW0U2nZkvI96UOgxtGGk9e5YyHhg7uEZXC0cCxm5fM+55b7hqZCRywfj9xinqGeFhkaMtBbONe8q6lqhlZDvzaithVp518ySWqiVd80EIxjBCEYwghGMYAQjGMEIRjCCcQmMWt9Eq8GZcY7bhNbhp68y+yc3mbyWsRcYe/jLUoDRHtQb5xipB94yqD8+Coz0mpbzSn3dSWCk14BxmYyX/jbnjVMPvPWZocUfb31maNljeO8hcgFGn/gvjL/dZ1PLmOq78VozPRilfhGu1lt6nVoyWnudLP83Q7AzWnt0LP8zl+NKfTd0zfTqIyrdh6fWUrpmevURpfbhEqP0PtMa5dFHVDInVsbaHp1Un481p4aRm69tZjxLTg0jV2+GzHiWnBpGzhtZZ8az5FDGkh4d6f2X7pHK0TIG5hktHlKqhnNhea7asHgprf20v+r3IEL4At7tSCRoLwAA
+  </data>
+ </layer>
+ <layer name="Capa de patrones 2" width="41" height="74">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2au08DMQzGMxc2YAA23ozlPYN4rEysNzFApc4FCVXAihDwD/Oha0QEySXNJY4P/JM+3SW1W6tnn3V1lRK4sTbluhRjaN9x5MKr51iS9UC7jaxRCCV4hJ6g59KBGJj5eAG9Qe/Qx2Stoc7HnrLf8648azXx6yWP6DeLjv1rz9rnn4pNaAvaLuTv4yv3DqBD6CjyPUz/XDl6Cp1B54X8Y6gS2+VgmNiuLbbe/BDoa7Ojume+JLYTeGDLxyrQ12ZHlY/c6tpGm7qmgltdhz67hCLPON9Uie1ywK2upV8LnJB+nQ/p19Mj/VoQ0vKzpqQmBGrM38Wb8rH0zHDc8nUKfDNBDjPDrnDj2L8ljaKZkWP/jjSK7iPX+v/wl6/1DDSr6nmxPufGErSs6nmxPudIyLx416E9QzkJmTcfO3RiKCch8+JLhzjB4b9OC9AcNJ/xM0wGkX4r0Kqq483NfaRfH9pRNDHG0hRbqXzU+cf5e9P5xxmdf4LQBT4BOfpp/GgvAAA=
+  </data>
+ </layer>
+ <layer name="Capa de patrones 3" width="41" height="74">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3UsQ0CMQwF0FuCEWACmIDbgIHIBqxMcSmuCUqQTRC8J/3uW0phZ1kAgHeVyfM9HpPnoaUE9zL07r87gU0J7mVw1zCmBPcyuGsYU4J7Gdw1APAPjoP9U8orYGMf+Sb28Tddama5N3LeZa2J1Nrnkb297nKrAXgl4u/5hMPsB0CnJ2HT5qxoLwAA
+  </data>
+ </layer>
+ <objectgroup color="#f90505" name="muro" width="41" height="74">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="864" y="2144" width="190" height="138"/>
+  <object x="862" y="1950" width="192" height="128"/>
+  <object x="1042" y="1781" width="262" height="170"/>
+  <object x="1120" y="1927" width="96" height="37"/>
+  <object x="1280" y="1944" width="35" height="326"/>
+  <object x="1046" y="2241" width="248" height="31"/>
+  <object x="1260" y="2178" width="17" height="25"/>
+  <object x="1261" y="1953" width="26" height="25"/>
+  <object x="1046" y="1952" width="31" height="26"/>
+  <object x="1055" y="2179" height="26"/>
+  <object x="1053" y="2144" width="68" height="69"/>
+  <object x="1183" y="2019" width="63" height="60"/>
+  <object x="832" y="2208" width="43" height="108"/>
+  <object x="643" y="2300" width="232" height="49"/>
+  <object x="616" y="2205" width="52" height="99"/>
+  <object x="448" y="2145" width="192" height="110"/>
+  <object x="449" y="1999" width="189" height="80"/>
+  <object x="527" y="1919" width="144" height="95"/>
+  <object x="832" y="1918" width="174" height="96"/>
+  <object x="739" y="2055" width="30" height="56"/>
+  <object x="47" y="1867" width="443" height="149"/>
+  <object x="51" y="2008" width="42" height="223"/>
+  <object x="81" y="2208" width="379" height="33"/>
+  <object x="427" y="2147" width="26" height="31"/>
+  <object x="430" y="2019" width="38" height="29"/>
+  <object x="86" y="2020" width="32" height="27"/>
+  <object x="90" y="2148" width="27" height="24"/>
+  <object x="959" y="1584" width="36" height="344"/>
+  <object x="834" y="1279" width="282" height="321"/>
+  <object x="939" y="1701" width="16" height="25"/>
+  <object x="942" y="1828" width="23" height="22"/>
+  <object x="832" y="1791" width="30" height="62"/>
+  <object x="831" y="1697" width="33" height="62"/>
+  <object x="835" y="1598" width="29" height="66"/>
+  <object x="640" y="1599" width="32" height="67"/>
+  <object x="639" y="1695" width="32" height="63"/>
+  <object x="640" y="1791" width="32" height="64"/>
+  <object x="489" y="1569" width="57" height="355"/>
+  <object x="394" y="1278" width="276" height="321"/>
+  <object x="536" y="1694" width="29" height="31"/>
+  <object x="537" y="1824" width="29" height="30"/>
+  <object x="667" y="1348" width="25" height="24"/>
+  <object x="669" y="1475" width="24" height="32"/>
+  <object x="811" y="1346" width="31" height="30"/>
+  <object x="811" y="1475" width="35" height="32"/>
+  <object x="576" y="479" width="34" height="128"/>
+  <object x="896" y="479" width="32" height="128"/>
+  <object x="898" y="673" width="29" height="126"/>
+  <object x="576" y="671" width="31" height="127"/>
+  <object x="579" y="864" width="29" height="126"/>
+  <object x="895" y="864" width="34" height="128"/>
+  <object x="897" y="1056" width="30" height="128"/>
+  <object x="577" y="1055" width="31" height="126"/>
+  <object x="366" y="270" width="50" height="1011"/>
+  <object x="1086" y="254" width="34" height="1046"/>
+  <object x="1067" y="420" width="25" height="26"/>
+  <object x="1068" y="548" width="24" height="29"/>
+  <object x="1067" y="677" width="34" height="26"/>
+  <object x="1068" y="804" width="31" height="33"/>
+  <object x="1066" y="932" width="36" height="27"/>
+  <object x="1067" y="1059" width="33" height="29"/>
+  <object x="1066" y="1190" width="37" height="24"/>
+  <object x="411" y="1185" width="26" height="28"/>
+  <object x="415" y="1062" width="21" height="23"/>
+  <object x="412" y="930" width="26" height="29"/>
+  <object x="409" y="795" width="28" height="36"/>
+  <object x="414" y="678" width="23" height="28"/>
+  <object x="409" y="545" width="27" height="27"/>
+  <object x="385" y="11" width="194" height="443"/>
+  <object x="447" y="433" width="95" height="26"/>
+  <object x="520" y="24" width="445" height="167"/>
+  <object x="926" y="172" width="210" height="277"/>
+  <object x="959" y="425" width="96" height="33"/>
+  <object x="907" y="290" width="40" height="25"/>
+  <object x="572" y="290" width="23" height="24"/>
+  <object x="718" y="254" width="66" height="64"/>
+  <object x="806" y="301" width="22" height="73"/>
+  <object x="675" y="299" width="29" height="74"/>
+ </objectgroup>
+</map>

@@ -14,6 +14,7 @@ public class Key {
 private Body mBody;
 public String map;
 public String door;
+public String texto;
 private boolean abrir;
 private boolean cerrar;
 private Rectangle rect;
@@ -30,6 +31,7 @@ public Key(TMXObject object,Game app, Map mMap){
     this.door=object.getType();
     this.abrir=object.getTMXObjectProperties().containsTMXProperty("abrir", "true");
     this.cerrar=object.getTMXObjectProperties().containsTMXProperty("cerrar", "true");
+    this.texto=object.getTMXObjectProperties().get(0).getValue();
 }
 public String toString(){
 	return "key";	

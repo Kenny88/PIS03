@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="11" height="18" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="portalElfos" tilewidth="32" tileheight="32">
+  <image source="/gfx/portalElfos.png" width="192" height="192"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="11" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACxNkYFggSCQWIgFzMjAwjOJRPJgwNoBLHAA4THkpGAMAAA==
+  </data>
+ </layer>
+ <layer name="Capa de patrones 2" width="11" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC72R2w6CMBBEKygFipcEFFQU+P+fZDYpYbP2EnlgkpMmzNKeglL75AFa0Dm6K8OAHnzAF1Sipxzsmot9StFTdGRWs2dnu17EmTfR/5vFR97FBHzJrwYNuDN/ly/NPsELvNmsy5dmBzCCSf1+F+6TgZRxCvj64vL1xdcn9vxj5H0K3adQ6//dmhmF9cXyGAMAAA==
+  </data>
+ </layer>
+ <layer name="Capa de patrones 3" width="11" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC1NiYFjAAAVKULYSkhgyXxlKqyCxQbQKVB2yODaAbi4yUEHjo5ujgqQGnzno8rjcAzQrAV1eBVUepxipAJt7VXDI4ws/dHlC7sEmD/M3PqCEascBfPK0du9AAQBabNagGAMAAA==
+  </data>
+ </layer>
+ <objectgroup name="muro" width="11" height="18">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="-5" y="12" width="375" height="50"/>
+  <object x="-19" y="57" width="19" height="496"/>
+  <object x="347" y="56" width="29" height="507"/>
+  <object x="-6" y="544" width="164" height="27"/>
+  <object x="193" y="545" width="169" height="32"/>
+  <object x="290" y="386" width="27" height="92"/>
+  <object x="34" y="385" width="28" height="94"/>
+  <object x="35" y="258" width="25" height="93"/>
+  <object x="291" y="258" width="25" height="93"/>
+  <object x="290" y="128" width="27" height="96"/>
+  <object x="34" y="128" width="27" height="96"/>
+  <object x="144" y="64" width="63" height="61"/>
+ </objectgroup>
+</map>

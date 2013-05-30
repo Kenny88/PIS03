@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="castillo" tilewidth="32" tileheight="32">
+  <image source="/gfx/castillo.png" width="256" height="256"/>
+ </tileset>
+ <layer name="base" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC9NkYGDQHMSYe4ThgQ7voY45cWBQ2FriwCA5RiSMrE8QBybFPFxmkGIeMWagm4cvT+HSJ4kDEzIPlz5GHJiQebj00dM8YuN3uJhHTvgBAOb12X5ABgAA
+  </data>
+ </layer>
+ <layer name="muro" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC72R2QrCMBBFiwv1QamCFh+0VXDpgyuudf//r/I+TCAM9aI0ceBwT9NMJqVB4LZCUCNZBw3lIckINEm2QFt5RDIGXZI90Fcek0zBACTiiTyb9SEYKU8l7R6zPgeZoH0CpmCmnPWswUbQvgBLsFJu9mUFfgJnQfseHMBRPBBnPU/wErTfwB08lLMeH9Uh73LLx57m28Xu8o8y37hzeOYFXB2e92tVvtxX9H+3JebmH9bZfaol5vmoN10u+kxABgAA
+  </data>
+ </layer>
+ <layer name="columnas" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWDDQgzMCRoMTAsgLGNiNADU48LaAPlFRHmEwTaSOYZQfTgNF+aCPNAAMn+A0A9B0jRgwyksIgJEzBPGY+cEhBzImFKAch9gkiYGEDIfeS4gRw5ctxAifuwpUVscU4IwNyALS3iC1tyADnhR6v4BZUPQD8nYJMjBZAbvwAms49TQAYAAA==
+  </data>
+ </layer>
+ <objectgroup color="#d50000" name="muro" width="20" height="20" visible="0">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="292" y="424" width="54" height="54"/>
+  <object x="219" y="243" width="21" height="44"/>
+  <object x="401" y="241" width="23" height="45"/>
+  <object x="306" y="240" width="29" height="47"/>
+  <object x="418" y="258" width="29" height="188"/>
+  <object x="418" y="483" width="27" height="156"/>
+  <object x="445" y="430" width="24" height="116"/>
+  <object x="193" y="287" width="30" height="34"/>
+  <object x="194" y="354" width="27" height="157"/>
+  <object x="193" y="548" width="30" height="98"/>
+  <object x="189" y="320" width="5" height="243"/>
+ </objectgroup>
+</map>

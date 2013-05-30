@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="desierto" tilewidth="32" tileheight="32">
+  <image source="gfx/desierto.png" width="256" height="320"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="20" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC1NiYGBQGgDMxsCQwAfE1DKPFWgWLxXNo9AtIP/hVSMKxGJEmgf0FwPfIPAXpZgUP4/igcPDOW+O4lE8immPxcjM77jKHlEyzRvosgcANb5npGAJAAA=
+  </data>
+ </layer>
+ <layer name="Capa de patrones 2" width="20" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC6VVwU4CQQztRcNhYyCKiuJBgQOaPaDhsPoLBPgEPo1PtU2moTSvZdl9yctkSvu2GTrzFkT0CfhFMZZBzZw5Y34D/iR6q6Dmvej9Av4lek1Qo3pdUJd1YGJ99BTDjnpVi5xr+5swX93+xcRUrwY5iFPmm9uvTQz1J7EP5oLwjGWcB3qPRIdoLjNG/Y2LHpqxjMtAbwDiCFuio11Xgd7wgt6e62V+dkVH1wbUSc/oXNvC1lWl5z73xus1LfT0vPx+AuokNjVx/q9lfs6g57V355fNM+rP3zfBhk532+vVdD7PHj5f8qpET2NjoFeDfMnLvqexEYhH+Zd+V69BfiT59n1B74/XU69BfhT5Wva+qNcgP4p8LXtfMkS+5v3tyc17V6jes9G7Yd62qN0keop75gPz7oqeRoleX2Tz5O+pReSBMn//Watm4GAJAAA=
+  </data>
+ </layer>
+ <layer name="Capa de patrones 3" width="20" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAW0AiwD7QAqAHEGhgXUNE+CyubRGrADsc5AO2IUDCswmp5oA9gH2gEDCIZ6OT1c8wQAPnVpUGAJAAA=
+  </data>
+ </layer>
+ <objectgroup color="#f90404" name="muro" width="20" height="30">
+  <properties>
+   <property name="wall" value="true"/>
+  </properties>
+  <object x="417" y="1" width="221" height="94"/>
+  <object x="609" y="97" width="31" height="317"/>
+  <object x="130" y="226" width="495" height="124"/>
+  <object x="356" y="194" width="55" height="40"/>
+  <object x="482" y="195" width="89" height="47"/>
+  <object x="510" y="99" width="35" height="59"/>
+  <object x="419" y="388" width="27" height="29"/>
+  <object x="482" y="355" width="29" height="62"/>
+  <object x="547" y="353" width="28" height="61"/>
+  <object x="547" y="482" width="26" height="60"/>
+  <object x="483" y="514" width="26" height="31"/>
+  <object x="419" y="482" width="29" height="62"/>
+  <object x="353" y="547" width="63" height="252"/>
+  <object x="416" y="671" width="226" height="130"/>
+  <object x="610" y="484" width="31" height="191"/>
+  <object x="572" y="771" width="33" height="58"/>
+  <object x="608" y="803" width="32" height="167"/>
+  <object x="418" y="928" width="208" height="37"/>
+  <object x="1" y="929" width="221" height="44"/>
+  <object x="127" y="350" width="97" height="413"/>
+  <object x="32" y="803" width="28" height="58"/>
+  <object x="0" y="2" width="32" height="961"/>
+  <object x="4" y="1" width="218" height="88"/>
+  <object x="451" y="99" width="28" height="29"/>
+  <object x="37" y="227" width="24" height="27"/>
+  <object x="324" y="611" width="25" height="27"/>
+  <object x="101" y="578" width="24" height="29"/>
+ </objectgroup>
+</map>

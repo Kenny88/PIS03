@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="3" margin="2">
-  <image source="gfx/desert_tiled.png" width="281" height="211"/>
-  <tile id="30">
-   <properties>
-    <property name="cactus" value="true"/>
-   </properties>
-  </tile>
- </tileset>
- <tileset firstgid="49" name="Nothing" tilewidth="32" tileheight="32">
-  <image source="Tilesets/Nothing.png" trans="ff00ff" width="32" height="32"/>
- </tileset>
- <tileset firstgid="50" name="sky" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="sky" tilewidth="32" tileheight="32">
   <properties>
    <property name="wall" value="true"/>
   </properties>
@@ -221,12 +210,12 @@
  </tileset>
  <layer name="Ground" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3DAQkAAAwEoev1/Xutx1Bw1VRVVVVVVR89wPKicwAZAAA=
+   H4sIAAAAAAAAC+3DwQkAAAwDoXtn/4G7R1Fw1VRVVVVVVR89C+H4ZAAZAAA=
   </data>
  </layer>
  <layer name="arboles" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC82YSU4DMRBF61QQ1HsGsWfYE4YdN8iuN5HIERA34Ai5Qm6EI/GloqhyVbmHtKUvtxTHfv3ioTsrIrooOSs5X1C9+uW6LrkpuSy5WlANrruS+wXWDyWPJc8lLwus4W/tpDeCcrx+YrHa96Kt1R/6hL8M35fBZ2XHrrdJPs2fd+89axfhy/iT0fx5XLzd1HxRfx8KHyL53hkDr6f2Z7ER/V0bmVhjbQx/mgfJxx1MxYe5I/1ZnjS/nM+bZ5JH49vRf77o/sfZZR+cj7c9BLiP11ujjeYv4m3NxqBA+9b1y/3hecFrr62PyL1pc6PGiLkPf+CsFWv9Zvj4npPZ/8CZ5csmy5fxN5STM0m+DbX764J83l6eXR+aP/5Zx2KNC3bZb81fbY+WZ6L0102c7Pki/U3Nl2GkE/jL8s3tL/Pbav6wLuR819ZKZIxWPnn+auvXOzutfuUe1/qMZflr4RtyPzU+z98+OBY+/w4wRvfnVn8a51Dv2rOpd36MySjH974HvhZ/n8o4Y99XxF/EzVh8sp+aP5TIPLH49kE2y0HNX41vqL/oHoNS80fGd/n7lhzDehfLzD88q5LhT96DxRmdo1p/KJ7DzPvHKUrL+8ecRfq7bUy24H95rwbXa8nbjHzw4tXg+gE+4UkgABkAAA==
+   H4sIAAAAAAAAC+2Y2wnCQBBF90djAz4a8NGAjz87SAGCKUHswBJswVKdQAYizD5mV5frsgcuE0KyGU6yYZPGGDOjTChToNoMfS0pK8qcsgCq3NeasgGsW8qOsqccACv7Q4X9abgrj+9G2xfluSX6y0mov6tizHNkLxKo/tqhuvx900MsSP46Yd8v5+8r8DjXOwfJnwT74/UCCvzssz/U9zT3hXqfUfy1lv3VXxrVXxrVXxrVXxr/7u+pHO+R3NEnKP6ktWlPrufPdn0fMf5ukdeKobT5G3qftPPKRmn+elzfW9r/PxLjtWqJ/nJS/cnwf3lf5b6OlFPG/tiLr3Jfb6938SUAGQAA
   </data>
  </layer>
  <objectgroup color="#df0000" name="muro" width="40" height="40">
@@ -256,12 +245,12 @@
     <property name="y" value="-35"/>
    </properties>
   </object>
-  <object name="puertaIzquierda" type="tmx/desert11.tmx" x="23" y="115" width="15" height="341">
+  <object name="puertaIzquierda" type="tmx/desierto.tmx" x="23" y="115" width="15" height="341">
    <properties>
     <property name="abierta" value="true"/>
     <property name="image" value="null"/>
-    <property name="x" value="0"/>
-    <property name="y" value="35"/>
+    <property name="x" value="20"/>
+    <property name="y" value="0"/>
    </properties>
   </object>
  </objectgroup>
@@ -274,5 +263,84 @@
   <properties>
    <property name="keys" value="true"/>
   </properties>
+ </objectgroup>
+ <objectgroup name="personajes" width="40" height="40">
+  <properties>
+   <property name="enemy" value="true"/>
+  </properties>
+  <object name="personaje" type="anciano" x="296" y="234" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="636" y="285" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="450" y="400" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="829" y="172" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="1095" y="369" width="38" height="124">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="1011" y="849" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="695" y="815" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="869" y="649" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="199" y="1008" width="38" height="124">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="366" y="830" width="38" height="124">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="155" y="672" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="561" y="635" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="789" y="403" width="38" height="124">
+   <properties>
+    <property name="imagen" value="ninja.png"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="385" y="163" width="38" height="124">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

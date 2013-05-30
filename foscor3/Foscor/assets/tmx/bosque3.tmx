@@ -226,7 +226,7 @@
  </layer>
  <layer name="arboles" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC82X3U0DMQyAPRWUBQoswM87LfDGBn27l0p0BMQGjNAV2AhXwpIxdmwn5+oiWTmpbvLdpziXrADgCuMC43JB/eqX6wbjFmONcb2gnrjuMO4X2D9gPGJsMZ4X2JO/jROTEdROz08srPxJ5Frj0ZjkL8P3afBZcWDP+ySf5s9794nlRfgy/mRo/jwunlfNF/X3rvBRSL43xsD7an8WG8Df2siENdfO8Kd5kHzcQRUfrR3pz/Kk+eV83jqTPBrfAf7zRfc/zi7H4Hw89zvAfXreGzmav4i3DZsDAvm99cv90XnBy9fqI/Ju2tpoMdLaJ3/E2WpW/Wb4+J6T2f+IM8uXjSxfxt8oJ2eSfDsY9+fxeXt5tj40f16+5gQCedxfa4+W30Tpr/o+kf2+SH9rqL1PZNhA8Vd9n8jySX9bqL1PjPrz6kOrwYqQ399o/XpcsgZHzli9/rLnuB62qL9jcC76/SvAGN2fe/1pnKPetbPpFPA3F6Oc3/sf8fX4+1Dmmfu9Iv4ibubik+O0/FGLrBOL7xhksxy0/LX4Rv1F9xhqLX9g/Jfft+Qc1l0ss/7orAqGP/kOFmd0jWrjUfMc9pyfz9l67h/nbHOdn6sacb1gvEL/ubiqEdcPbafjcAAZAAA=
+   H4sIAAAAAAAAC+2Yyw3CMAxAMxUUcQe6AJ8F+NzYoANUoiMgNmCErsBG+IClCqWVLWPHDT08pYqS1HppIrtFCGEBzIC5o7b4xLUBSmAFrB21GNcW2Dls98ABOAInhy36WzoF/XHmPJjjm85zzZyboz9LqP5ujDWvf+CvIvj7pYcc/DWRPs3z+yKOG7pzPPmLgf4wX0gdD4LfPvrzek9jXF732Yu/qqd/8ifj2592PSH1p11PSP1p1xNSf9r1hNRf6vMw9vObOh6uv5a53jNTf7HclOJP+/0a/u6GXnM7v9R9aid/vQzVW9z/PzG6uWqO/iwZmz+rvJjr7wxcgl1eTAXjegPZmxw2ABkAAA==
   </data>
  </layer>
  <objectgroup color="#df1010" name="muro" width="40" height="40">
@@ -282,9 +282,27 @@
   <properties>
    <property name="keys" value="true"/>
   </properties>
-  <object name="tmx/bosque1.tmx" type="puertaArriba" x="105" y="1002" width="35" height="50">
+ </objectgroup>
+ <objectgroup name="personajes" width="40" height="40">
+  <properties>
+   <property name="enemy" value="true"/>
+  </properties>
+  <object name="personaje" type="anciano" x="179" y="1069" width="38" height="124">
    <properties>
-    <property name="cerrar" value="true"/>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="289" y="904" width="38" height="124">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
+   </properties>
+  </object>
+  <object name="personaje" type="anciano" x="404" y="813" width="38" height="124">
+   <properties>
+    <property name="imagen" value="oscuro.png"/>
+    <property name="ranged" value="true"/>
    </properties>
   </object>
  </objectgroup>

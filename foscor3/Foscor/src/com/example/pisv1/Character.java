@@ -48,12 +48,6 @@ public class Character {
    		mPhysicsWorld.registerPhysicsConnector(new PhysicsConnector(mAnimatedSprite, mBody, true, false));
    		mBody.setUserData(this);
 	}
-	public void setStatistics(int attack, int defense,int magic) {
-		cAttack=attack;
-		cDefense=defense;
-		cMagic=magic;
-		
-	}
 	public AnimatedSprite getAnimatedSprite() {
 		return mAnimatedSprite;
 	}
@@ -253,6 +247,12 @@ public class Character {
 		cVida-=f;
 		if (cVida<=0){
 			detach(app.mMap.getmPhysicsWorld());
+		}
+	}
+	public void sumVida(float f) {
+		cVida+=f;
+		if (cVida>100){
+			cVida=100;
 		}
 	}
 }

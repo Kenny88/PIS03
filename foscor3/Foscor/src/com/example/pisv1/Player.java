@@ -14,7 +14,7 @@ public class Player extends Character {
 	private IOnScreenControlListener mBotonsControlListener;
 	public Player(float x, float y, String image,final Game app) {
 		super(x, y, image, app);
-		cAttack=100;
+		setStatistics(75,75, 75);
 		mIOnScreenControlListener=new IOnScreenControlListener() {
 	
 			@Override
@@ -42,6 +42,13 @@ public class Player extends Character {
 		}else{
 			app.setVida(cVida);
 		}
+	}
+	public void sumVida(float f) {
+		cVida+=f;
+		if (cVida>100){
+			cVida=100;
+		}
+		app.setVida(cVida);
 	}
 	public IOnScreenControlListener getIOnScreenControlListener() {
 		return mIOnScreenControlListener;

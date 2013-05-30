@@ -508,7 +508,8 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 
 	}
 
-	public void gameOver() {
+	public void gameOver() {		
+		 finish();
 		 Intent intentContinue = new Intent(Game.this , GameOver.class);
 		 Game.this.startActivity(intentContinue);
 	}

@@ -105,36 +105,33 @@ public class Character {
 
 	protected void move(float pValueX, float pValueY) {
 		if (move){
-			if(Math.abs(pValueX)>=Math.abs(pValueY)){
-				if ( pValueX > 0){
-			        // X = 1 => Right
-					if (direction!= 1){
-			        	mAnimatedSprite.animate(new long[]{200, 200, 200}, 6, 8, true);
-			        	direction = 1;
-					}
+			if ( pValueX > 0){
+		        // X = 1 => Right
+				if (direction!= 1){
+		        	mAnimatedSprite.animate(new long[]{200, 200, 200}, 6, 8, true);
+		        	direction = 1;
 				}
-			    else if ( pValueX < 0){
-			        // X = -1 => Left
-					if (direction!= 3){
-						mAnimatedSprite.animate(new long[]{200, 200, 200}, 3, 5, true);
-			        	direction = 3;
-					}
+			}
+		    else if ( pValueX < 0){
+		        // X = -1 => Left
+				if (direction!= 3){
+					mAnimatedSprite.animate(new long[]{200, 200, 200}, 3, 5, true);
+		        	direction = 3;
 				}
-			}else{
-
-			    if ( pValueY > 0){
-			        // Y = 1 => Down
-			    	if (direction!=2){
-			    		mAnimatedSprite.animate(new long[]{200, 200, 200}, 0, 2, true);
-			        	direction = 2;
-					}
+			}
+		    
+		    if ( pValueY > 0){
+		        // Y = 1 => Down
+		    	if (direction!=2){
+		    		mAnimatedSprite.animate(new long[]{200, 200, 200}, 0, 2, true);
+		        	direction = 2;
 				}
-			    else if ( pValueY < 0){
-			        // Y = -1 => Up
-			    	if (direction!= 0){
-						mAnimatedSprite.animate(new long[]{200, 200, 200}, 9, 11, true);
-			        	direction = 0;
-					}
+			}
+		    else if ( pValueY < 0){
+		        // Y = -1 => Up
+		    	if (direction!= 0){
+					mAnimatedSprite.animate(new long[]{200, 200, 200}, 9, 11, true);
+		        	direction = 0;
 				}
 			}
 			if( pValueX == 0 && pValueY == 0){

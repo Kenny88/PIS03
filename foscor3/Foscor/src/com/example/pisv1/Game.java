@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.andengine.engine.Engine;
 import org.andengine.engine.camera.BoundCamera;
 import org.andengine.engine.camera.hud.HUD;
+import org.andengine.engine.camera.hud.controls.AnalogOnScreenControl;
 import org.andengine.engine.camera.hud.controls.DigitalOnScreenControl;
 import org.andengine.engine.handler.IUpdateHandler;
 import org.andengine.engine.options.EngineOptions;
@@ -15,6 +16,7 @@ import org.andengine.entity.primitive.Rectangle;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.scene.background.SpriteBackground;
 import org.andengine.entity.sprite.ButtonSprite;
+import org.andengine.entity.sprite.ButtonSprite.OnClickListener;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.util.FPSLogger;
 import org.andengine.extension.physics.box2d.PhysicsFactory;
@@ -87,8 +89,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	protected volatile Map mMap;
 	protected volatile Player mPlayer;
 	String mapaName ="tmx/bosque1.tmx";
-	private DigitalOnScreenControl mDigitalOnScreenControl;
-	private DigitalOnScreenControl mDigitalOnScreenControl2;
+	protected AnalogOnScreenControl mAnalogOnScreenControl;
 	Maps mapas=new Maps();	String message1="";
 	int message2=0;
 	private final Handler handler = new Handler() {
@@ -257,6 +258,15 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	private Rectangle mVida;
 	private float vRed=0;
 	private float vGreen=1;
+	private BitmapTextureAtlas mAtaqueMagicoButtonTexture;
+	private TextureRegion mAtaqueMagicoButtonTextureRegion;
+	private BitmapTextureAtlas mAtaqueMeleeButtonTexture;
+	private TextureRegion mAtaqueMeleeButtonTextureRegion;
+	private ButtonSprite mAtaqueMagicoButton;
+	private ButtonSprite mAtaqueMeleeButton;
+	private BitmapTextureAtlas mSeleccionAtaqueTexture;
+	private TextureRegion mSeleccionAtaqueTextureRegion;
+	private Sprite mSeleccionAtaque;
 
 	// ===========================================================
 	// Getter & Setter
@@ -291,18 +301,24 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		BitmapTextureAtlasTextureRegionFactory.setAssetBasePath("gfx/");
 		menu= new Inventory(this);
 		this.mOnScreenControlTexture = new BitmapTextureAtlas(this.getTextureManager(), 256, 128, TextureOptions.BILINEAR);
-		this.mOnScreenControlBaseTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mOnScreenControlTexture, this, "onscreen_control_base.png", 0, 0);
-		this.mOnScreenControlKnobTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mOnScreenControlTexture, this, "onscreen_control_knob.png", 128, 0);
-		this.mOnScreenControlTexture2 = new BitmapTextureAtlas(this.getTextureManager(), 256, 128, TextureOptions.BILINEAR);
-		this.mOnScreenControlBaseTextureRegion2 = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mOnScreenControlTexture2, this, "botones_control_base.png", 0, 0);
-		this.mOnScreenControlKnobTextureRegion2 = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mOnScreenControlTexture2, this, "botones_control_knob.png", 128, 0);
+		this.mOnScreenControlBaseTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mOnScreenControlTexture, this, "base.png", 0, 0);
+		this.mOnScreenControlKnobTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(this.mOnScreenControlTexture, this, "knob.png", 128, 0);
 
-		mInventoryMenuButtonTexture = new BitmapTextureAtlas(this.getTextureManager(), 64, 64, TextureOptions.NEAREST);
+		mInventoryMenuButtonTexture = new BitmapTextureAtlas(this.getTextureManager(), 55, 55, TextureOptions.NEAREST);
 		mInventoryMenuButtonTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(mInventoryMenuButtonTexture, this, "button-backpack-up.png", 0, 0);
 		mInventoryMenuButtonTexture.load();
+		mAtaqueMagicoButtonTexture = new BitmapTextureAtlas(this.getTextureManager(), 45, 45, TextureOptions.NEAREST);
+		mAtaqueMagicoButtonTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(mAtaqueMagicoButtonTexture, this, "ataqueMagico.png", 0, 0);
+		mAtaqueMagicoButtonTexture.load();
+		mAtaqueMeleeButtonTexture = new BitmapTextureAtlas(this.getTextureManager(), 45, 45, TextureOptions.NEAREST);
+		mAtaqueMeleeButtonTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(mAtaqueMeleeButtonTexture, this, "ataqueMelee.png", 0, 0);
+		mAtaqueMeleeButtonTexture.load();
+
+		mSeleccionAtaqueTexture = new BitmapTextureAtlas(this.getTextureManager(), 45, 45, TextureOptions.NEAREST);
+		mSeleccionAtaqueTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(mSeleccionAtaqueTexture, this, "seleccionAtaques.png", 0, 0);
+		mSeleccionAtaqueTexture.load();
 		
    		this.mOnScreenControlTexture.load();
-   		this.mOnScreenControlTexture2.load();
 		itemTest();
 		
 		
@@ -327,7 +343,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 				/* Remove the menu and reset it. */
 				menu.getScene().back();
 				bMenu=false;
-				mMainScene.setChildScene(mDigitalOnScreenControl);
+				mMainScene.setChildScene(mAnalogOnScreenControl);
 			} else {
 				/* Attach the menu. */
 				bMenu=true;
@@ -345,7 +361,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	    {
 	        if(bMenu){
 	            bMenu=false;
-		    	mMainScene.setChildScene(mDigitalOnScreenControl);
+		    	mMainScene.setChildScene(mAnalogOnScreenControl);
 	        }
 	        else{
 	        	new AlertDialog.Builder(this)
@@ -406,8 +422,9 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mapaName=name;
 		mHud.detachChild(mMap.getMapScene());
 		mHud.setVisible(false);
-		mDigitalOnScreenControl.setVisible(false);
+		mAnalogOnScreenControl.setVisible(false);
 		mPlayer.move(0, 0);
+		mPlayer.direction=-1;
 			mMainScene.registerUpdateHandler(new IUpdateHandler(){
 
 				@Override
@@ -418,7 +435,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					mMap.addPlayer(mPlayer,x, y);
 					mMainScene.attachChild(mMap.getMapScene());
 					mHud.setVisible(true);
-					mDigitalOnScreenControl.setVisible(true);
+					mAnalogOnScreenControl.setVisible(true);
 					message1="";
 					message2=0;
 					mMainScene.unregisterUpdateHandler(this);
@@ -446,27 +463,17 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		this.mapas.setGame(this);
 		this.mMap=mapas.get(mapaName);
 		mMap.addPlayer(mPlayer);
-		this.mDigitalOnScreenControl = new DigitalOnScreenControl(0, CAMERA_HEIGHT - this.mOnScreenControlBaseTextureRegion.getHeight(), 
+		this.mAnalogOnScreenControl = new AnalogOnScreenControl(20, CAMERA_HEIGHT - this.mOnScreenControlBaseTextureRegion.getHeight()-20, 
 				this.mBoundChaseCamera, this.mOnScreenControlBaseTextureRegion, this.mOnScreenControlKnobTextureRegion, 0.1f, 
 				this.getVertexBufferObjectManager(), mPlayer.getIOnScreenControlListener());
-		this.mDigitalOnScreenControl.getControlBase().setBlendFunction(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA);
-		this.mDigitalOnScreenControl.getControlBase().setAlpha(0.8f);
-		this.mDigitalOnScreenControl.getControlBase().setScaleCenter(0, 128);
-		this.mDigitalOnScreenControl.getControlBase().setScale(1.1f);
-		this.mDigitalOnScreenControl.getControlKnob().setScale(1.1f);
-		this.mDigitalOnScreenControl.refreshControlKnobPosition();
-		//this.mDigitalOnScreenControl.setAllowDiagonal(true);
-		this.mDigitalOnScreenControl2 = new DigitalOnScreenControl(CAMERA_WIDTH - this.mOnScreenControlBaseTextureRegion2.getWidth()-24000/CAMERA_WIDTH, CAMERA_HEIGHT - this.mOnScreenControlBaseTextureRegion2.getHeight(), this.mBoundChaseCamera, this.mOnScreenControlBaseTextureRegion2, this.mOnScreenControlKnobTextureRegion2, 0.1f, this.getVertexBufferObjectManager(),mPlayer.getBotonsControlListener());
-		this.mDigitalOnScreenControl2.getControlBase().setBlendFunction(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA);
-		this.mDigitalOnScreenControl2.getControlBase().setAlpha(0.8f);
-		this.mDigitalOnScreenControl2.getControlBase().setScaleCenter(0, 128);
-		this.mDigitalOnScreenControl2.getControlBase().setScale(1.3f);
-		this.mDigitalOnScreenControl2.getControlKnob().setScale(1.3f);
-		this.mDigitalOnScreenControl2.refreshControlKnobPosition();
-
+		this.mAnalogOnScreenControl.getControlBase().setBlendFunction(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA);
+		this.mAnalogOnScreenControl.getControlBase().setAlpha(0.8f);
+		this.mAnalogOnScreenControl.getControlBase().setScaleCenter(0, 128);
+		this.mAnalogOnScreenControl.getControlBase().setScale(1.1f);
+		this.mAnalogOnScreenControl.getControlKnob().setScale(1.1f);
+		this.mAnalogOnScreenControl.refreshControlKnobPosition();
 		mMainScene.attachChild(mMap.getMapScene());
-		mMainScene.setChildScene(mDigitalOnScreenControl);
-		mDigitalOnScreenControl.setChildScene(mDigitalOnScreenControl2);
+		mMainScene.setChildScene(mAnalogOnScreenControl);
 		menu.startMenu();
 		Rectangle vida=new Rectangle(0, 0, 108, 16, mEngine.getVertexBufferObjectManager());
 		vida.setVisible(true);
@@ -476,8 +483,28 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		mVida.setVisible(true);
 		mVida.setColor(new Color(vRed, vGreen, 0));
 		mHud.attachChild(mVida);
-		
-		mInventoryMenuButton = new ButtonSprite(16, 16, mInventoryMenuButtonTextureRegion, mEngine.getVertexBufferObjectManager()) {
+		mAtaqueMagicoButton= new ButtonSprite(CAMERA_WIDTH -110, CAMERA_HEIGHT-60, mAtaqueMagicoButtonTextureRegion, mEngine.getVertexBufferObjectManager()) {
+			@Override
+			public boolean onAreaTouched(TouchEvent event, float x, float y)
+			{
+
+				mSeleccionAtaque.setPosition(CAMERA_WIDTH -110,CAMERA_HEIGHT-60);
+				mPlayer.attack(0, -1);
+				
+				return super.onAreaTouched(event, x, y);
+			}
+		};
+		mAtaqueMeleeButton= new ButtonSprite(CAMERA_WIDTH -50, CAMERA_HEIGHT-60, mAtaqueMeleeButtonTextureRegion, mEngine.getVertexBufferObjectManager()) {
+			@Override
+			public boolean onAreaTouched(TouchEvent event, float x, float y)
+			{
+				mSeleccionAtaque.setPosition(CAMERA_WIDTH -50,CAMERA_HEIGHT-60);
+				mPlayer.attack(0, 1);
+				return super.onAreaTouched(event, x, y);
+			}
+		};
+		setmSeleccionAtaque(new Sprite(0, 0, mSeleccionAtaqueTextureRegion, mEngine.getVertexBufferObjectManager()));
+				mInventoryMenuButton = new ButtonSprite(CAMERA_WIDTH -60,0, mInventoryMenuButtonTextureRegion, mEngine.getVertexBufferObjectManager()) {
 			@Override
 			public boolean onAreaTouched(TouchEvent event, float x, float y)
 			{
@@ -487,7 +514,7 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 					{
 						menu.getScene().back();
 						bMenu=false;
-						mMainScene.setChildScene(mDigitalOnScreenControl);
+						mMainScene.setChildScene(mAnalogOnScreenControl);
 					}
 					else
 					{
@@ -502,8 +529,14 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 		};
 		mHud.registerTouchArea(mInventoryMenuButton);
 		mHud.attachChild(mInventoryMenuButton);
+		mHud.registerTouchArea(mAtaqueMagicoButton);
+		mHud.attachChild(mAtaqueMagicoButton);
+		mHud.registerTouchArea(mAtaqueMeleeButton);
+		mHud.attachChild(mAtaqueMeleeButton);
+		mHud.attachChild(getmSeleccionAtaque());
+		getmSeleccionAtaque().setVisible(false);
 		mMainScene.attachChild(mHud);
-		mMainScene.setChildScene(mDigitalOnScreenControl);
+		mMainScene.setChildScene(mAnalogOnScreenControl);
 
 
 	}
@@ -534,6 +567,14 @@ public class Game extends SimpleBaseGameActivity implements Serializable {
 	        .show();
 		}*/
 
+	}
+
+	public Sprite getmSeleccionAtaque() {
+		return mSeleccionAtaque;
+	}
+
+	public void setmSeleccionAtaque(Sprite mSeleccionAtaque) {
+		this.mSeleccionAtaque = mSeleccionAtaque;
 	}
 
 }

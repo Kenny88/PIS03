@@ -29,6 +29,9 @@ public class Ataque {
 		this.app=app1;
 		this.daño=daño;
 		this.creador=creador;
+		if(creador.toString().equals("player")){
+			app.getmSeleccionAtaque().setVisible(true);
+		}
 		this.velocidad=velocidad;
 		BitmapTextureAtlas mBitmapTextureAtlas = new BitmapTextureAtlas(app.getTextureManager(), 96, 128, TextureOptions.DEFAULT);
 		TiledTextureRegion mPlayerTextureRegion = BitmapTextureAtlasTextureRegionFactory.createTiledFromAsset(mBitmapTextureAtlas, app,image, 0, 0, 3, 4);
@@ -106,6 +109,7 @@ public class Ataque {
 			// TODO Auto-generated method stub
 			mPhysicsWorld.destroyBody(mBody);
 			mAnimatedSprite.detachSelf();
+			app.getmSeleccionAtaque().setVisible(false);
 	
 			}
 
